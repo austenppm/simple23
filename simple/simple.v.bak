@@ -1,0 +1,10 @@
+
+
+
+
+
+module simple(
+		input [15:0];
+		output [15:0]
+		)
+		
