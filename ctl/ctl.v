@@ -57,6 +57,28 @@ module ctl(
 			end else begin
 				Input <= 1'b0;
 			end
+			if( (twobit == 2'b11 && opcode != 4'b0111 && opcode != 4'b1101 && opcode != 4'b1110 && opcode != 4'b1111) || (twobit == 2'b11) && (opcode_reg == 4'b1100 || opcode_reg == 4'b1101) )begin
+				opcode <= opcode_reg;
+			end else if(twobit == 2'b10 && brch_reg == 3'b000) begin
+				opcode <= 4'b0110;
+			end else begin
+				opcode <= 4'b0000;
+			end
+			if(twobit == 2'b10 && brch_reg == 3'b111) begin
+				Branch <= inst[10:8];
+			end else if(twobit == 2'b10 && brch_reg == 3'b100) begin
+				Branch <= brch_reg;
+			end else begin
+				Branch <= 3'b111;
+			end
+			if(twobit == 2'b00 ) begin
+				RegDst <= inst[13:11];
+			end else  begin
+				RegDst <= inst[10:8];
+			end
+			
+			
+			
 		end
 	end
 endmodule
