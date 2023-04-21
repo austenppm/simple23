@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 100C Model Setup 'ALUctl[1]'
+Slack : -4.348
+TNS   : -4.348
+
+Type  : Slow 1200mV 100C Model Setup 'ALUctl[0]'
+Slack : -4.010
+TNS   : -58.983
+
+Type  : Slow 1200mV 100C Model Hold 'ALUctl[0]'
+Slack : 0.548
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'ALUctl[1]'
+Slack : 0.597
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'ALUctl[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'ALUctl[1]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV -40C Model Setup 'ALUctl[1]'
+Slack : -3.738
+TNS   : -3.738
+
+Type  : Slow 1200mV -40C Model Setup 'ALUctl[0]'
+Slack : -3.573
+TNS   : -51.126
+
+Type  : Slow 1200mV -40C Model Hold 'ALUctl[0]'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'ALUctl[1]'
+Slack : 0.482
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'ALUctl[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'ALUctl[1]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV -40C Model Setup 'ALUctl[0]'
+Slack : -2.097
+TNS   : -31.246
+
+Type  : Fast 1200mV -40C Model Setup 'ALUctl[1]'
+Slack : -1.486
+TNS   : -1.486
+
+Type  : Fast 1200mV -40C Model Hold 'ALUctl[0]'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'ALUctl[1]'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'ALUctl[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'ALUctl[1]'
+Slack : -3.000
+TNS   : -3.000
+
+------------------------------------------------------------

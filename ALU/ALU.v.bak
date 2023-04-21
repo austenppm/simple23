@@ -1,0 +1,17 @@
+module ALU(
+		input [3:0] ALUctl;
+		input [15:0] A,B;
+		output [15:0] Out;
+		output [3:0] cond;
+		)
+		always @(ALUctl,A,B) begin
+			case (ALUctl)
+				0: {Out <= A + B;
+				1: Out <= A - B;
+				2: Out <= A & B;
+				3: Out <= A | B;
+				4: Out <= A ^ B;
+				5: Out <= A + B;
+				6: Out <= A + B;
+				
+

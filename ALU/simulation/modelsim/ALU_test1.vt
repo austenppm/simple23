@@ -1,0 +1,87 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "12/22/2022 00:14:57"
+                                                                                
+// Verilog Test Bench template for design : ALU
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module ALU_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [15:0] A;
+reg [3:0] ALUctl;
+reg [15:0] B;
+// wires      
+wire [15:0]  Out;
+wire [3:0]  Outcond;
+
+// assign statements (if any)                          
+ALU i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.ALUctl(ALUctl),
+	.B(B),
+	.Out(Out),
+	.Outcond(Outcond)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+A <= 16'b0010011100101011;
+B <= 16'b0000001011110001;
+ALUctl <= 4'b0001;                                     
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin     
+#100 
+A <= 16'b0000001100101011;
+B <= 16'b0001111011110001; 
+#100  
+A <= 16'b1111110001011011;
+B <= 16'b1110001101011011; 
+#100   
+A <= 16'b1110001110111001;
+B <= 16'b1111111100010110; 
+#100
+A <= 16'b0000000011010101;
+B <= 16'b1111111111101010; 
+#100
+A <= 16'b0111111100101011;
+B <= 16'b1111011011110001;
+#100
+A <= 16'b0110011100101011;
+B <= 16'b0110011100101011;                              
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+
