@@ -1,4 +1,4 @@
-module pc(input clock,reset,branchFlag,ce,//changeEnable
+module PC(input clock,reset,branchFlag,ce,//changeEnable
 			input [15:0] dr,
 			output reg [15:0] pc,pcPlusOne);
 

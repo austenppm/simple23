@@ -18,7 +18,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "04/21/2023 11:03:47"
+// Generated on "04/25/2023 00:13:08"
                                                                                 
 // Verilog Test Bench template for design : shifter
 // 
@@ -32,6 +32,7 @@ module shifter_vlg_tst();
 reg eachvec;
 // test vector input registers
 reg [15:0] A;
+reg [3:0] d;
 reg [3:0] opcode;
 // wires                                               
 wire [15:0]  Out;
@@ -43,6 +44,7 @@ shifter i1 (
 	.A(A),
 	.Out(Out),
 	.Outcond(Outcond),
+	.d(d),
 	.opcode(opcode)
 );
 initial                                                

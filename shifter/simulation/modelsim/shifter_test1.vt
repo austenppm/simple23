@@ -33,6 +33,7 @@ reg eachvec;
 // test vector input registers
 reg [15:0] A;
 reg [3:0] opcode;
+reg [3:0] d;
 // wires                                               
 wire [15:0]  Out;
 wire [3:0]  Outcond;
@@ -43,6 +44,7 @@ shifter i1 (
 	.A(A),
 	.Out(Out),
 	.Outcond(Outcond),
+	.d(d),
 	.opcode(opcode)
 );
 initial                                                
@@ -50,7 +52,8 @@ begin
 // code that executes only once                        
 // insert code here --> begin                          
 A <= 16'b1010011100101011;
-opcode <= 4'b1000;        
+opcode <= 4'b1001;    
+d <= 4'b0110;    
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
@@ -61,11 +64,11 @@ begin
 // code executes for every event on sensitivity list   
 // insert code here --> begin                          
 #100
-opcode <= 4'b1001; 
+d <= 4'b1001; 
 #100
-opcode <= 4'b1010;
+d <= 4'b1010;
 #100
-opcode <= 4'b1011;                                                       
+d <= 4'b1011;                                                       
 @eachvec;                                              
 // --> end                                             
 end                                                    
