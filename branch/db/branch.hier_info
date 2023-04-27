@@ -1,0 +1,25 @@
+|branch
+cond[0] => brch_sig.IN0
+cond[1] => ~NO_FANOUT~
+cond[2] => brch_sig.IN1
+cond[2] => brch_sig.IN1
+cond[2] => brch_sig.IN1
+cond[3] => brch_sig.IN1
+brch[0] => Equal0.IN2
+brch[0] => Equal1.IN2
+brch[0] => Equal2.IN0
+brch[0] => Equal3.IN2
+brch[0] => Equal4.IN1
+brch[1] => Equal0.IN1
+brch[1] => Equal1.IN1
+brch[1] => Equal2.IN2
+brch[1] => Equal3.IN0
+brch[1] => Equal4.IN0
+brch[2] => Equal0.IN0
+brch[2] => Equal1.IN0
+brch[2] => Equal2.IN1
+brch[2] => Equal3.IN1
+brch[2] => Equal4.IN2
+brch_sig <= brch_sig.DB_MAX_OUTPUT_PORT_TYPE
+
+
