@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simple
-Thu Apr 27 13:43:29 2023
+Thu Apr 27 14:20:31 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,8 +10,21 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "branch:br"
+ 10. Port Connectivity Checks: "PC:PC"
+ 11. Port Connectivity Checks: "shifter:sf"
+ 12. Port Connectivity Checks: "ctl:ctl"
+ 13. Port Connectivity Checks: "RegisterFile:RF"
+ 14. Port Connectivity Checks: "register:SZCV"
+ 15. Port Connectivity Checks: "register:IR"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -38,20 +51,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Apr 27 13:43:29 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 14:20:31 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; simple                                      ;
 ; Top-level Entity Name              ; simple                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 35                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -157,18 +170,188 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; simple.v                         ; yes             ; User Verilog HDL File        ; C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v       ;         ;
+; ALU.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v          ;         ;
+; RegisterFile.v                   ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/RegisterFile.v ;         ;
+; register.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/register.v     ;         ;
+; shifter.v                        ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v      ;         ;
+; PC.v                             ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v           ;         ;
+; phasecounter.v                   ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v ;         ;
+; ctl.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v          ;         ;
+; branch.v                         ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v       ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 35    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; in[0] ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 35    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |simple                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |simple             ; simple      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "branch:br"                                                                                                                                                                        ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; cond ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PC:PC"                                                                                                                                       ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; ce   ; Input  ; Info     ; Explicitly unconnected                                                                                                                       ;
+; dr   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "dr[15..1]" will be connected to GND. ;
+; pc   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shifter:sf"                                                                                                                                                                         ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; opcode ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ctl:ctl"                                                                                                                      ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                   ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; MemRead  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; MemWrite ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; Output   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; opcode   ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "opcode[3..1]" have no fanouts ;
+; opcode   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; RegDst   ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "RegDst[2..1]" have no fanouts ;
+; RegDst   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; Halt     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                  ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterFile:RF"                                                                                                                                    ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; WriteReg ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "WriteReg[2..1]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:SZCV"                                                                                  ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; WriteData[15..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; DataOut[15..4]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:IR"                                                                                   ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; DataOut[15..14] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 35                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 27 13:43:17 2023
+    Info: Processing started: Thu Apr 27 14:20:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simple -c simple
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (10229): Verilog HDL Expression warning at shifter.v(36): truncated literal to match 3 bits File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 36
-Info (12021): Found 8 design units, including 8 entities, in source file simple.v
+Info (12021): Found 9 design units, including 9 entities, in source file simple.v
     Info (12023): Found entity 1: ALU File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 1
     Info (12023): Found entity 2: RegisterFile File: C:/Users/kazu4/2023-simple-2023-team23/simple/RegisterFile.v Line: 1
     Info (12023): Found entity 3: register File: C:/Users/kazu4/2023-simple-2023-team23/simple/register.v Line: 1
@@ -176,18 +359,18 @@ Info (12021): Found 8 design units, including 8 entities, in source file simple.
     Info (12023): Found entity 5: PC File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 1
     Info (12023): Found entity 6: phasecounter File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 1
     Info (12023): Found entity 7: ctl File: C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v Line: 1
-    Info (12023): Found entity 8: simple File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(55): created implicit net for "WriteReg" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 55
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(57): created implicit net for "ALUorshifter" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(57): created implicit net for "opcode" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(57): created implicit net for "RegDst" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(59): created implicit net for "brch_sig" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(59): created implicit net for "PCIn" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
+    Info (12023): Found entity 8: branch File: C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v Line: 1
+    Info (12023): Found entity 9: simple File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(56): created implicit net for "WriteReg" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 56
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "opcode" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "RegDst" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "brch_sig" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "PCIn" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
 Info (12127): Elaborating entity "simple" for the top level hierarchy
-Warning (10034): Output port "out" at simple.v(15) has no driver File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 15
-Info (12128): Elaborating entity "register" for hierarchy "register:IR" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 49
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 55
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 56
+Warning (10034): Output port "out" at simple.v(16) has no driver File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+Info (12128): Elaborating entity "register" for hierarchy "register:IR" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 50
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 56
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
 Warning (10235): Verilog HDL Always Construct warning at ALU.v(13): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 13
 Warning (10235): Verilog HDL Always Construct warning at ALU.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 20
 Warning (10270): Verilog HDL Case Statement warning at ALU.v(10): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 10
@@ -214,9 +397,9 @@ Info (10041): Inferred latch for "C[13]" at ALU.v(9) File: C:/Users/kazu4/2023-s
 Info (10041): Inferred latch for "C[14]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
 Info (10041): Inferred latch for "C[15]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
 Info (10041): Inferred latch for "C[16]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (12128): Elaborating entity "ctl" for hierarchy "ctl:ctl" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
+Info (12128): Elaborating entity "ctl" for hierarchy "ctl:ctl" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
 Warning (10036): Verilog HDL or VHDL warning at ctl.v(10): object "inst_reg" assigned a value but never read File: C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v Line: 10
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:sf" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:sf" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(16): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 16
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(17): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 17
 Warning (10230): Verilog HDL assignment warning at shifter.v(17): truncated value with size 3 to match size of target (2) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 17
@@ -284,18 +467,79 @@ Info (10041): Inferred latch for "C[28]" at shifter.v(10) File: C:/Users/kazu4/2
 Info (10041): Inferred latch for "C[29]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
 Info (10041): Inferred latch for "C[30]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
 Info (10041): Inferred latch for "C[31]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
 Warning (10230): Verilog HDL assignment warning at PC.v(9): truncated value with size 32 to match size of target (16) File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 9
 Warning (10230): Verilog HDL assignment warning at PC.v(20): truncated value with size 32 to match size of target (16) File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 20
-Info (12128): Elaborating entity "phasecounter" for hierarchy "phasecounter:a0" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
+Info (12128): Elaborating entity "phasecounter" for hierarchy "phasecounter:a0" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 61
 Warning (10230): Verilog HDL assignment warning at phasecounter.v(10): truncated value with size 32 to match size of target (3) File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 10
-Error (12006): Node instance "br" instantiates undefined entity "branch". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 61
+Info (12128): Elaborating entity "branch" for hierarchy "branch:br" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 62
+Warning (10036): Verilog HDL or VHDL warning at branch.v(5): object "c" assigned a value but never read File: C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v Line: 5
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Inst[15]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[14]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[13]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[12]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[11]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[10]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[9]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[8]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[7]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[6]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[5]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[4]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[3]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[2]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[1]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[0]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out[0]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[1]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[2]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[3]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[4]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[5]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[6]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[7]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[8]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[9]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[10]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[11]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[12]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[13]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[14]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
+    Warning (13410): Pin "out[15]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
 Info (144001): Generated suppressed messages file C:/Users/kazu4/2023-simple-2023-team23/simple/output_files/simple.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 56 warnings
-    Error: Peak virtual memory: 4710 megabytes
-    Error: Processing ended: Thu Apr 27 13:43:29 2023
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:12
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "in[0]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[1]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[2]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[3]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[4]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[5]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[6]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[7]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[8]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[9]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[10]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[11]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[12]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[13]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[14]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[15]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "rst_n" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 13
+    Warning (15610): No output dependent on input pin "exec" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 14
+Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 16 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 111 warnings
+    Info: Peak virtual memory: 4733 megabytes
+    Info: Processing ended: Thu Apr 27 14:20:31 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+

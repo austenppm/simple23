@@ -16,7 +16,7 @@ in[13] => ~NO_FANOUT~
 in[14] => ~NO_FANOUT~
 in[15] => ~NO_FANOUT~
 clk => clk.IN1
-rst_n => rst_n.IN8
+rst_n => rst_n.IN9
 exec => ~NO_FANOUT~
 out[0] <= <GND>
 out[1] <= <GND>
@@ -1009,6 +1009,8 @@ Outcond[3] <= C[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |simple|ctl:ctl
+clk => Halt~reg0.CLK
+clk => ALUorShifter~reg0.CLK
 clk => RegDst[0]~reg0.CLK
 clk => RegDst[1]~reg0.CLK
 clk => RegDst[2]~reg0.CLK
@@ -1036,7 +1038,7 @@ clk => opcode_reg[2].CLK
 clk => opcode_reg[3].CLK
 clk => twobit[0].CLK
 clk => twobit[1].CLK
-rst_n => RegDst[0]~reg0.ENA
+rst_n => Halt~reg0.ENA
 rst_n => twobit[1].ENA
 rst_n => twobit[0].ENA
 rst_n => opcode_reg[3].ENA
@@ -1063,6 +1065,8 @@ rst_n => Branch[1]~reg0.ENA
 rst_n => Branch[0]~reg0.ENA
 rst_n => RegDst[2]~reg0.ENA
 rst_n => RegDst[1]~reg0.ENA
+rst_n => RegDst[0]~reg0.ENA
+rst_n => ALUorShifter~reg0.ENA
 inst[0] => ~NO_FANOUT~
 inst[1] => ~NO_FANOUT~
 inst[2] => ~NO_FANOUT~
@@ -1093,6 +1097,8 @@ ALUSrc2 <= ALUSrc2~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MemtoReg <= MemtoReg~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Output <= Output~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Input <= Input~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ALUorShifter <= ALUorShifter~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Halt <= Halt~reg0.DB_MAX_OUTPUT_PORT_TYPE
 opcode[0] <= opcode[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 opcode[1] <= opcode[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 opcode[2] <= opcode[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1455,5 +1461,30 @@ p[1] <= p[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 p[2] <= p[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 p[3] <= p[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 p[4] <= p[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple|branch:br
+cond[0] => brch_sig.IN0
+cond[1] => ~NO_FANOUT~
+cond[2] => brch_sig.IN1
+cond[2] => brch_sig.IN1
+cond[2] => brch_sig.IN1
+cond[3] => brch_sig.IN1
+brch[0] => Equal0.IN2
+brch[0] => Equal1.IN2
+brch[0] => Equal2.IN0
+brch[0] => Equal3.IN2
+brch[0] => Equal4.IN1
+brch[1] => Equal0.IN1
+brch[1] => Equal1.IN1
+brch[1] => Equal2.IN2
+brch[1] => Equal3.IN0
+brch[1] => Equal4.IN0
+brch[2] => Equal0.IN0
+brch[2] => Equal1.IN0
+brch[2] => Equal2.IN1
+brch[2] => Equal3.IN1
+brch[2] => Equal4.IN2
+brch_sig <= brch_sig.DB_MAX_OUTPUT_PORT_TYPE
 
 
