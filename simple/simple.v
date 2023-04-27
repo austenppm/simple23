@@ -41,6 +41,7 @@ module simple(
 		wire [15:0] shifterOut;
 		wire [3:0] shiftercondout;
 		wire [15:0] Inst;
+		wire [15:0] pc;
 		wire [15:0] pcPlusOne;
 		wire [15:0] pcIn;
 		wire [4:0] clk2;
@@ -53,10 +54,11 @@ module simple(
 		register MDR(.clk(clk2[0]),.rst_n(rst_n),.WriteData(MDRIn),.DataOut(MDROut));
 		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(WriteReg),.WriteData(WriteData),.clk(clk2[0]),.RegWrite(RegWrite),.Data1(Data1),.Data2(Data2));
 		ALU ALU(.ALUctl(ALUctl),.A(A),.B(B),.Out(ALUOut),.Outcond(ALUcondout));
-		ctl ctl(.clk(clk2[3]),.rst_n(rst_n),.inst(Inst),.MemRead(),.MemWrite(),.RegWrite(),.ALUSrc1(),.ALUSrc2(),.MemtoReg(),.Output(),.Input(),.opcode(),.RegDst(),.Branch());
+		ctl ctl(.clk(clk2[3]),.rst_n(rst_n),.inst(Inst),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorshifter(ALUorshifter),.Output(Output),.Input(Input),.opcode(opcode),.RegDst(RegDst),.Branch(Branch));
 		shifter sf(.A(shifterIn),.opcode(shifterctl),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
-		PC PC(.clock(clk2[4]),.reset(),.branchFlag(),.ce(),.dr(PCIn),.pc(),.pcPlusOne(pcPlusOne));
+		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig),.ce(),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
+		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
 		assign dshift = IROut[3:0];
@@ -65,15 +67,15 @@ module simple(
 					  BROut;
 		assign B = (ALUSrc2==1'b1) ? exd:
 					  AROut;
-		assign DRIn = (ALUSrc2==1'b1) ? ALUOut:
+		assign DRIn = (ALUorshifter==1'b0) ? ALUOut:
 					  shifterOut;
+		assign SZCVIn = (ALUorshifter==1'b0) ? ALUcondout:
+					  shiftercondout;
 		assign MDRIn = (Input==1'b1) ? pcPlusOne:
 					  BROut;
 		assign WriteData = (MemtoReg) ? MDROut:
 					  DROut;
 		assign exd = (d[7]==1'b0) ? {8'b00000000,d}:
-					  {8'b11111111,d};]
-		assign pcsel = (Branch==3'b000) !Z:
-							(Branch==3'b001) 
+					  {8'b11111111,d};
 endmodule
 		
