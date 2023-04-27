@@ -1,7 +1,7 @@
 module ctl(
 	input clk,rst_n,
 	input [15:0] inst,
-	output reg MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorShifter,
+	output reg MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorShifter,Halt,
 	output reg [3:0] opcode,
 	output reg [2:0] RegDst,
 	output reg [2:0] Branch);
@@ -80,6 +80,11 @@ module ctl(
 				ALUorShifter <= 1'b1;
 			end else begin
 				ALUorShifter <= 1'b0;
+			end
+			if(twobit == 2'b11 && opcode_reg == 4'b1111) begin
+				Halt <= 1'b0;
+			end else begin
+				Halt <= 1'b1;
 			end
 			
 		end
