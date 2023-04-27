@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simple
-Thu Apr 27 16:46:07 2023
+Thu Apr 27 16:55:20 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -16,27 +16,26 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|altsyncram_14b2:altsyncram1
- 16. Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component
- 17. Parameter Settings for Inferred Entity Instance: phasecounter:a0|lpm_divide:Mod0
- 18. altsyncram Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "ram:ram"
- 20. Port Connectivity Checks: "branch:br"
- 21. Port Connectivity Checks: "PC:PC"
- 22. Port Connectivity Checks: "shifter:sf"
- 23. Port Connectivity Checks: "ctl:ctl"
- 24. Port Connectivity Checks: "RegisterFile:RF"
- 25. Port Connectivity Checks: "register:SZCV"
- 26. Port Connectivity Checks: "register:IR"
- 27. In-System Memory Content Editor Settings
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|altsyncram_14b2:altsyncram1
+ 15. Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component
+ 16. Parameter Settings for Inferred Entity Instance: phasecounter:a0|lpm_divide:Mod0
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "ram:ram"
+ 19. Port Connectivity Checks: "branch:br"
+ 20. Port Connectivity Checks: "PC:PC"
+ 21. Port Connectivity Checks: "shifter:sf"
+ 22. Port Connectivity Checks: "ctl:ctl"
+ 23. Port Connectivity Checks: "RegisterFile:RF"
+ 24. Port Connectivity Checks: "register:SZCV"
+ 25. Port Connectivity Checks: "register:IR"
+ 26. In-System Memory Content Editor Settings
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -63,15 +62,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 27 16:46:07 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 16:55:20 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; simple                                      ;
 ; Top-level Entity Name              ; simple                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 276                                         ;
-;     Total combinational functions  ; 244                                         ;
-;     Dedicated logic registers      ; 167                                         ;
-; Total registers                    ; 167                                         ;
+; Total logic elements               ; 565                                         ;
+;     Total combinational functions  ; 444                                         ;
+;     Dedicated logic registers      ; 371                                         ;
+; Total registers                    ; 371                                         ;
 ; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536                                      ;
@@ -235,37 +234,37 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 276                      ;
-;                                             ;                          ;
-; Total combinational functions               ; 244                      ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 92                       ;
-;     -- 3 input functions                    ; 64                       ;
-;     -- <=2 input functions                  ; 88                       ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 196                      ;
-;     -- arithmetic mode                      ; 48                       ;
-;                                             ;                          ;
-; Total registers                             ; 167                      ;
-;     -- Dedicated logic registers            ; 167                      ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 35                       ;
-; Total memory bits                           ; 65536                    ;
-;                                             ;                          ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 176                      ;
-; Total fan-out                               ; 1789                     ;
-; Average fan-out                             ; 3.54                     ;
-+---------------------------------------------+--------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 565         ;
+;                                             ;             ;
+; Total combinational functions               ; 444         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 115         ;
+;     -- 3 input functions                    ; 199         ;
+;     -- <=2 input functions                  ; 130         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 376         ;
+;     -- arithmetic mode                      ; 68          ;
+;                                             ;             ;
+; Total registers                             ; 371         ;
+;     -- Dedicated logic registers            ; 371         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 35          ;
+; Total memory bits                           ; 65536       ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; rst_n~input ;
+; Maximum fan-out                             ; 205         ;
+; Total fan-out                               ; 3028        ;
+; Average fan-out                             ; 3.33        ;
++---------------------------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -273,9 +272,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |simple                                                                                                                                 ; 244 (1)             ; 167 (0)                   ; 65536       ; 0            ; 0       ; 0         ; 35   ; 0            ; |simple                                                                                                                                                                                                                                                                                                                                            ; simple                            ; work         ;
-;    |PC:PC|                                                                                                                              ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|PC:PC                                                                                                                                                                                                                                                                                                                                      ; PC                                ; work         ;
+; |simple                                                                                                                                 ; 444 (49)            ; 371 (0)                   ; 65536       ; 0            ; 0       ; 0         ; 35   ; 0            ; |simple                                                                                                                                                                                                                                                                                                                                            ; simple                            ; work         ;
+;    |ALU:ALU|                                                                                                                            ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ALU:ALU                                                                                                                                                                                                                                                                                                                                    ; ALU                               ; work         ;
+;    |PC:PC|                                                                                                                              ; 36 (36)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|PC:PC                                                                                                                                                                                                                                                                                                                                      ; PC                                ; work         ;
+;    |RegisterFile:RF|                                                                                                                    ; 32 (32)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|RegisterFile:RF                                                                                                                                                                                                                                                                                                                            ; RegisterFile                      ; work         ;
 ;    |RemoveChattering:rc|                                                                                                                ; 13 (13)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|RemoveChattering:rc                                                                                                                                                                                                                                                                                                                        ; RemoveChattering                  ; work         ;
+;    |ctl:ctl|                                                                                                                            ; 25 (25)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ctl:ctl                                                                                                                                                                                                                                                                                                                                    ; ctl                               ; work         ;
 ;    |phasecounter:a0|                                                                                                                    ; 24 (6)              ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0                                                                                                                                                                                                                                                                                                                            ; phasecounter                      ; work         ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
 ;          |lpm_divide_h9m:auto_generated|                                                                                                ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0|lpm_divide:Mod0|lpm_divide_h9m:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_h9m                    ; work         ;
@@ -287,6 +289,12 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsyncram_14b2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|altsyncram_14b2:altsyncram1                                                                                                                                                                                                                                         ; altsyncram_14b2                   ; work         ;
 ;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 72 (56)             ; 50 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                           ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|                                                                  ; 16 (16)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
+;    |register:AR|                                                                                                                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|register:AR                                                                                                                                                                                                                                                                                                                                ; register                          ; work         ;
+;    |register:BR|                                                                                                                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|register:BR                                                                                                                                                                                                                                                                                                                                ; register                          ; work         ;
+;    |register:DR|                                                                                                                        ; 17 (17)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|register:DR                                                                                                                                                                                                                                                                                                                                ; register                          ; work         ;
+;    |register:IR|                                                                                                                        ; 14 (14)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|register:IR                                                                                                                                                                                                                                                                                                                                ; register                          ; work         ;
+;    |register:MDR|                                                                                                                       ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|register:MDR                                                                                                                                                                                                                                                                                                                               ; register                          ; work         ;
+;    |register:SZCV|                                                                                                                      ; 7 (7)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|register:SZCV                                                                                                                                                                                                                                                                                                                              ; register                          ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 122 (1)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 121 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 121 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -327,324 +335,122 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+----------------------------------------+
 ; Register name                           ; Reason for Removal                     ;
 +-----------------------------------------+----------------------------------------+
-; ctl:ctl|twobit[0,1]                     ; Stuck at GND due to stuck port data_in ;
-; ctl:ctl|opcode_reg[0..3]                ; Stuck at GND due to stuck port data_in ;
-; ctl:ctl|brch_reg[0..2]                  ; Stuck at GND due to stuck port data_in ;
-; register:IR|RegData[0..13]              ; Stuck at GND due to stuck port data_in ;
-; ctl:ctl|opcode[0..3]                    ; Lost fanout                            ;
-; ctl:ctl|Halt                            ; Stuck at VCC due to stuck port data_in ;
-; ctl:ctl|MemWrite                        ; Stuck at GND due to stuck port data_in ;
-; ctl:ctl|ALUSrc1                         ; Stuck at GND due to stuck port data_in ;
-; ctl:ctl|ALUSrc2                         ; Stuck at VCC due to stuck port data_in ;
-; ctl:ctl|Input                           ; Stuck at GND due to stuck port data_in ;
-; ctl:ctl|Branch[0..2]                    ; Stuck at VCC due to stuck port data_in ;
-; ctl:ctl|ALUorShifter                    ; Stuck at GND due to stuck port data_in ;
-; register:IR|DataOut[0..13]              ; Stuck at GND due to stuck port data_in ;
-; register:AR|DataOut[15]                 ; Lost fanout                            ;
-; register:AR|RegData[15]                 ; Lost fanout                            ;
-; register:AR|DataOut[14]                 ; Lost fanout                            ;
-; register:AR|RegData[14]                 ; Lost fanout                            ;
-; register:AR|DataOut[13]                 ; Lost fanout                            ;
-; register:AR|RegData[13]                 ; Lost fanout                            ;
-; register:AR|DataOut[12]                 ; Lost fanout                            ;
-; register:AR|RegData[12]                 ; Lost fanout                            ;
-; register:AR|DataOut[11]                 ; Lost fanout                            ;
-; register:AR|RegData[11]                 ; Lost fanout                            ;
-; register:AR|DataOut[10]                 ; Lost fanout                            ;
-; register:AR|RegData[10]                 ; Lost fanout                            ;
-; register:AR|DataOut[9]                  ; Lost fanout                            ;
-; register:AR|RegData[9]                  ; Lost fanout                            ;
-; register:AR|DataOut[8]                  ; Lost fanout                            ;
-; register:AR|RegData[8]                  ; Lost fanout                            ;
-; register:AR|DataOut[7]                  ; Lost fanout                            ;
-; register:AR|RegData[7]                  ; Lost fanout                            ;
-; register:AR|DataOut[6]                  ; Lost fanout                            ;
-; register:AR|RegData[6]                  ; Lost fanout                            ;
-; register:AR|DataOut[5]                  ; Lost fanout                            ;
-; register:AR|RegData[5]                  ; Lost fanout                            ;
-; register:AR|DataOut[4]                  ; Lost fanout                            ;
-; register:AR|RegData[4]                  ; Lost fanout                            ;
-; register:AR|DataOut[3]                  ; Lost fanout                            ;
-; register:AR|RegData[3]                  ; Lost fanout                            ;
-; register:AR|DataOut[2]                  ; Lost fanout                            ;
-; register:AR|RegData[2]                  ; Lost fanout                            ;
-; register:AR|DataOut[1]                  ; Lost fanout                            ;
-; register:AR|RegData[1]                  ; Lost fanout                            ;
-; register:AR|DataOut[0]                  ; Lost fanout                            ;
-; register:AR|RegData[0]                  ; Lost fanout                            ;
-; register:SZCV|DataOut[0]                ; Lost fanout                            ;
-; register:SZCV|RegData[0]                ; Lost fanout                            ;
-; register:SZCV|DataOut[3]                ; Lost fanout                            ;
-; register:SZCV|RegData[3]                ; Lost fanout                            ;
-; register:SZCV|DataOut[2]                ; Lost fanout                            ;
-; register:SZCV|RegData[2]                ; Lost fanout                            ;
-; ctl:ctl|RegWrite                        ; Merged with ctl:ctl|MemtoReg           ;
-; ctl:ctl|MemtoReg                        ; Stuck at VCC due to stuck port data_in ;
-; register:MDR|DataOut[0]                 ; Lost fanout                            ;
-; register:MDR|RegData[0]                 ; Lost fanout                            ;
-; register:MDR|DataOut[1]                 ; Lost fanout                            ;
-; register:MDR|RegData[1]                 ; Lost fanout                            ;
-; register:MDR|DataOut[2]                 ; Lost fanout                            ;
-; register:MDR|RegData[2]                 ; Lost fanout                            ;
-; register:MDR|DataOut[3]                 ; Lost fanout                            ;
-; register:MDR|RegData[3]                 ; Lost fanout                            ;
-; register:MDR|DataOut[4]                 ; Lost fanout                            ;
-; register:MDR|RegData[4]                 ; Lost fanout                            ;
-; register:MDR|DataOut[5]                 ; Lost fanout                            ;
-; register:MDR|RegData[5]                 ; Lost fanout                            ;
-; register:MDR|DataOut[6]                 ; Lost fanout                            ;
-; register:MDR|RegData[6]                 ; Lost fanout                            ;
-; register:MDR|DataOut[7]                 ; Lost fanout                            ;
-; register:MDR|RegData[7]                 ; Lost fanout                            ;
-; register:MDR|DataOut[8]                 ; Lost fanout                            ;
-; register:MDR|RegData[8]                 ; Lost fanout                            ;
-; register:MDR|DataOut[9]                 ; Lost fanout                            ;
-; register:MDR|RegData[9]                 ; Lost fanout                            ;
-; register:MDR|DataOut[10]                ; Lost fanout                            ;
-; register:MDR|RegData[10]                ; Lost fanout                            ;
-; register:MDR|DataOut[11]                ; Lost fanout                            ;
-; register:MDR|RegData[11]                ; Lost fanout                            ;
-; register:MDR|DataOut[12]                ; Lost fanout                            ;
-; register:MDR|RegData[12]                ; Lost fanout                            ;
-; register:MDR|DataOut[13]                ; Lost fanout                            ;
-; register:MDR|RegData[13]                ; Lost fanout                            ;
-; register:MDR|DataOut[14]                ; Lost fanout                            ;
-; register:MDR|RegData[14]                ; Lost fanout                            ;
-; register:MDR|DataOut[15]                ; Lost fanout                            ;
-; register:MDR|RegData[15]                ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~16              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~17              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~18              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~19              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~20              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~21              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~22              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~23              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~24              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~25              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~26              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~27              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~28              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~29              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~30              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~31              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~32              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~33              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~34              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~35              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~36              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~37              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~38              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~39              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~40              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~41              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~42              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~43              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~44              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~45              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~46              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~47              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~48              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~49              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~50              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~51              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~52              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~53              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~54              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~55              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~56              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~57              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~58              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~59              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~60              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~61              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~62              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~63              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~64              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~65              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~66              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~67              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~68              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~69              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~70              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~71              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~72              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~73              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~74              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~75              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~76              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~77              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~78              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~79              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~80              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~81              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~82              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~83              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~84              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~85              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~86              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~87              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~88              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~89              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~90              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~91              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~92              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~93              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~94              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~95              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~96              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~97              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~98              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~99              ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~100             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~101             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~102             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~103             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~104             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~105             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~106             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~107             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~108             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~109             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~110             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~111             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~112             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~113             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~114             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~115             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~116             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~117             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~118             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~119             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~120             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~121             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~122             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~123             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~124             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~125             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~126             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~127             ; Lost fanout                            ;
-; RegisterFile:RF|RegFile~0               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~1               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~2               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~3               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~4               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~5               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~6               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~7               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~8               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~9               ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~10              ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~11              ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~12              ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~13              ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~14              ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|RegFile~15              ; Stuck at GND due to stuck port data_in ;
-; register:BR|RegData[0..15]              ; Stuck at GND due to stuck port data_in ;
-; register:BR|DataOut[0..15]              ; Stuck at GND due to stuck port data_in ;
-; register:DR|RegData[0..15]              ; Stuck at GND due to stuck port data_in ;
-; register:DR|DataOut[0..15]              ; Stuck at GND due to stuck port data_in ;
-; PC:PC|pc[12..15]                        ; Lost fanout                            ;
-; Total Number of Removed Registers = 318 ;                                        ;
+; register:SZCV|DataOut[3]                ; Merged with register:DR|DataOut[15]    ;
+; register:SZCV|RegData[3]                ; Merged with register:DR|RegData[15]    ;
+; RegisterFile:RF|RegFile~31              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~47              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~63              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~79              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~95              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~111             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~127             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~30              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~46              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~62              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~78              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~94              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~110             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~126             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~29              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~45              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~61              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~77              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~93              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~109             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~125             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~28              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~44              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~60              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~76              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~92              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~108             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~124             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~27              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~43              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~59              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~75              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~91              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~107             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~123             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~26              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~42              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~58              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~74              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~90              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~106             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~122             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~25              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~41              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~57              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~73              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~89              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~105             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~121             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~24              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~40              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~56              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~72              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~88              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~104             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~120             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~23              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~39              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~55              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~71              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~87              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~103             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~119             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~22              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~38              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~54              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~70              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~86              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~102             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~118             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~21              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~37              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~53              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~69              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~85              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~101             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~117             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~20              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~36              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~52              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~68              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~84              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~100             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~116             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~19              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~35              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~51              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~67              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~83              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~99              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~115             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~18              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~34              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~50              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~66              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~82              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~98              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~114             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~17              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~33              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~49              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~65              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~81              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~97              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~113             ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~16              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~32              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~48              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~64              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~80              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~96              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~112             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 114 ;                                        ;
 +-----------------------------------------+----------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                        ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------------------+
-; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                                    ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------------------+
-; ctl:ctl|twobit[1]          ; Stuck at GND              ; ctl:ctl|opcode[3], ctl:ctl|opcode[2], ctl:ctl|opcode[1], ctl:ctl|opcode[0], ctl:ctl|Halt, ;
-;                            ; due to stuck port data_in ; ctl:ctl|MemWrite, ctl:ctl|ALUSrc2, ctl:ctl|Input, ctl:ctl|ALUorShifter,                   ;
-;                            ;                           ; register:SZCV|DataOut[2], register:SZCV|RegData[2], ctl:ctl|MemtoReg,                     ;
-;                            ;                           ; register:MDR|DataOut[8], register:MDR|RegData[8], register:MDR|DataOut[9],                ;
-;                            ;                           ; register:MDR|RegData[9], register:MDR|DataOut[10], register:MDR|RegData[10],              ;
-;                            ;                           ; register:MDR|DataOut[11], register:MDR|RegData[11], register:MDR|DataOut[12],             ;
-;                            ;                           ; register:MDR|RegData[12], register:MDR|DataOut[13], register:MDR|RegData[13],             ;
-;                            ;                           ; register:MDR|DataOut[14], register:MDR|RegData[14], register:MDR|DataOut[15],             ;
-;                            ;                           ; register:MDR|RegData[15], register:BR|RegData[0], register:BR|RegData[1],                 ;
-;                            ;                           ; register:BR|RegData[2], register:BR|RegData[3], register:BR|RegData[4],                   ;
-;                            ;                           ; register:BR|RegData[5], register:BR|RegData[6], register:BR|DataOut[0],                   ;
-;                            ;                           ; register:BR|DataOut[1], register:BR|DataOut[2], register:BR|DataOut[3],                   ;
-;                            ;                           ; register:BR|DataOut[4], register:BR|DataOut[5], register:BR|DataOut[6],                   ;
-;                            ;                           ; register:DR|RegData[0], register:DR|RegData[1], register:DR|RegData[2],                   ;
-;                            ;                           ; register:DR|RegData[3], register:DR|RegData[4], register:DR|RegData[5],                   ;
-;                            ;                           ; register:DR|RegData[6], register:DR|RegData[7], register:DR|RegData[8],                   ;
-;                            ;                           ; register:DR|RegData[9], register:DR|RegData[10], register:DR|RegData[11],                 ;
-;                            ;                           ; register:DR|RegData[12], register:DR|RegData[13], register:DR|RegData[14],                ;
-;                            ;                           ; register:DR|DataOut[0], register:DR|DataOut[1], register:DR|DataOut[2],                   ;
-;                            ;                           ; register:DR|DataOut[3], register:DR|DataOut[4], register:DR|DataOut[5],                   ;
-;                            ;                           ; register:DR|DataOut[6], register:DR|DataOut[7], register:DR|DataOut[8],                   ;
-;                            ;                           ; register:DR|DataOut[9], register:DR|DataOut[10], register:DR|DataOut[11],                 ;
-;                            ;                           ; register:DR|DataOut[12], register:DR|DataOut[13], register:DR|DataOut[14]                 ;
-; ctl:ctl|brch_reg[2]        ; Stuck at GND              ; ctl:ctl|ALUSrc1, ctl:ctl|Branch[2], register:AR|DataOut[15], register:AR|RegData[15],     ;
-;                            ; due to stuck port data_in ; register:AR|DataOut[14], register:AR|RegData[14], register:AR|DataOut[13],                ;
-;                            ;                           ; register:AR|RegData[13], register:AR|DataOut[12], register:AR|RegData[12],                ;
-;                            ;                           ; register:AR|DataOut[11], register:AR|RegData[11], register:AR|DataOut[10],                ;
-;                            ;                           ; register:AR|RegData[10], register:AR|DataOut[8], register:AR|RegData[8],                  ;
-;                            ;                           ; register:AR|DataOut[7], register:AR|RegData[7], register:AR|DataOut[6],                   ;
-;                            ;                           ; register:AR|RegData[6], register:AR|DataOut[5], register:AR|RegData[5],                   ;
-;                            ;                           ; register:AR|DataOut[4], register:AR|RegData[4], register:AR|DataOut[3],                   ;
-;                            ;                           ; register:AR|RegData[3], register:AR|DataOut[2], register:AR|RegData[2],                   ;
-;                            ;                           ; register:AR|DataOut[1], register:AR|RegData[1], register:AR|DataOut[0],                   ;
-;                            ;                           ; register:AR|RegData[0], register:DR|RegData[15], register:DR|DataOut[15]                  ;
-; register:IR|RegData[8]     ; Stuck at GND              ; register:IR|DataOut[8], register:MDR|DataOut[0], register:MDR|RegData[0],                 ;
-;                            ; due to stuck port data_in ; register:MDR|DataOut[1], register:MDR|RegData[1], register:MDR|DataOut[2],                ;
-;                            ;                           ; register:MDR|RegData[2], register:MDR|DataOut[3], register:MDR|RegData[3],                ;
-;                            ;                           ; register:MDR|DataOut[4], register:MDR|RegData[4], register:MDR|DataOut[5],                ;
-;                            ;                           ; register:MDR|RegData[5], register:MDR|DataOut[6], register:MDR|RegData[6]                 ;
-; register:IR|RegData[7]     ; Stuck at GND              ; register:IR|DataOut[7], register:AR|DataOut[9], register:AR|RegData[9]                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~7  ; Stuck at GND              ; register:BR|RegData[7], register:BR|DataOut[7]                                            ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~8  ; Stuck at GND              ; register:BR|RegData[8], register:BR|DataOut[8]                                            ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~9  ; Stuck at GND              ; register:BR|RegData[9], register:BR|DataOut[9]                                            ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~10 ; Stuck at GND              ; register:BR|RegData[10], register:BR|DataOut[10]                                          ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~11 ; Stuck at GND              ; register:BR|RegData[11], register:BR|DataOut[11]                                          ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~12 ; Stuck at GND              ; register:BR|RegData[12], register:BR|DataOut[12]                                          ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~13 ; Stuck at GND              ; register:BR|RegData[13], register:BR|DataOut[13]                                          ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~14 ; Stuck at GND              ; register:BR|RegData[14], register:BR|DataOut[14]                                          ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; RegisterFile:RF|RegFile~15 ; Stuck at GND              ; register:BR|RegData[15], register:BR|DataOut[15]                                          ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; ctl:ctl|brch_reg[1]        ; Stuck at GND              ; ctl:ctl|Branch[1]                                                                         ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; ctl:ctl|brch_reg[0]        ; Stuck at GND              ; ctl:ctl|Branch[0]                                                                         ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[0]     ; Stuck at GND              ; register:IR|DataOut[0]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[1]     ; Stuck at GND              ; register:IR|DataOut[1]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[2]     ; Stuck at GND              ; register:IR|DataOut[2]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[3]     ; Stuck at GND              ; register:IR|DataOut[3]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[4]     ; Stuck at GND              ; register:IR|DataOut[4]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[5]     ; Stuck at GND              ; register:IR|DataOut[5]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[6]     ; Stuck at GND              ; register:IR|DataOut[6]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[9]     ; Stuck at GND              ; register:IR|DataOut[9]                                                                    ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[10]    ; Stuck at GND              ; register:IR|DataOut[10]                                                                   ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[11]    ; Stuck at GND              ; register:IR|DataOut[11]                                                                   ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[12]    ; Stuck at GND              ; register:IR|DataOut[12]                                                                   ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:IR|RegData[13]    ; Stuck at GND              ; register:IR|DataOut[13]                                                                   ;
-;                            ; due to stuck port data_in ;                                                                                           ;
-; register:SZCV|DataOut[0]   ; Lost Fanouts              ; register:SZCV|RegData[0]                                                                  ;
-; register:SZCV|DataOut[3]   ; Lost Fanouts              ; register:SZCV|RegData[3]                                                                  ;
-; register:MDR|DataOut[7]    ; Lost Fanouts              ; register:MDR|RegData[7]                                                                   ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -652,12 +458,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 167   ;
-; Number of registers using Synchronous Clear  ; 24    ;
-; Number of registers using Synchronous Load   ; 22    ;
+; Total registers                              ; 371   ;
+; Number of registers using Synchronous Clear  ; 60    ;
+; Number of registers using Synchronous Load   ; 54    ;
 ; Number of registers using Asynchronous Clear ; 73    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 106   ;
+; Number of registers using Clock Enable       ; 242   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -678,12 +484,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[4]                                                   ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]                                                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[2] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[2]      ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[11]                                                  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[11]                                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |simple|ctl:ctl|Branch[0]                                                                                                                                                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |simple|register:MDR|RegData[12]                                                                                                                                               ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |simple|register:DR|RegData[0]                                                                                                                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[0] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |simple|PC:PC|pc[6]                                                                                                                                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[3]      ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[1]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -800,14 +610,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ram:ram"                                                                                                                                                                              ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (12 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; q       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram:ram"                                                                                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (12 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -895,26 +704,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 62                          ;
-; cycloneiii_ff         ; 81                          ;
+; cycloneiii_ff         ; 285                         ;
 ;     CLR               ; 21                          ;
-;     ENA               ; 29                          ;
+;     ENA               ; 165                         ;
 ;     ENA CLR           ; 7                           ;
 ;     ENA CLR SLD       ; 12                          ;
-;     SCLR              ; 12                          ;
-; cycloneiii_lcell_comb ; 122                         ;
-;     arith             ; 40                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 7                           ;
-;     normal            ; 82                          ;
-;         0 data inputs ; 3                           ;
+;     SCLR              ; 16                          ;
+;     SCLR SLD          ; 32                          ;
+;     plain             ; 32                          ;
+; cycloneiii_lcell_comb ; 322                         ;
+;     arith             ; 60                          ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 22                          ;
+;     normal            ; 262                         ;
+;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 26                          ;
-;         4 data inputs ; 38                          ;
+;         2 data inputs ; 46                          ;
+;         3 data inputs ; 146                         ;
+;         4 data inputs ; 61                          ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.50                        ;
-; Average LUT depth     ; 2.09                        ;
+; Max LUT depth         ; 9.30                        ;
+; Average LUT depth     ; 2.96                        ;
 +-----------------------+-----------------------------+
 
 
@@ -933,7 +744,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 27 16:45:35 2023
+    Info: Processing started: Thu Apr 27 16:54:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simple -c simple
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1108,25 +919,8 @@ Info (12128): Elaborating entity "RemoveChattering" for hierarchy "RemoveChatter
 Warning (10230): Verilog HDL assignment warning at RemoveChattering.v(16): truncated value with size 32 to match size of target (8) File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 16
 Warning (10230): Verilog HDL assignment warning at RemoveChattering.v(18): truncated value with size 32 to match size of target (1) File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 18
 Warning (10230): Verilog HDL assignment warning at RemoveChattering.v(36): truncated value with size 32 to match size of target (1) File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 36
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Inst[15]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[14]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[13]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[12]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[11]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[10]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[9]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[8]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[7]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[6]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[5]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[4]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[3]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[2]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[1]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
-    Warning (12110): Net "Inst[0]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.04.27.16:45:52 Progress: Loading sld6c6326ae/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.04.27.16:55:10 Progress: Loading sld6c6326ae/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1238,7 +1032,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out[14]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
     Warning (13410): Pin "out[15]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 190 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/kazu4/2023-simple-2023-team23/simple/output_files/simple.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1259,16 +1052,16 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "in[13]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
     Warning (15610): No output dependent on input pin "in[14]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
     Warning (15610): No output dependent on input pin "in[15]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
-Info (21057): Implemented 336 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 626 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 280 logic cells
+    Info (21061): Implemented 570 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 162 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 145 warnings
     Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Thu Apr 27 16:46:07 2023
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Processing ended: Thu Apr 27 16:55:20 2023
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+

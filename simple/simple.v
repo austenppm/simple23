@@ -61,7 +61,7 @@ module simple(
 		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig),.ce(ce),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig));
-		ram ram(.address(pc),.clock(clk2[0]),.data(DROut),.wren(MemWrite));
+		ram ram(.address(pc),.clock(clk2[0]),.data(DROut),.wren(MemWrite),.q(Inst));
 		RemoveChattering rc(.clk(clk),.botton(exec),.rst_n(rst_n),.signal(ce2));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
