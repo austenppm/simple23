@@ -15,9 +15,9 @@ in[12] => ~NO_FANOUT~
 in[13] => ~NO_FANOUT~
 in[14] => ~NO_FANOUT~
 in[15] => ~NO_FANOUT~
-clk => clk.IN1
-rst_n => rst_n.IN9
-exec => ~NO_FANOUT~
+clk => clk.IN2
+rst_n => rst_n.IN10
+exec => exec.IN1
 out[0] <= <GND>
 out[1] <= <GND>
 out[2] <= <GND>
@@ -2509,5 +2509,30 @@ ENA => WORD_SR.OUTPUTSELECT
 ENA => WORD_SR.OUTPUTSELECT
 TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple|RemoveChattering:rc
+clk => ten_hz_clk.CLK
+clk => remove_chat[0].CLK
+clk => remove_chat[1].CLK
+clk => remove_chat[2].CLK
+clk => remove_chat[3].CLK
+clk => remove_chat[4].CLK
+clk => remove_chat[5].CLK
+clk => remove_chat[6].CLK
+clk => remove_chat[7].CLK
+botton => botton_reg.DATAIN
+rst_n => ten_hz_clk.ACLR
+rst_n => remove_chat[0].ACLR
+rst_n => remove_chat[1].ACLR
+rst_n => remove_chat[2].ACLR
+rst_n => remove_chat[3].ACLR
+rst_n => remove_chat[4].ACLR
+rst_n => remove_chat[5].ACLR
+rst_n => remove_chat[6].ACLR
+rst_n => remove_chat[7].ACLR
+rst_n => signal~reg0.ACLR
+rst_n => botton_reg.ACLR
+signal <= signal~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

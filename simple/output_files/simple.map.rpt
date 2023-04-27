@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simple
-Thu Apr 27 16:13:53 2023
+Thu Apr 27 16:46:07 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,19 +10,33 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis IP Cores Summary
-  6. Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|altsyncram_14b2:altsyncram1
-  7. Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component
-  8. Port Connectivity Checks: "ram:ram"
-  9. Port Connectivity Checks: "branch:br"
- 10. Port Connectivity Checks: "PC:PC"
- 11. Port Connectivity Checks: "shifter:sf"
- 12. Port Connectivity Checks: "ctl:ctl"
- 13. Port Connectivity Checks: "RegisterFile:RF"
- 14. Port Connectivity Checks: "register:SZCV"
- 15. Port Connectivity Checks: "register:IR"
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|altsyncram_14b2:altsyncram1
+ 16. Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component
+ 17. Parameter Settings for Inferred Entity Instance: phasecounter:a0|lpm_divide:Mod0
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "ram:ram"
+ 20. Port Connectivity Checks: "branch:br"
+ 21. Port Connectivity Checks: "PC:PC"
+ 22. Port Connectivity Checks: "shifter:sf"
+ 23. Port Connectivity Checks: "ctl:ctl"
+ 24. Port Connectivity Checks: "RegisterFile:RF"
+ 25. Port Connectivity Checks: "register:SZCV"
+ 26. Port Connectivity Checks: "register:IR"
+ 27. In-System Memory Content Editor Settings
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+ 31. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -49,20 +63,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Apr 27 16:13:53 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 16:46:07 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; simple                                      ;
 ; Top-level Entity Name              ; simple                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 276                                         ;
+;     Total combinational functions  ; 244                                         ;
+;     Dedicated logic registers      ; 167                                         ;
+; Total registers                    ; 167                                         ;
+; Total pins                         ; 35                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 65,536                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -161,11 +175,137 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                               ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                     ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
+; BubbleSort.mif                                                     ; yes             ; User Memory Initialization File              ; C:/Users/kazu4/2023-simple-2023-team23/simple/BubbleSort.mif                                                     ;             ;
+; simple.v                                                           ; yes             ; User Verilog HDL File                        ; C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v                                                           ;             ;
+; ram.v                                                              ; yes             ; User Wizard-Generated File                   ; C:/Users/kazu4/2023-simple-2023-team23/simple/ram.v                                                              ;             ;
+; ALU.v                                                              ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v                                                              ;             ;
+; RegisterFile.v                                                     ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/RegisterFile.v                                                     ;             ;
+; register.v                                                         ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/register.v                                                         ;             ;
+; shifter.v                                                          ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v                                                          ;             ;
+; PC.v                                                               ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v                                                               ;             ;
+; phasecounter.v                                                     ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v                                                     ;             ;
+; ctl.v                                                              ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v                                                              ;             ;
+; branch.v                                                           ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v                                                           ;             ;
+; RemoveChattering.v                                                 ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v                                                 ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                            ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                               ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                            ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                              ;             ;
+; db/altsyncram_3qk1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/altsyncram_3qk1.tdf                                             ;             ;
+; db/altsyncram_14b2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/altsyncram_14b2.tdf                                             ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                       ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                             ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                         ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                            ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                               ; altera_sld  ;
+; db/ip/sld6c6326ae/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                          ;             ;
+; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                            ;             ;
+; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                           ;             ;
+; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                       ;             ;
+; db/lpm_divide_h9m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/lpm_divide_h9m.tdf                                              ;             ;
+; db/sign_div_unsign_6kh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/sign_div_unsign_6kh.tdf                                         ;             ;
+; db/alt_u_div_04f.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/alt_u_div_04f.tdf                                               ;             ;
+; db/add_sub_7pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/add_sub_7pc.tdf                                                 ;             ;
+; db/add_sub_8pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/kazu4/2023-simple-2023-team23/simple/db/add_sub_8pc.tdf                                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 276                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 244                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 92                       ;
+;     -- 3 input functions                    ; 64                       ;
+;     -- <=2 input functions                  ; 88                       ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 196                      ;
+;     -- arithmetic mode                      ; 48                       ;
+;                                             ;                          ;
+; Total registers                             ; 167                      ;
+;     -- Dedicated logic registers            ; 167                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 35                       ;
+; Total memory bits                           ; 65536                    ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 176                      ;
+; Total fan-out                               ; 1789                     ;
+; Average fan-out                             ; 3.54                     ;
++---------------------------------------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                ; Entity Name                       ; Library Name ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; |simple                                                                                                                                 ; 244 (1)             ; 167 (0)                   ; 65536       ; 0            ; 0       ; 0         ; 35   ; 0            ; |simple                                                                                                                                                                                                                                                                                                                                            ; simple                            ; work         ;
+;    |PC:PC|                                                                                                                              ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|PC:PC                                                                                                                                                                                                                                                                                                                                      ; PC                                ; work         ;
+;    |RemoveChattering:rc|                                                                                                                ; 13 (13)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|RemoveChattering:rc                                                                                                                                                                                                                                                                                                                        ; RemoveChattering                  ; work         ;
+;    |phasecounter:a0|                                                                                                                    ; 24 (6)              ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0                                                                                                                                                                                                                                                                                                                            ; phasecounter                      ; work         ;
+;       |lpm_divide:Mod0|                                                                                                                 ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
+;          |lpm_divide_h9m:auto_generated|                                                                                                ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0|lpm_divide:Mod0|lpm_divide_h9m:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_h9m                    ; work         ;
+;             |sign_div_unsign_6kh:divider|                                                                                               ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0|lpm_divide:Mod0|lpm_divide_h9m:auto_generated|sign_div_unsign_6kh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_6kh               ; work         ;
+;                |alt_u_div_04f:divider|                                                                                                  ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|phasecounter:a0|lpm_divide:Mod0|lpm_divide_h9m:auto_generated|sign_div_unsign_6kh:divider|alt_u_div_04f:divider                                                                                                                                                                                                                            ; alt_u_div_04f                     ; work         ;
+;    |ram:ram|                                                                                                                            ; 72 (0)              ; 50 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram                                                                                                                                                                                                                                                                                                                                    ; ram                               ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 72 (0)              ; 50 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                    ; altsyncram                        ; work         ;
+;          |altsyncram_3qk1:auto_generated|                                                                                               ; 72 (0)              ; 50 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated                                                                                                                                                                                                                                                                     ; altsyncram_3qk1                   ; work         ;
+;             |altsyncram_14b2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|altsyncram_14b2:altsyncram1                                                                                                                                                                                                                                         ; altsyncram_14b2                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 72 (56)             ; 50 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                           ; sld_mod_ram_rom                   ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|                                                                  ; 16 (16)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 122 (1)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 121 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 121 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 121 (1)             ; 86 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 120 (0)             ; 81 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 120 (84)            ; 81 (53)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 18 (18)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
+;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                           ;
++---------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
+; Name                                                                                                          ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF            ;
++---------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
+; ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|altsyncram_14b2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 4096         ; 16           ; 4096         ; 16           ; 65536 ; BubbleSort.mif ;
++---------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -180,6 +320,371 @@ https://fpgasoftware.intel.com/eula.
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |simple|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
 ; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |simple|ram:ram                                                                                                                                                                                                                                                             ; ram.v           ;
 +--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; ctl:ctl|twobit[0,1]                     ; Stuck at GND due to stuck port data_in ;
+; ctl:ctl|opcode_reg[0..3]                ; Stuck at GND due to stuck port data_in ;
+; ctl:ctl|brch_reg[0..2]                  ; Stuck at GND due to stuck port data_in ;
+; register:IR|RegData[0..13]              ; Stuck at GND due to stuck port data_in ;
+; ctl:ctl|opcode[0..3]                    ; Lost fanout                            ;
+; ctl:ctl|Halt                            ; Stuck at VCC due to stuck port data_in ;
+; ctl:ctl|MemWrite                        ; Stuck at GND due to stuck port data_in ;
+; ctl:ctl|ALUSrc1                         ; Stuck at GND due to stuck port data_in ;
+; ctl:ctl|ALUSrc2                         ; Stuck at VCC due to stuck port data_in ;
+; ctl:ctl|Input                           ; Stuck at GND due to stuck port data_in ;
+; ctl:ctl|Branch[0..2]                    ; Stuck at VCC due to stuck port data_in ;
+; ctl:ctl|ALUorShifter                    ; Stuck at GND due to stuck port data_in ;
+; register:IR|DataOut[0..13]              ; Stuck at GND due to stuck port data_in ;
+; register:AR|DataOut[15]                 ; Lost fanout                            ;
+; register:AR|RegData[15]                 ; Lost fanout                            ;
+; register:AR|DataOut[14]                 ; Lost fanout                            ;
+; register:AR|RegData[14]                 ; Lost fanout                            ;
+; register:AR|DataOut[13]                 ; Lost fanout                            ;
+; register:AR|RegData[13]                 ; Lost fanout                            ;
+; register:AR|DataOut[12]                 ; Lost fanout                            ;
+; register:AR|RegData[12]                 ; Lost fanout                            ;
+; register:AR|DataOut[11]                 ; Lost fanout                            ;
+; register:AR|RegData[11]                 ; Lost fanout                            ;
+; register:AR|DataOut[10]                 ; Lost fanout                            ;
+; register:AR|RegData[10]                 ; Lost fanout                            ;
+; register:AR|DataOut[9]                  ; Lost fanout                            ;
+; register:AR|RegData[9]                  ; Lost fanout                            ;
+; register:AR|DataOut[8]                  ; Lost fanout                            ;
+; register:AR|RegData[8]                  ; Lost fanout                            ;
+; register:AR|DataOut[7]                  ; Lost fanout                            ;
+; register:AR|RegData[7]                  ; Lost fanout                            ;
+; register:AR|DataOut[6]                  ; Lost fanout                            ;
+; register:AR|RegData[6]                  ; Lost fanout                            ;
+; register:AR|DataOut[5]                  ; Lost fanout                            ;
+; register:AR|RegData[5]                  ; Lost fanout                            ;
+; register:AR|DataOut[4]                  ; Lost fanout                            ;
+; register:AR|RegData[4]                  ; Lost fanout                            ;
+; register:AR|DataOut[3]                  ; Lost fanout                            ;
+; register:AR|RegData[3]                  ; Lost fanout                            ;
+; register:AR|DataOut[2]                  ; Lost fanout                            ;
+; register:AR|RegData[2]                  ; Lost fanout                            ;
+; register:AR|DataOut[1]                  ; Lost fanout                            ;
+; register:AR|RegData[1]                  ; Lost fanout                            ;
+; register:AR|DataOut[0]                  ; Lost fanout                            ;
+; register:AR|RegData[0]                  ; Lost fanout                            ;
+; register:SZCV|DataOut[0]                ; Lost fanout                            ;
+; register:SZCV|RegData[0]                ; Lost fanout                            ;
+; register:SZCV|DataOut[3]                ; Lost fanout                            ;
+; register:SZCV|RegData[3]                ; Lost fanout                            ;
+; register:SZCV|DataOut[2]                ; Lost fanout                            ;
+; register:SZCV|RegData[2]                ; Lost fanout                            ;
+; ctl:ctl|RegWrite                        ; Merged with ctl:ctl|MemtoReg           ;
+; ctl:ctl|MemtoReg                        ; Stuck at VCC due to stuck port data_in ;
+; register:MDR|DataOut[0]                 ; Lost fanout                            ;
+; register:MDR|RegData[0]                 ; Lost fanout                            ;
+; register:MDR|DataOut[1]                 ; Lost fanout                            ;
+; register:MDR|RegData[1]                 ; Lost fanout                            ;
+; register:MDR|DataOut[2]                 ; Lost fanout                            ;
+; register:MDR|RegData[2]                 ; Lost fanout                            ;
+; register:MDR|DataOut[3]                 ; Lost fanout                            ;
+; register:MDR|RegData[3]                 ; Lost fanout                            ;
+; register:MDR|DataOut[4]                 ; Lost fanout                            ;
+; register:MDR|RegData[4]                 ; Lost fanout                            ;
+; register:MDR|DataOut[5]                 ; Lost fanout                            ;
+; register:MDR|RegData[5]                 ; Lost fanout                            ;
+; register:MDR|DataOut[6]                 ; Lost fanout                            ;
+; register:MDR|RegData[6]                 ; Lost fanout                            ;
+; register:MDR|DataOut[7]                 ; Lost fanout                            ;
+; register:MDR|RegData[7]                 ; Lost fanout                            ;
+; register:MDR|DataOut[8]                 ; Lost fanout                            ;
+; register:MDR|RegData[8]                 ; Lost fanout                            ;
+; register:MDR|DataOut[9]                 ; Lost fanout                            ;
+; register:MDR|RegData[9]                 ; Lost fanout                            ;
+; register:MDR|DataOut[10]                ; Lost fanout                            ;
+; register:MDR|RegData[10]                ; Lost fanout                            ;
+; register:MDR|DataOut[11]                ; Lost fanout                            ;
+; register:MDR|RegData[11]                ; Lost fanout                            ;
+; register:MDR|DataOut[12]                ; Lost fanout                            ;
+; register:MDR|RegData[12]                ; Lost fanout                            ;
+; register:MDR|DataOut[13]                ; Lost fanout                            ;
+; register:MDR|RegData[13]                ; Lost fanout                            ;
+; register:MDR|DataOut[14]                ; Lost fanout                            ;
+; register:MDR|RegData[14]                ; Lost fanout                            ;
+; register:MDR|DataOut[15]                ; Lost fanout                            ;
+; register:MDR|RegData[15]                ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~16              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~17              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~18              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~19              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~20              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~21              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~22              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~23              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~24              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~25              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~26              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~27              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~28              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~29              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~30              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~31              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~32              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~33              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~34              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~35              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~36              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~37              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~38              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~39              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~40              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~41              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~42              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~43              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~44              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~45              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~46              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~47              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~48              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~49              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~50              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~51              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~52              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~53              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~54              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~55              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~56              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~57              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~58              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~59              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~60              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~61              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~62              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~63              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~64              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~65              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~66              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~67              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~68              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~69              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~70              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~71              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~72              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~73              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~74              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~75              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~76              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~77              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~78              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~79              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~80              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~81              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~82              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~83              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~84              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~85              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~86              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~87              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~88              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~89              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~90              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~91              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~92              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~93              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~94              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~95              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~96              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~97              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~98              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~99              ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~100             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~101             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~102             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~103             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~104             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~105             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~106             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~107             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~108             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~109             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~110             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~111             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~112             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~113             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~114             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~115             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~116             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~117             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~118             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~119             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~120             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~121             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~122             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~123             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~124             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~125             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~126             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~127             ; Lost fanout                            ;
+; RegisterFile:RF|RegFile~0               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~1               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~2               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~3               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~4               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~5               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~6               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~7               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~8               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~9               ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~10              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~11              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~12              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~13              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~14              ; Stuck at GND due to stuck port data_in ;
+; RegisterFile:RF|RegFile~15              ; Stuck at GND due to stuck port data_in ;
+; register:BR|RegData[0..15]              ; Stuck at GND due to stuck port data_in ;
+; register:BR|DataOut[0..15]              ; Stuck at GND due to stuck port data_in ;
+; register:DR|RegData[0..15]              ; Stuck at GND due to stuck port data_in ;
+; register:DR|DataOut[0..15]              ; Stuck at GND due to stuck port data_in ;
+; PC:PC|pc[12..15]                        ; Lost fanout                            ;
+; Total Number of Removed Registers = 318 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                        ;
++----------------------------+---------------------------+-------------------------------------------------------------------------------------------+
+; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                                    ;
++----------------------------+---------------------------+-------------------------------------------------------------------------------------------+
+; ctl:ctl|twobit[1]          ; Stuck at GND              ; ctl:ctl|opcode[3], ctl:ctl|opcode[2], ctl:ctl|opcode[1], ctl:ctl|opcode[0], ctl:ctl|Halt, ;
+;                            ; due to stuck port data_in ; ctl:ctl|MemWrite, ctl:ctl|ALUSrc2, ctl:ctl|Input, ctl:ctl|ALUorShifter,                   ;
+;                            ;                           ; register:SZCV|DataOut[2], register:SZCV|RegData[2], ctl:ctl|MemtoReg,                     ;
+;                            ;                           ; register:MDR|DataOut[8], register:MDR|RegData[8], register:MDR|DataOut[9],                ;
+;                            ;                           ; register:MDR|RegData[9], register:MDR|DataOut[10], register:MDR|RegData[10],              ;
+;                            ;                           ; register:MDR|DataOut[11], register:MDR|RegData[11], register:MDR|DataOut[12],             ;
+;                            ;                           ; register:MDR|RegData[12], register:MDR|DataOut[13], register:MDR|RegData[13],             ;
+;                            ;                           ; register:MDR|DataOut[14], register:MDR|RegData[14], register:MDR|DataOut[15],             ;
+;                            ;                           ; register:MDR|RegData[15], register:BR|RegData[0], register:BR|RegData[1],                 ;
+;                            ;                           ; register:BR|RegData[2], register:BR|RegData[3], register:BR|RegData[4],                   ;
+;                            ;                           ; register:BR|RegData[5], register:BR|RegData[6], register:BR|DataOut[0],                   ;
+;                            ;                           ; register:BR|DataOut[1], register:BR|DataOut[2], register:BR|DataOut[3],                   ;
+;                            ;                           ; register:BR|DataOut[4], register:BR|DataOut[5], register:BR|DataOut[6],                   ;
+;                            ;                           ; register:DR|RegData[0], register:DR|RegData[1], register:DR|RegData[2],                   ;
+;                            ;                           ; register:DR|RegData[3], register:DR|RegData[4], register:DR|RegData[5],                   ;
+;                            ;                           ; register:DR|RegData[6], register:DR|RegData[7], register:DR|RegData[8],                   ;
+;                            ;                           ; register:DR|RegData[9], register:DR|RegData[10], register:DR|RegData[11],                 ;
+;                            ;                           ; register:DR|RegData[12], register:DR|RegData[13], register:DR|RegData[14],                ;
+;                            ;                           ; register:DR|DataOut[0], register:DR|DataOut[1], register:DR|DataOut[2],                   ;
+;                            ;                           ; register:DR|DataOut[3], register:DR|DataOut[4], register:DR|DataOut[5],                   ;
+;                            ;                           ; register:DR|DataOut[6], register:DR|DataOut[7], register:DR|DataOut[8],                   ;
+;                            ;                           ; register:DR|DataOut[9], register:DR|DataOut[10], register:DR|DataOut[11],                 ;
+;                            ;                           ; register:DR|DataOut[12], register:DR|DataOut[13], register:DR|DataOut[14]                 ;
+; ctl:ctl|brch_reg[2]        ; Stuck at GND              ; ctl:ctl|ALUSrc1, ctl:ctl|Branch[2], register:AR|DataOut[15], register:AR|RegData[15],     ;
+;                            ; due to stuck port data_in ; register:AR|DataOut[14], register:AR|RegData[14], register:AR|DataOut[13],                ;
+;                            ;                           ; register:AR|RegData[13], register:AR|DataOut[12], register:AR|RegData[12],                ;
+;                            ;                           ; register:AR|DataOut[11], register:AR|RegData[11], register:AR|DataOut[10],                ;
+;                            ;                           ; register:AR|RegData[10], register:AR|DataOut[8], register:AR|RegData[8],                  ;
+;                            ;                           ; register:AR|DataOut[7], register:AR|RegData[7], register:AR|DataOut[6],                   ;
+;                            ;                           ; register:AR|RegData[6], register:AR|DataOut[5], register:AR|RegData[5],                   ;
+;                            ;                           ; register:AR|DataOut[4], register:AR|RegData[4], register:AR|DataOut[3],                   ;
+;                            ;                           ; register:AR|RegData[3], register:AR|DataOut[2], register:AR|RegData[2],                   ;
+;                            ;                           ; register:AR|DataOut[1], register:AR|RegData[1], register:AR|DataOut[0],                   ;
+;                            ;                           ; register:AR|RegData[0], register:DR|RegData[15], register:DR|DataOut[15]                  ;
+; register:IR|RegData[8]     ; Stuck at GND              ; register:IR|DataOut[8], register:MDR|DataOut[0], register:MDR|RegData[0],                 ;
+;                            ; due to stuck port data_in ; register:MDR|DataOut[1], register:MDR|RegData[1], register:MDR|DataOut[2],                ;
+;                            ;                           ; register:MDR|RegData[2], register:MDR|DataOut[3], register:MDR|RegData[3],                ;
+;                            ;                           ; register:MDR|DataOut[4], register:MDR|RegData[4], register:MDR|DataOut[5],                ;
+;                            ;                           ; register:MDR|RegData[5], register:MDR|DataOut[6], register:MDR|RegData[6]                 ;
+; register:IR|RegData[7]     ; Stuck at GND              ; register:IR|DataOut[7], register:AR|DataOut[9], register:AR|RegData[9]                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~7  ; Stuck at GND              ; register:BR|RegData[7], register:BR|DataOut[7]                                            ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~8  ; Stuck at GND              ; register:BR|RegData[8], register:BR|DataOut[8]                                            ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~9  ; Stuck at GND              ; register:BR|RegData[9], register:BR|DataOut[9]                                            ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~10 ; Stuck at GND              ; register:BR|RegData[10], register:BR|DataOut[10]                                          ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~11 ; Stuck at GND              ; register:BR|RegData[11], register:BR|DataOut[11]                                          ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~12 ; Stuck at GND              ; register:BR|RegData[12], register:BR|DataOut[12]                                          ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~13 ; Stuck at GND              ; register:BR|RegData[13], register:BR|DataOut[13]                                          ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~14 ; Stuck at GND              ; register:BR|RegData[14], register:BR|DataOut[14]                                          ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; RegisterFile:RF|RegFile~15 ; Stuck at GND              ; register:BR|RegData[15], register:BR|DataOut[15]                                          ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; ctl:ctl|brch_reg[1]        ; Stuck at GND              ; ctl:ctl|Branch[1]                                                                         ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; ctl:ctl|brch_reg[0]        ; Stuck at GND              ; ctl:ctl|Branch[0]                                                                         ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[0]     ; Stuck at GND              ; register:IR|DataOut[0]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[1]     ; Stuck at GND              ; register:IR|DataOut[1]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[2]     ; Stuck at GND              ; register:IR|DataOut[2]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[3]     ; Stuck at GND              ; register:IR|DataOut[3]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[4]     ; Stuck at GND              ; register:IR|DataOut[4]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[5]     ; Stuck at GND              ; register:IR|DataOut[5]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[6]     ; Stuck at GND              ; register:IR|DataOut[6]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[9]     ; Stuck at GND              ; register:IR|DataOut[9]                                                                    ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[10]    ; Stuck at GND              ; register:IR|DataOut[10]                                                                   ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[11]    ; Stuck at GND              ; register:IR|DataOut[11]                                                                   ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[12]    ; Stuck at GND              ; register:IR|DataOut[12]                                                                   ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:IR|RegData[13]    ; Stuck at GND              ; register:IR|DataOut[13]                                                                   ;
+;                            ; due to stuck port data_in ;                                                                                           ;
+; register:SZCV|DataOut[0]   ; Lost Fanouts              ; register:SZCV|RegData[0]                                                                  ;
+; register:SZCV|DataOut[3]   ; Lost Fanouts              ; register:SZCV|RegData[3]                                                                  ;
+; register:MDR|DataOut[7]    ; Lost Fanouts              ; register:MDR|RegData[7]                                                                   ;
++----------------------------+---------------------------+-------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 167   ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 22    ;
+; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 106   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
+; Total number of inverted registers = 2                                                                                                                                                                                                                                                                                          ;         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[4]                                                   ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]                                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[2]      ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |simple|ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -250,6 +755,49 @@ https://fpgasoftware.intel.com/eula.
 ; CBXI_PARAMETER                     ; altsyncram_3qk1      ; Untyped                  ;
 +------------------------------------+----------------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: phasecounter:a0|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                ;
+; LPM_WIDTHD             ; 3              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_h9m ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                    ;
++-------------------------------------------+-----------------------------------------+
+; Name                                      ; Value                                   ;
++-------------------------------------------+-----------------------------------------+
+; Number of entity instances                ; 1                                       ;
+; Entity Instance                           ; ram:ram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                             ;
+;     -- WIDTH_A                            ; 16                                      ;
+;     -- NUMWORDS_A                         ; 4096                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
+;     -- WIDTH_B                            ; 1                                       ;
+;     -- NUMWORDS_B                         ; 1                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
++-------------------------------------------+-----------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -332,18 +880,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------+
+; In-System Memory Content Editor Settings                                                                                           ;
++----------------+-------------+-------+-------+------------+------------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                     ;
++----------------+-------------+-------+-------+------------+------------------------------------------------------------------------+
+; 0              ; NONE        ; 16    ; 4096  ; Read/Write ; ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated ;
++----------------+-------------+-------+-------+------------+------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 62                          ;
+; cycloneiii_ff         ; 81                          ;
+;     CLR               ; 21                          ;
+;     ENA               ; 29                          ;
+;     ENA CLR           ; 7                           ;
+;     ENA CLR SLD       ; 12                          ;
+;     SCLR              ; 12                          ;
+; cycloneiii_lcell_comb ; 122                         ;
+;     arith             ; 40                          ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 82                          ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 38                          ;
+; cycloneiii_ram_block  ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.50                        ;
+; Average LUT depth     ; 2.09                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 27 16:13:14 2023
+    Info: Processing started: Thu Apr 27 16:45:35 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simple -c simple
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (10229): Verilog HDL Expression warning at shifter.v(36): truncated literal to match 3 bits File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 36
-Info (12021): Found 9 design units, including 9 entities, in source file simple.v
+Warning (10229): Verilog HDL Expression warning at RemoveChattering.v(17): truncated literal to match 7 bits File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 17
+Info (12021): Found 10 design units, including 10 entities, in source file simple.v
     Info (12023): Found entity 1: ALU File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 1
     Info (12023): Found entity 2: RegisterFile File: C:/Users/kazu4/2023-simple-2023-team23/simple/RegisterFile.v Line: 1
     Info (12023): Found entity 3: register File: C:/Users/kazu4/2023-simple-2023-team23/simple/register.v Line: 1
@@ -352,19 +948,20 @@ Info (12021): Found 9 design units, including 9 entities, in source file simple.
     Info (12023): Found entity 6: phasecounter File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 1
     Info (12023): Found entity 7: ctl File: C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v Line: 1
     Info (12023): Found entity 8: branch File: C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v Line: 1
-    Info (12023): Found entity 9: simple File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 10
+    Info (12023): Found entity 9: RemoveChattering File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 1
+    Info (12023): Found entity 10: simple File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
     Info (12023): Found entity 1: ram File: C:/Users/kazu4/2023-simple-2023-team23/simple/ram.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(56): created implicit net for "WriteReg" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 56
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "opcode" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "RegDst" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "brch_sig" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "PCIn" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(57): created implicit net for "WriteReg" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(59): created implicit net for "opcode" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(59): created implicit net for "RegDst" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(61): created implicit net for "brch_sig" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 61
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(61): created implicit net for "PCIn" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 61
 Info (12127): Elaborating entity "simple" for the top level hierarchy
-Warning (10034): Output port "out" at simple.v(16) has no driver File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-Info (12128): Elaborating entity "register" for hierarchy "register:IR" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 50
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 56
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
+Warning (10034): Output port "out" at simple.v(17) has no driver File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+Info (12128): Elaborating entity "register" for hierarchy "register:IR" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 51
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
 Warning (10235): Verilog HDL Always Construct warning at ALU.v(13): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 13
 Warning (10235): Verilog HDL Always Construct warning at ALU.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 20
 Warning (10270): Verilog HDL Case Statement warning at ALU.v(10): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 10
@@ -391,9 +988,9 @@ Info (10041): Inferred latch for "C[13]" at ALU.v(9) File: C:/Users/kazu4/2023-s
 Info (10041): Inferred latch for "C[14]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
 Info (10041): Inferred latch for "C[15]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
 Info (10041): Inferred latch for "C[16]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (12128): Elaborating entity "ctl" for hierarchy "ctl:ctl" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
+Info (12128): Elaborating entity "ctl" for hierarchy "ctl:ctl" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
 Warning (10036): Verilog HDL or VHDL warning at ctl.v(10): object "inst_reg" assigned a value but never read File: C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v Line: 10
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:sf" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:sf" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(16): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 16
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(17): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 17
 Warning (10230): Verilog HDL assignment warning at shifter.v(17): truncated value with size 3 to match size of target (2) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 17
@@ -461,14 +1058,14 @@ Info (10041): Inferred latch for "C[28]" at shifter.v(10) File: C:/Users/kazu4/2
 Info (10041): Inferred latch for "C[29]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
 Info (10041): Inferred latch for "C[30]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
 Info (10041): Inferred latch for "C[31]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 61
 Warning (10230): Verilog HDL assignment warning at PC.v(9): truncated value with size 32 to match size of target (16) File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 9
 Warning (10230): Verilog HDL assignment warning at PC.v(20): truncated value with size 32 to match size of target (16) File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 20
-Info (12128): Elaborating entity "phasecounter" for hierarchy "phasecounter:a0" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 61
+Info (12128): Elaborating entity "phasecounter" for hierarchy "phasecounter:a0" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 62
 Warning (10230): Verilog HDL assignment warning at phasecounter.v(10): truncated value with size 32 to match size of target (3) File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 10
-Info (12128): Elaborating entity "branch" for hierarchy "branch:br" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 62
+Info (12128): Elaborating entity "branch" for hierarchy "branch:br" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 63
 Warning (10036): Verilog HDL or VHDL warning at branch.v(5): object "c" assigned a value but never read File: C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v Line: 5
-Info (12128): Elaborating entity "ram" for hierarchy "ram:ram" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 63
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 64
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:ram|altsyncram:altsyncram_component" File: C:/Users/kazu4/2023-simple-2023-team23/simple/ram.v Line: 86
 Info (12130): Elaborated megafunction instantiation "ram:ram|altsyncram:altsyncram_component" File: C:/Users/kazu4/2023-simple-2023-team23/simple/ram.v Line: 86
 Info (12133): Instantiated megafunction "ram:ram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/kazu4/2023-simple-2023-team23/simple/ram.v Line: 86
@@ -507,25 +1104,29 @@ Info (12133): Instantiated megafunction "ram:ram|altsyncram:altsyncram_component
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "ram:ram|altsyncram:altsyncram_component|altsyncram_3qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 799
+Info (12128): Elaborating entity "RemoveChattering" for hierarchy "RemoveChattering:rc" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 65
+Warning (10230): Verilog HDL assignment warning at RemoveChattering.v(16): truncated value with size 32 to match size of target (8) File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 16
+Warning (10230): Verilog HDL assignment warning at RemoveChattering.v(18): truncated value with size 32 to match size of target (1) File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 18
+Warning (10230): Verilog HDL assignment warning at RemoveChattering.v(36): truncated value with size 32 to match size of target (1) File: C:/Users/kazu4/2023-simple-2023-team23/simple/RemoveChattering.v Line: 36
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Inst[15]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[14]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[13]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[12]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[11]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[10]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[9]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[8]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[7]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[6]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[5]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[4]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[3]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[2]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[1]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[0]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[15]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[14]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[13]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[12]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[11]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[10]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[9]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[8]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[7]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[6]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[5]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[4]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[3]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[2]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[1]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+    Warning (12110): Net "Inst[0]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.04.27.16:13:33 Progress: Loading sld6c6326ae/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.04.27.16:45:52 Progress: Loading sld6c6326ae/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -548,16 +1149,126 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/kazu4/2023-simple-2023-team23/simple/db/ip/sld6c6326ae/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Error (12014): Net "ce", which fans out to "PC:PC|ce", cannot be assigned more than one value File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 32
-    Error (12015): Net is fed by "VCC"
-    Error (12015): Net is fed by "ctl:ctl|Halt" File: C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v Line: 4
+Warning (14025): LATCH primitive "shifter:sf|C[16]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[17]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[18]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[19]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[20]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[21]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[22]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[23]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[24]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[25]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[26]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[27]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[28]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[29]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[30]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[31]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14026): LATCH primitive "ALU:ALU|C[16]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14025): LATCH primitive "shifter:sf|C[0]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[2]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[1]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[3]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[4]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[5]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[6]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[7]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[8]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[9]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[10]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[11]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[12]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[13]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[14]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14025): LATCH primitive "shifter:sf|C[15]" is permanently disabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
+Warning (14026): LATCH primitive "ALU:ALU|cond[0]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[0]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[1]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[2]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[3]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[4]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[5]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[6]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[7]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[8]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[9]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[10]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[11]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[12]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[13]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[14]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Warning (14026): LATCH primitive "ALU:ALU|C[15]" is permanently enabled File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "RegisterFile:RF|RegFile" is uninferred due to inappropriate RAM size File: C:/Users/kazu4/2023-simple-2023-team23/simple/RegisterFile.v Line: 6
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "phasecounter:a0|Mod0" File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 10
+Info (12130): Elaborated megafunction instantiation "phasecounter:a0|lpm_divide:Mod0" File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 10
+Info (12133): Instantiated megafunction "phasecounter:a0|lpm_divide:Mod0" with the following parameter: File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 10
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "3"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_h9m.tdf
+    Info (12023): Found entity 1: lpm_divide_h9m File: C:/Users/kazu4/2023-simple-2023-team23/simple/db/lpm_divide_h9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_6kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_6kh File: C:/Users/kazu4/2023-simple-2023-team23/simple/db/sign_div_unsign_6kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_04f.tdf
+    Info (12023): Found entity 1: alt_u_div_04f File: C:/Users/kazu4/2023-simple-2023-team23/simple/db/alt_u_div_04f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/kazu4/2023-simple-2023-team23/simple/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/kazu4/2023-simple-2023-team23/simple/db/add_sub_8pc.tdf Line: 23
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out[0]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[1]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[2]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[3]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[4]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[5]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[6]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[7]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[8]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[9]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[10]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[11]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[12]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[13]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[14]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+    Warning (13410): Pin "out[15]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 17
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (17049): 190 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/kazu4/2023-simple-2023-team23/simple/output_files/simple.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 74 warnings
-    Error: Peak virtual memory: 4814 megabytes
-    Error: Processing ended: Thu Apr 27 16:13:55 2023
-    Error: Elapsed time: 00:00:41
-    Error: Total CPU time (on all processors): 00:00:32
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "in[0]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[1]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[2]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[3]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[4]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[5]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[6]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[7]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[8]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[9]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[10]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[11]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[12]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[13]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[14]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "in[15]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
+Info (21057): Implemented 336 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 280 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 162 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Thu Apr 27 16:46:07 2023
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+
