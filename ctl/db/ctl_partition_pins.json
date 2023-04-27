@@ -40,6 +40,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "Halt",
+					"strict" : false
+				},
+				{
 					"name" : "opcode[0]",
 					"strict" : false
 				},
