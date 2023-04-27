@@ -18,22 +18,22 @@ in[15] => ~NO_FANOUT~
 clk => clk.IN1
 rst_n => rst_n.IN9
 exec => ~NO_FANOUT~
-out[0] <= <GND>
-out[1] <= <GND>
-out[2] <= <GND>
-out[3] <= <GND>
-out[4] <= <GND>
-out[5] <= <GND>
-out[6] <= <GND>
-out[7] <= <GND>
-out[8] <= <GND>
-out[9] <= <GND>
-out[10] <= <GND>
-out[11] <= <GND>
-out[12] <= <GND>
-out[13] <= <GND>
-out[14] <= <GND>
-out[15] <= <GND>
+out[0] << <GND>
+out[1] << <GND>
+out[2] << <GND>
+out[3] << <GND>
+out[4] << <GND>
+out[5] << <GND>
+out[6] << <GND>
+out[7] << <GND>
+out[8] << <GND>
+out[9] << <GND>
+out[10] << <GND>
+out[11] << <GND>
+out[12] << <GND>
+out[13] << <GND>
+out[14] << <GND>
+out[15] << <GND>
 
 
 |simple|register:IR

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simple
-Thu Apr 27 14:20:31 2023
+Thu Apr 27 15:07:25 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 27 14:20:31 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 15:07:25 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; simple                                      ;
 ; Top-level Entity Name              ; simple                                      ;
@@ -159,8 +159,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -170,21 +170,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
-; simple.v                         ; yes             ; User Verilog HDL File        ; C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v       ;         ;
-; ALU.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v          ;         ;
-; RegisterFile.v                   ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/RegisterFile.v ;         ;
-; register.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/register.v     ;         ;
-; shifter.v                        ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v      ;         ;
-; PC.v                             ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v           ;         ;
-; phasecounter.v                   ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v ;         ;
-; ctl.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v          ;         ;
-; branch.v                         ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v       ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; simple.v                         ; yes             ; User Verilog HDL File        ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v       ;         ;
+; ALU.v                            ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v          ;         ;
+; RegisterFile.v                   ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/RegisterFile.v ;         ;
+; register.v                       ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/register.v     ;         ;
+; shifter.v                        ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v      ;         ;
+; PC.v                             ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/PC.v           ;         ;
+; phasecounter.v                   ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/phasecounter.v ;         ;
+; ctl.v                            ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ctl.v          ;         ;
+; branch.v                         ; yes             ; Auto-Found Verilog HDL File  ; /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/branch.v       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -346,205 +346,207 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 27 14:20:19 2023
+    Info: Processing started: Thu Apr 27 15:07:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simple -c simple
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (10229): Verilog HDL Expression warning at shifter.v(36): truncated literal to match 3 bits File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 36
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Warning (10229): Verilog HDL Expression warning at shifter.v(36): truncated literal to match 3 bits File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 36
 Info (12021): Found 9 design units, including 9 entities, in source file simple.v
-    Info (12023): Found entity 1: ALU File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 1
-    Info (12023): Found entity 2: RegisterFile File: C:/Users/kazu4/2023-simple-2023-team23/simple/RegisterFile.v Line: 1
-    Info (12023): Found entity 3: register File: C:/Users/kazu4/2023-simple-2023-team23/simple/register.v Line: 1
-    Info (12023): Found entity 4: shifter File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 1
-    Info (12023): Found entity 5: PC File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 1
-    Info (12023): Found entity 6: phasecounter File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 1
-    Info (12023): Found entity 7: ctl File: C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v Line: 1
-    Info (12023): Found entity 8: branch File: C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v Line: 1
-    Info (12023): Found entity 9: simple File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(56): created implicit net for "WriteReg" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 56
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "opcode" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "RegDst" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "brch_sig" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "PCIn" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
+    Info (12023): Found entity 1: ALU File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 1
+    Info (12023): Found entity 2: RegisterFile File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/RegisterFile.v Line: 1
+    Info (12023): Found entity 3: register File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/register.v Line: 1
+    Info (12023): Found entity 4: shifter File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 1
+    Info (12023): Found entity 5: PC File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/PC.v Line: 1
+    Info (12023): Found entity 6: phasecounter File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/phasecounter.v Line: 1
+    Info (12023): Found entity 7: ctl File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ctl.v Line: 1
+    Info (12023): Found entity 8: branch File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/branch.v Line: 1
+    Info (12023): Found entity 9: simple File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ram.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(56): created implicit net for "WriteReg" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 56
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "opcode" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(58): created implicit net for "RegDst" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "brch_sig" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at simple.v(60): created implicit net for "PCIn" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 60
 Info (12127): Elaborating entity "simple" for the top level hierarchy
-Warning (10034): Output port "out" at simple.v(16) has no driver File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-Info (12128): Elaborating entity "register" for hierarchy "register:IR" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 50
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 56
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 57
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(13): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 13
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 20
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(10): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 10
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(31): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 31
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(35): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 35
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(36): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 36
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(9): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(9): inferring latch(es) for variable "cond", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "cond[0]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[0]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[1]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[2]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[3]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[4]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[5]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[6]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[7]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[8]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[9]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[10]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[11]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[12]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[13]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[14]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[15]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (10041): Inferred latch for "C[16]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/ALU.v Line: 9
-Info (12128): Elaborating entity "ctl" for hierarchy "ctl:ctl" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 58
-Warning (10036): Verilog HDL or VHDL warning at ctl.v(10): object "inst_reg" assigned a value but never read File: C:/Users/kazu4/2023-simple-2023-team23/simple/ctl.v Line: 10
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:sf" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 59
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(16): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 16
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(17): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 17
-Warning (10230): Verilog HDL assignment warning at shifter.v(17): truncated value with size 3 to match size of target (2) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 17
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(18): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 18
-Warning (10230): Verilog HDL assignment warning at shifter.v(18): truncated value with size 4 to match size of target (3) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 18
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(19): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 19
-Warning (10230): Verilog HDL assignment warning at shifter.v(19): truncated value with size 5 to match size of target (4) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 19
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 20
-Warning (10230): Verilog HDL assignment warning at shifter.v(20): truncated value with size 6 to match size of target (5) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(21): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 21
-Warning (10230): Verilog HDL assignment warning at shifter.v(21): truncated value with size 7 to match size of target (6) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(22): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 22
-Warning (10230): Verilog HDL assignment warning at shifter.v(22): truncated value with size 8 to match size of target (7) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(23): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 23
-Warning (10230): Verilog HDL assignment warning at shifter.v(23): truncated value with size 9 to match size of target (8) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 23
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(24): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 24
-Warning (10230): Verilog HDL assignment warning at shifter.v(24): truncated value with size 10 to match size of target (9) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(25): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 25
-Warning (10230): Verilog HDL assignment warning at shifter.v(25): truncated value with size 11 to match size of target (10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(26): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 26
-Warning (10230): Verilog HDL assignment warning at shifter.v(26): truncated value with size 12 to match size of target (11) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 26
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(27): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 27
-Warning (10230): Verilog HDL assignment warning at shifter.v(27): truncated value with size 13 to match size of target (12) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 27
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(28): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 28
-Warning (10230): Verilog HDL assignment warning at shifter.v(28): truncated value with size 14 to match size of target (13) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(29): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 29
-Warning (10230): Verilog HDL assignment warning at shifter.v(29): truncated value with size 15 to match size of target (14) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 29
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(30): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 30
-Warning (10230): Verilog HDL assignment warning at shifter.v(30): truncated value with size 16 to match size of target (15) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 30
-Warning (10270): Verilog HDL Case Statement warning at shifter.v(15): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 15
-Warning (10270): Verilog HDL Case Statement warning at shifter.v(11): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 11
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(39): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 39
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(40): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 40
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(45): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 45
-Warning (10240): Verilog HDL Always Construct warning at shifter.v(10): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[0]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[1]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[2]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[3]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[4]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[5]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[6]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[7]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[8]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[9]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[10]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[11]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[12]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[13]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[14]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[15]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[16]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[17]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[18]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[19]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[20]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[21]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[22]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[23]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[24]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[25]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[26]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[27]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[28]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[29]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[30]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (10041): Inferred latch for "C[31]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/simple/shifter.v Line: 10
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 60
-Warning (10230): Verilog HDL assignment warning at PC.v(9): truncated value with size 32 to match size of target (16) File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 9
-Warning (10230): Verilog HDL assignment warning at PC.v(20): truncated value with size 32 to match size of target (16) File: C:/Users/kazu4/2023-simple-2023-team23/simple/PC.v Line: 20
-Info (12128): Elaborating entity "phasecounter" for hierarchy "phasecounter:a0" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 61
-Warning (10230): Verilog HDL assignment warning at phasecounter.v(10): truncated value with size 32 to match size of target (3) File: C:/Users/kazu4/2023-simple-2023-team23/simple/phasecounter.v Line: 10
-Info (12128): Elaborating entity "branch" for hierarchy "branch:br" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 62
-Warning (10036): Verilog HDL or VHDL warning at branch.v(5): object "c" assigned a value but never read File: C:/Users/kazu4/2023-simple-2023-team23/simple/branch.v Line: 5
+Warning (10034): Output port "out" at simple.v(16) has no driver File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+Info (12128): Elaborating entity "register" for hierarchy "register:IR" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 50
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 56
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 57
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(13): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 13
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 20
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(10): incomplete case statement has no default case item File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 10
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(31): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(35): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 35
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(36): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 36
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(9): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(9): inferring latch(es) for variable "cond", which holds its previous value in one or more paths through the always construct File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "cond[0]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[0]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[1]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[2]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[3]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[4]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[5]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[6]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[7]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[8]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[9]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[10]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[11]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[12]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[13]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[14]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[15]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (10041): Inferred latch for "C[16]" at ALU.v(9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ALU.v Line: 9
+Info (12128): Elaborating entity "ctl" for hierarchy "ctl:ctl" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 58
+Warning (10036): Verilog HDL or VHDL warning at ctl.v(10): object "inst_reg" assigned a value but never read File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/ctl.v Line: 10
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:sf" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 59
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(16): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 16
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(17): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 17
+Warning (10230): Verilog HDL assignment warning at shifter.v(17): truncated value with size 3 to match size of target (2) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 17
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(18): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 18
+Warning (10230): Verilog HDL assignment warning at shifter.v(18): truncated value with size 4 to match size of target (3) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 18
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(19): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 19
+Warning (10230): Verilog HDL assignment warning at shifter.v(19): truncated value with size 5 to match size of target (4) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 19
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 20
+Warning (10230): Verilog HDL assignment warning at shifter.v(20): truncated value with size 6 to match size of target (5) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 20
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(21): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 21
+Warning (10230): Verilog HDL assignment warning at shifter.v(21): truncated value with size 7 to match size of target (6) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(22): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 22
+Warning (10230): Verilog HDL assignment warning at shifter.v(22): truncated value with size 8 to match size of target (7) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 22
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(23): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 23
+Warning (10230): Verilog HDL assignment warning at shifter.v(23): truncated value with size 9 to match size of target (8) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(24): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 24
+Warning (10230): Verilog HDL assignment warning at shifter.v(24): truncated value with size 10 to match size of target (9) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(25): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 25
+Warning (10230): Verilog HDL assignment warning at shifter.v(25): truncated value with size 11 to match size of target (10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(26): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 26
+Warning (10230): Verilog HDL assignment warning at shifter.v(26): truncated value with size 12 to match size of target (11) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 26
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(27): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 27
+Warning (10230): Verilog HDL assignment warning at shifter.v(27): truncated value with size 13 to match size of target (12) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(28): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 28
+Warning (10230): Verilog HDL assignment warning at shifter.v(28): truncated value with size 14 to match size of target (13) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(29): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 29
+Warning (10230): Verilog HDL assignment warning at shifter.v(29): truncated value with size 15 to match size of target (14) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(30): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 30
+Warning (10230): Verilog HDL assignment warning at shifter.v(30): truncated value with size 16 to match size of target (15) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 30
+Warning (10270): Verilog HDL Case Statement warning at shifter.v(15): incomplete case statement has no default case item File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 15
+Warning (10270): Verilog HDL Case Statement warning at shifter.v(11): incomplete case statement has no default case item File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 11
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(39): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(40): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(45): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 45
+Warning (10240): Verilog HDL Always Construct warning at shifter.v(10): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[0]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[1]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[2]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[3]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[4]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[5]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[6]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[7]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[8]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[9]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[10]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[11]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[12]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[13]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[14]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[15]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[16]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[17]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[18]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[19]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[20]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[21]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[22]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[23]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[24]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[25]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[26]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[27]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[28]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[29]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[30]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (10041): Inferred latch for "C[31]" at shifter.v(10) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/shifter.v Line: 10
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 60
+Warning (10230): Verilog HDL assignment warning at PC.v(9): truncated value with size 32 to match size of target (16) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/PC.v Line: 9
+Warning (10230): Verilog HDL assignment warning at PC.v(20): truncated value with size 32 to match size of target (16) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/PC.v Line: 20
+Info (12128): Elaborating entity "phasecounter" for hierarchy "phasecounter:a0" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 61
+Warning (10230): Verilog HDL assignment warning at phasecounter.v(10): truncated value with size 32 to match size of target (3) File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/phasecounter.v Line: 10
+Info (12128): Elaborating entity "branch" for hierarchy "branch:br" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 62
+Warning (10036): Verilog HDL or VHDL warning at branch.v(5): object "c" assigned a value but never read File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/branch.v Line: 5
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Inst[15]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[14]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[13]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[12]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[11]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[10]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[9]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[8]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[7]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[6]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[5]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[4]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[3]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[2]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[1]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
-    Warning (12110): Net "Inst[0]" is missing source, defaulting to GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[15]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[14]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[13]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[12]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[11]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[10]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[9]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[8]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[7]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[6]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[5]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[4]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[3]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[2]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[1]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
+    Warning (12110): Net "Inst[0]" is missing source, defaulting to GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 44
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out[0]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[1]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[2]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[3]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[4]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[5]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[6]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[7]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[8]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[9]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[10]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[11]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[12]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[13]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[14]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-    Warning (13410): Pin "out[15]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 16
-Info (144001): Generated suppressed messages file C:/Users/kazu4/2023-simple-2023-team23/simple/output_files/simple.map.smsg
+    Warning (13410): Pin "out[0]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[1]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[2]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[3]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[4]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[5]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[6]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[7]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[8]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[9]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[10]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[11]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[12]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[13]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[14]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+    Warning (13410): Pin "out[15]" is stuck at GND File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 16
+Info (144001): Generated suppressed messages file /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/output_files/simple.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "in[0]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[1]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[2]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[3]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[4]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[5]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[6]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[7]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[8]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[9]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[10]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[11]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[12]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[13]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[14]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "in[15]" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 11
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 12
-    Warning (15610): No output dependent on input pin "rst_n" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 13
-    Warning (15610): No output dependent on input pin "exec" File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 14
+    Warning (15610): No output dependent on input pin "in[0]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[1]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[2]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[3]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[4]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[5]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[6]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[7]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[8]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[9]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[10]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[11]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[12]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[13]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[14]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "in[15]" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 11
+    Warning (15610): No output dependent on input pin "clk" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 12
+    Warning (15610): No output dependent on input pin "rst_n" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 13
+    Warning (15610): No output dependent on input pin "exec" File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 14
 Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 16 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 111 warnings
-    Info: Peak virtual memory: 4733 megabytes
-    Info: Processing ended: Thu Apr 27 14:20:31 2023
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 384 megabytes
+    Info: Processing ended: Thu Apr 27 15:07:25 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/kazu4/2023-simple-2023-team23/simple/output_files/simple.map.smsg.
+The suppressed messages can be found in /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/output_files/simple.map.smsg.
 
 

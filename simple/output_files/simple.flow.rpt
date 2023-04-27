@@ -1,5 +1,5 @@
 Flow report for simple
-Thu Apr 27 14:20:51 2023
+Thu Apr 27 15:07:32 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 27 14:20:51 2023       ;
+; Flow Status                        ; Successful - Thu Apr 27 15:07:32 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; simple                                      ;
 ; Top-level Entity Name              ; simple                                      ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/27/2023 14:20:20 ;
+; Start date & time ; 04/27/2023 15:07:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; simple              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 154535783466012.168257281915812        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 269318575776682.168257563917627        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -86,6 +86,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --                                ;
+; MISC_FILE                           ; ram.bsf                                ; --            ; --          ; --                                ;
+; MISC_FILE                           ; ram.cmp                                ; --            ; --          ; --                                ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
@@ -101,26 +103,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4719 MB             ; 00:00:13                           ;
-; Fitter               ; 00:00:10     ; 1.0                     ; 5536 MB             ; 00:00:08                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4783 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:00                           ;
-; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 373 MB              ; 00:00:13                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 1601 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 369 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 579 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 616 MB              ; 00:00:00                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Kazu-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Kazu-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Kazu-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Kazu-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Kazu-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; WS38             ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
+; Fitter               ; WS38             ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
+; Assembler            ; WS38             ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
+; Timing Analyzer      ; WS38             ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; WS38             ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------
