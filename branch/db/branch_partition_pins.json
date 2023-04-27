@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "brch_sig",
+					"strict" : false
+				},
+				{
+					"name" : "cond[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cond[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cond[2]",
+					"strict" : false
+				},
+				{
+					"name" : "brch[2]",
+					"strict" : false
+				},
+				{
+					"name" : "brch[1]",
+					"strict" : false
+				},
+				{
+					"name" : "brch[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
