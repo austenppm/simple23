@@ -18,15 +18,15 @@
 # -------------------------------------------------------------------------- #
 #
 # Quartus Prime
-# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-# Date created = 13:19:13  April 21, 2023
+# Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+# Date created = 16:17:19  April 27, 2023
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		simple_assignment_defaults.qdf
+#		RemoveChattering_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -39,9 +39,9 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE30F23I7
-set_global_assignment -name TOP_LEVEL_ENTITY simple
+set_global_assignment -name TOP_LEVEL_ENTITY RemoveChattering
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:19:13  APRIL 21, 2023"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:17:19  APRIL 27, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Standard Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
@@ -55,45 +55,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VERILOG_FILE RemoveChattering.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE simple.v
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name QIP_FILE ram.qip
-set_location_assignment PIN_A12 -to clk
-set_location_assignment PIN_A10 -to in[15]
-set_location_assignment PIN_B10 -to in[14]
-set_location_assignment PIN_C10 -to in[13]
-set_location_assignment PIN_D10 -to in[12]
-set_location_assignment PIN_E10 -to in[11]
-set_location_assignment PIN_F10 -to in[10]
-set_location_assignment PIN_G10 -to in[9]
-set_location_assignment PIN_G11 -to in[8]
-set_location_assignment PIN_E11 -to in[7]
-set_location_assignment PIN_F11 -to in[6]
-set_location_assignment PIN_A13 -to in[5]
-set_location_assignment PIN_B13 -to in[4]
-set_location_assignment PIN_C13 -to in[3]
-set_location_assignment PIN_D13 -to in[2]
-set_location_assignment PIN_E13 -to in[1]
-set_location_assignment PIN_F13 -to in[0]
-set_location_assignment PIN_AA3 -to out[15]
-set_location_assignment PIN_V5 -to out[14]
-set_location_assignment PIN_AA5 -to out[12]
-set_location_assignment PIN_AA4 -to out[13]
-set_location_assignment PIN_AB4 -to out[11]
-set_location_assignment PIN_W6 -to out[10]
-set_location_assignment PIN_AB5 -to out[9]
-set_location_assignment PIN_Y6 -to out[8]
-set_location_assignment PIN_V6 -to out[7]
-set_location_assignment PIN_W7 -to out[6]
-set_location_assignment PIN_U7 -to out[5]
-set_location_assignment PIN_Y7 -to out[4]
-set_location_assignment PIN_V7 -to out[3]
-set_location_assignment PIN_T8 -to out[2]
-set_location_assignment PIN_AA7 -to out[1]
-set_location_assignment PIN_U8 -to out[0]
-set_location_assignment PIN_E15 -to rst_n
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
