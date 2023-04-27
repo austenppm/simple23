@@ -1,5 +1,5 @@
 module RegisterFile(
-	input [2:0] Read1,Read2,WriteReg,
+input [2:0] Read1,Read2,WriteReg,
 	input [15:0] WriteData,
 	input clk,RegWrite,
 	output [15:0] Data1,Data2);
