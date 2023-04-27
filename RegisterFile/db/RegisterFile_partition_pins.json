@@ -1,0 +1,245 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Data1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Data1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Data2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Read1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Read1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Read1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Read2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Read2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Read2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "WriteReg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteReg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RegWrite",
+					"strict" : false
+				},
+				{
+					"name" : "WriteReg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[8]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[9]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[10]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[11]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[12]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[13]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[14]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteData[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
