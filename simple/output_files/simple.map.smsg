@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at simple.v(45): object "pc" differs only in case from object "PC" in the same scope File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 45
-Info (10281): Verilog HDL Declaration information at simple.v(51): object "BR" differs only in case from object "br" in the same scope File: /export/home/019/a0192807/intelFPGA_lite/20.1/2023-simple-2023-team23-master/simple/simple.v Line: 51
+Info (10281): Verilog HDL Declaration information at simple.v(45): object "pc" differs only in case from object "PC" in the same scope File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 45
+Info (10281): Verilog HDL Declaration information at simple.v(51): object "BR" differs only in case from object "br" in the same scope File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 51

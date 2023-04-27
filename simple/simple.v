@@ -29,7 +29,7 @@ module simple(
 		wire [7:0] d;
 		wire [15:0] exd;
 		wire [15:0] WriteData;
-		wire MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorshifter;
+		wire MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorshifter,ce;
 		wire [15:0] A;
 		wire [15:0] B;
 		wire [15:0] Data1;
@@ -55,11 +55,12 @@ module simple(
 		register MDR(.clk(clk2[0]),.rst_n(rst_n),.WriteData(MDRIn),.DataOut(MDROut));
 		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(WriteReg),.WriteData(WriteData),.clk(clk2[0]),.RegWrite(RegWrite),.Data1(Data1),.Data2(Data2));
 		ALU ALU(.ALUctl(ALUctl),.A(A),.B(B),.Out(ALUOut),.Outcond(ALUcondout));
-		ctl ctl(.clk(clk2[3]),.rst_n(rst_n),.inst(Inst),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Output(Output),.Input(Input),.opcode(opcode),.RegDst(RegDst),.Branch(Branch));
+		ctl ctl(.clk(clk2[3]),.rst_n(rst_n),.inst(Inst),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Halt(ce),.Output(Output),.Input(Input),.opcode(opcode),.RegDst(RegDst),.Branch(Branch));
 		shifter sf(.A(shifterIn),.opcode(shifterctl),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
-		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig),.ce(),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
+		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig),.ce(ce),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig));
+		ram ram(.address(pc),.clock(clk2[0]),.data(DROut),.wren(MemWrite));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
 		assign dshift = IROut[3:0];
