@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Apr 28 10:08:17 2023
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+Fitter Status : Successful - Fri Apr 28 15:47:36 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : display
 Top-level Entity Name : display
 Family : Cyclone IV E
 Device : EP4CE30F23I7
 Timing Models : Final
-Total logic elements : 406 / 28,848 ( 1 % )
-    Total combinational functions : 406 / 28,848 ( 1 % )
+Total logic elements : 397 / 28,848 ( 1 % )
+    Total combinational functions : 397 / 28,848 ( 1 % )
     Dedicated logic registers : 4 / 28,848 ( < 1 % )
 Total registers : 4
 Total pins : 198 / 329 ( 60 % )

@@ -111,9 +111,9 @@ module number(
 	wire [7:0] disp_wire1,disp_wire2,disp_wire3,disp_wire4;
 	wire [3:0] data_wire1,data_wire2,data_wire3,data_wire4;
 	assign data_wire1 = data_sig [3:0];
-	assign data_wire2 = data_sig [7:3];
-	assign data_wire3 = data_sig [11:4];
-	assign data_wire4 = data_sig [15:11];
+	assign data_wire2 = data_sig [7:4];
+	assign data_wire3 = data_sig [11:8];
+	assign data_wire4 = data_sig [15:12];
 	SEVENSEG_LED l1(.input_signal(data_wire1[3:0]), .output_signal(disp_wire1[7:0]));
 	SEVENSEG_LED l2(.input_signal(data_wire2[3:0]), .output_signal(disp_wire2[7:0]));
 	SEVENSEG_LED l3(.input_signal(data_wire3[3:0]), .output_signal(disp_wire3[7:0]));
