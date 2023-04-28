@@ -8,6 +8,9 @@
 `include "branch.v"
 `include "RemoveChattering.v"
 `include "counta2.v"
+`include "counta3.v"
+`include "segLED.v"
+`include "divider.v"
 
 module simple(
 		input [15:0] in,
@@ -18,7 +21,10 @@ module simple(
 		output [15:0] out,
 		output [7:0] out2,
 		output [3:0] sel2,
-		output ceout,
+		output [7:0] out3,
+		output [3:0] sel3,
+		output ce1out,
+		output ce2out,
 		output [4:0] clk2out,
 		output bfo
 		);
@@ -68,9 +74,10 @@ module simple(
 		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig),.ce(ce),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig));
-		ram ram(.address(pc),.clock(clk2[0]),.data(DROut),.wren(MemWrite),.q(Inst));
+		ram ram(.address(pc),.clock(clk2[3]),.data(DROut),.wren(MemWrite),.q(Inst));
 		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
 		counta2 c2(.rst_n(rst_n), .clk(clk20),.data(pc),.out2(out2),.sel2(sel2));
+		counta3 c3(.rst_n(rst_n), .clk(clk20),.data(Inst),.out2(out3),.sel2(sel3));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
 		assign dshift = IROut[3:0];
@@ -91,7 +98,9 @@ module simple(
 					  {8'b11111111,d};
 		assign ce = ce1 && ce2;
 		assign pcout = pc;
-		assign ceout = ce;
+//		assign ceout = ce;
+		assign ce1out = ce1;
+		assign ce2out = ce2;
 		assign clk2out = clk2;
 		assign bfo = brch_sig;
 endmodule

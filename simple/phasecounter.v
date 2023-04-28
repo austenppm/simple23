@@ -6,6 +6,7 @@ module phasecounter(
 			always @(posedge clk or negedge rst_n) begin
 				if (!rst_n) begin
 					count <= 0;
+					p <= 5'b10000;
 				end else begin
 					count <= (count + 1) % 5;
 					if (count==3'd4)

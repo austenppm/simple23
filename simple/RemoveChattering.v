@@ -26,7 +26,7 @@ module RemoveChattering (
 		if(!rst_n2) begin
 			botton_reg <= 1'b0;
 		end else begin
-			botton_reg <= botton;
+			botton_reg <= !botton;
 		end
 	end
 	always @(posedge botton_reg or negedge rst_n3) begin

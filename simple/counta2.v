@@ -1,6 +1,3 @@
-`include "segLED.v"
-`include "divider.v"
-
 module counta2(
 			input rst_n, clk,
 			input [15:0] data,

@@ -48,7 +48,55 @@
 					"strict" : false
 				},
 				{
-					"name" : "ceout",
+					"name" : "out3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sel3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sel3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ce1out",
+					"strict" : false
+				},
+				{
+					"name" : "ce2out",
 					"strict" : false
 				},
 				{
