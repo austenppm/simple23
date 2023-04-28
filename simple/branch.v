@@ -9,5 +9,7 @@ module branch(
 	assign v = cond[0];
 	assign brch_sig = (((brch == 3'b100))||((brch == 3'b000 && z == 1'b1 ))||((brch == 3'b001 && s ^ v == 1'b1 )) || (brch == 3'b010 && (z == 1'b1 || s ^ v == 1'b1)) || (( brch == 3'b011 && z == 1'b0))) ? 1'b1:
 							1'b0;
+//	assign brch_sig = (((brch == 3'b100))||((brch == 3'b000 && z == 1'b1 ))||((brch == 3'b001 && s ^ v == 1'b1 )) || (brch == 3'b010 && (z == 1'b1 || s ^ v == 1'b1)) || (( brch == 3'b011 && z == 1'b0))) ? 1'b0:
+//						1'b1;
 endmodule
 	

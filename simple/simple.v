@@ -7,13 +7,20 @@
 `include "ctl.v"
 `include "branch.v"
 `include "RemoveChattering.v"
+`include "counta2.v"
 
 module simple(
 		input [15:0] in,
 		input clk,
+		input clk20,
 		input rst_n,
 		input exec,
-		output [15:0] out
+		output [15:0] out,
+		output [7:0] out2,
+		output [3:0] sel2,
+		output ceout,
+		output [4:0] clk2out,
+		output bfo
 		);
 		wire [15:0] IROut;
 		wire [15:0] BROut;
@@ -30,7 +37,7 @@ module simple(
 		wire [7:0] d;
 		wire [15:0] exd;
 		wire [15:0] WriteData;
-		wire MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorshifter,ce,ce1,ce2;
+		wire MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorshifter,ce,ce1,ce2,brch_sig;
 		wire [15:0] A;
 		wire [15:0] B;
 		wire [15:0] Data1;
@@ -62,7 +69,8 @@ module simple(
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig));
 		ram ram(.address(pc),.clock(clk2[0]),.data(DROut),.wren(MemWrite),.q(Inst));
-		RemoveChattering rc(.clk(clk),.botton(exec),.rst_n(rst_n),.signal(ce2));
+		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
+		counta2 c2(.rst_n(rst_n), .clk(clk20),.data(pc),.out2(out2),.sel2(sel2));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
 		assign dshift = IROut[3:0];
@@ -82,5 +90,9 @@ module simple(
 		assign exd = (d[7]==1'b0) ? {8'b00000000,d}:
 					  {8'b11111111,d};
 		assign ce = ce1 && ce2;
+		assign pcout = pc;
+		assign ceout = ce;
+		assign clk2out = clk2;
+		assign bfo = brch_sig;
 endmodule
 		

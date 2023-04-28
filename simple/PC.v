@@ -9,16 +9,16 @@ module PC(input clock,reset,branchFlag,ce,//changeEnable
 		pcPlusOne <= pc + 1;
 	end
 	
-	always @(posedge clock) begin 
-		if(reset == 1'b 1)begin
+	always @(posedge clock or negedge reset) begin 
+		if(!reset)begin
 			pc <= 0;
 		end else begin
 			if(ce == 1'b1)begin
-			if(branchFlag == 1'b 1) begin
-				pc <= dr;
-			end else  begin
-				pc <= pc+1;
-			end
+				if(branchFlag == 1'b 1) begin
+					pc <= dr;
+				end else  begin
+					pc <= pc+1;
+				end
 			end
 		end
 	end

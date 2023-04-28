@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/kazu4/2023-simple-2023-team23/simple/simulation/modelsim
+vsimple
+Z1 !s110 1682583445
+!i10b 1
+!s100 aN6[YL2T]mI7K>3DOSBAJ2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IMNohT23i3C=feBeN]?Q1H2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1682583433
+8simple.vo
+Fsimple.vo
+!i122 0
+L0 32 17248
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1682583445.000000
+!s107 simple.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|simple.vo|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z7 tCvgOpt 0
+vsimple_vlg_tst
+R1
+!i10b 1
+!s100 ]7ZnQ]lcaQGa[A4Sdz;J^2
+R2
+I1oeGHLOmfE=CoXbYBaD0L1
+R3
+R0
+w1682583383
+8C:/Users/kazu4/2023-simple-2023-team23/simple/simulation/modelsim/simple_test1.vt
+FC:/Users/kazu4/2023-simple-2023-team23/simple/simulation/modelsim/simple_test1.vt
+!i122 1
+L0 29 44
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kazu4/2023-simple-2023-team23/simple/simulation/modelsim/simple_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kazu4/2023-simple-2023-team23/simple/simulation/modelsim|C:/Users/kazu4/2023-simple-2023-team23/simple/simulation/modelsim/simple_test1.vt|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/kazu4/2023-simple-2023-team23/simple/simulation/modelsim
+R7
