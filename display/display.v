@@ -1,4 +1,4 @@
-module display(
+ module display(
 	input	sl_clk,rst,
 	input [15:0] reg_1,reg_2,reg_3,reg_4,reg_5,reg_6,reg_7,reg_0,
 	output [7:0] disp_1,disp_2,disp_3,disp_4,disp_5,disp_6,disp_7,disp_8,
@@ -66,23 +66,23 @@ endmodule
 module SEVENSEG_LED (
 	input [3:0] input_signal,
 	output [7:0] output_signal);
-	assign output_signal = (input_signal == 4'b0000)?8'b01111110:
-								  (input_signal == 4'b0001)?8'b00110000:
-								  (input_signal == 4'b0010)?8'b01101101:
-								  (input_signal == 4'b0011)?8'b01111001:	
-								  (input_signal == 4'b0100)?8'b00110011:
-								  (input_signal == 4'b0101)?8'b01011011:
-								  (input_signal == 4'b0110)?8'b01011111:
-								  (input_signal == 4'b0111)?8'b01110010:
-								  (input_signal == 4'b1000)?8'b01111111:
-								  (input_signal == 4'b1001)?8'b01111011:
-								  (input_signal == 4'b1010)?8'b01110111:
-								  (input_signal == 4'b1011)?8'b00011111:
-								  (input_signal == 4'b1100)?8'b00001101:
-								  (input_signal == 4'b1101)?8'b00111101:
-								  (input_signal == 4'b1110)?8'b01001111:
-								  (input_signal == 4'b1111)?8'b01000111:
-								  8'b10000000;
+	assign output_signal = (input_signal == 4'b0000)?8'b10000001:
+								  (input_signal == 4'b0001)?8'b11110011:
+								  (input_signal == 4'b0010)?8'b01001001:
+								  (input_signal == 4'b0011)?8'b01100001:	
+								  (input_signal == 4'b0100)?8'b00110111:
+								  (input_signal == 4'b0101)?8'b00100101:
+								  (input_signal == 4'b0110)?8'b00000101:
+								  (input_signal == 4'b0111)?8'b11110001:
+								  (input_signal == 4'b1000)?8'b00000001:
+								  (input_signal == 4'b1001)?8'b00100001:
+								  (input_signal == 4'b1010)?8'b00010001:
+								  (input_signal == 4'b1011)?8'b00001111:
+								  (input_signal == 4'b1100)?8'b10011011:
+								  (input_signal == 4'b1101)?8'b01000011:
+								  (input_signal == 4'b1110)?8'b00001011:
+								  (input_signal == 4'b1111)?8'b00011111:
+								  8'b01111111;
 								  
 endmodule
 
@@ -110,10 +110,10 @@ module number(
 	wire n_wire_clk,n_wire_rst;
 	wire [7:0] disp_wire1,disp_wire2,disp_wire3,disp_wire4;
 	wire [3:0] data_wire1,data_wire2,data_wire3,data_wire4;
-	assign data_wire1 = data_sig [3:0];
-	assign data_wire2 = data_sig [7:3];
-	assign data_wire3 = data_sig [11:4];
-	assign data_wire4 = data_sig [15:11];
+	assign data_wire1 = data_sig[3:0];
+	assign data_wire2 = data_sig[7:4]; // Changed from [7:3] to [7:4]
+	assign data_wire3 = data_sig[11:8]; // Changed from [11:4] to [11:8]
+	assign data_wire4 = data_sig[15:12]; // Changed from [15:11] to [15:12]
 	SEVENSEG_LED l1(.input_signal(data_wire1[3:0]), .output_signal(disp_wire1[7:0]));
 	SEVENSEG_LED l2(.input_signal(data_wire2[3:0]), .output_signal(disp_wire2[7:0]));
 	SEVENSEG_LED l3(.input_signal(data_wire3[3:0]), .output_signal(disp_wire3[7:0]));
