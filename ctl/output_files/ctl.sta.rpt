@@ -1,5 +1,5 @@
 Timing Analyzer report for ctl
-Thu Apr 27 14:02:07 2023
+Fri Apr 28 13:41:19 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -17,43 +17,36 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
   9. Slow 1200mV 100C Model Recovery Summary
  10. Slow 1200mV 100C Model Removal Summary
  11. Slow 1200mV 100C Model Minimum Pulse Width Summary
- 12. Slow 1200mV 100C Model Setup: 'clk'
- 13. Slow 1200mV 100C Model Hold: 'clk'
- 14. Slow 1200mV 100C Model Metastability Summary
- 15. Slow 1200mV -40C Model Fmax Summary
- 16. Slow 1200mV -40C Model Setup Summary
- 17. Slow 1200mV -40C Model Hold Summary
- 18. Slow 1200mV -40C Model Recovery Summary
- 19. Slow 1200mV -40C Model Removal Summary
- 20. Slow 1200mV -40C Model Minimum Pulse Width Summary
- 21. Slow 1200mV -40C Model Setup: 'clk'
- 22. Slow 1200mV -40C Model Hold: 'clk'
- 23. Slow 1200mV -40C Model Metastability Summary
- 24. Fast 1200mV -40C Model Setup Summary
- 25. Fast 1200mV -40C Model Hold Summary
- 26. Fast 1200mV -40C Model Recovery Summary
- 27. Fast 1200mV -40C Model Removal Summary
- 28. Fast 1200mV -40C Model Minimum Pulse Width Summary
- 29. Fast 1200mV -40C Model Setup: 'clk'
- 30. Fast 1200mV -40C Model Hold: 'clk'
- 31. Fast 1200mV -40C Model Metastability Summary
- 32. Multicorner Timing Analysis Summary
- 33. Board Trace Model Assignments
- 34. Input Transition Times
- 35. Signal Integrity Metrics (Slow 1200mv n40c Model)
- 36. Signal Integrity Metrics (Slow 1200mv 100c Model)
- 37. Signal Integrity Metrics (Fast 1200mv n40c Model)
- 38. Setup Transfers
- 39. Hold Transfers
- 40. Report TCCS
- 41. Report RSKM
- 42. Unconstrained Paths Summary
- 43. Clock Status Summary
- 44. Unconstrained Input Ports
- 45. Unconstrained Output Ports
- 46. Unconstrained Input Ports
- 47. Unconstrained Output Ports
- 48. Timing Analyzer Messages
+ 12. Slow 1200mV 100C Model Metastability Summary
+ 13. Slow 1200mV -40C Model Fmax Summary
+ 14. Slow 1200mV -40C Model Setup Summary
+ 15. Slow 1200mV -40C Model Hold Summary
+ 16. Slow 1200mV -40C Model Recovery Summary
+ 17. Slow 1200mV -40C Model Removal Summary
+ 18. Slow 1200mV -40C Model Minimum Pulse Width Summary
+ 19. Slow 1200mV -40C Model Metastability Summary
+ 20. Fast 1200mV -40C Model Setup Summary
+ 21. Fast 1200mV -40C Model Hold Summary
+ 22. Fast 1200mV -40C Model Recovery Summary
+ 23. Fast 1200mV -40C Model Removal Summary
+ 24. Fast 1200mV -40C Model Minimum Pulse Width Summary
+ 25. Fast 1200mV -40C Model Metastability Summary
+ 26. Multicorner Timing Analysis Summary
+ 27. Board Trace Model Assignments
+ 28. Input Transition Times
+ 29. Signal Integrity Metrics (Slow 1200mv n40c Model)
+ 30. Signal Integrity Metrics (Slow 1200mv 100c Model)
+ 31. Signal Integrity Metrics (Fast 1200mv n40c Model)
+ 32. Clock Transfers
+ 33. Report TCCS
+ 34. Report RSKM
+ 35. Unconstrained Paths Summary
+ 36. Clock Status Summary
+ 37. Unconstrained Input Ports
+ 38. Unconstrained Output Ports
+ 39. Unconstrained Input Ports
+ 40. Unconstrained Output Ports
+ 41. Timing Analyzer Messages
 
 
 
@@ -104,8 +97,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processors 3-12        ;   0.3%      ;
+;     Processors 2-12        ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -118,14 +110,10 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 100C Model Fmax Summary                                                                       ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 511.77 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+---------------------------------------
+; Slow 1200mV 100C Model Fmax Summary ;
+---------------------------------------
+No paths to report.
 
 
 ----------------------------------
@@ -134,22 +122,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+--------------------------------------+
+----------------------------------------
 ; Slow 1200mV 100C Model Setup Summary ;
-+-------+--------+---------------------+
-; Clock ; Slack  ; End Point TNS       ;
-+-------+--------+---------------------+
-; clk   ; -0.954 ; -11.811             ;
-+-------+--------+---------------------+
+----------------------------------------
+No paths to report.
 
 
-+-------------------------------------+
+---------------------------------------
 ; Slow 1200mV 100C Model Hold Summary ;
-+-------+-------+---------------------+
-; Clock ; Slack ; End Point TNS       ;
-+-------+-------+---------------------+
-; clk   ; 0.462 ; 0.000               ;
-+-------+-------+---------------------+
+---------------------------------------
+No paths to report.
 
 
 -------------------------------------------
@@ -169,206 +151,8 @@ No paths to report.
 +-------+--------+-----------------------------------+
 ; Clock ; Slack  ; End Point TNS                     ;
 +-------+--------+-----------------------------------+
-; clk   ; -3.000 ; -40.265                           ;
+; clk   ; -3.000 ; -23.560                           ;
 +-------+--------+-----------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 100C Model Setup: 'clk'                                                                               ;
-+--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; -0.954 ; twobit[0]      ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.878      ;
-; -0.898 ; brch_reg[1]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.822      ;
-; -0.897 ; twobit[1]      ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.821      ;
-; -0.887 ; brch_reg[0]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.811      ;
-; -0.886 ; brch_reg[1]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.810      ;
-; -0.885 ; brch_reg[1]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.809      ;
-; -0.885 ; brch_reg[1]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.809      ;
-; -0.866 ; brch_reg[0]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.790      ;
-; -0.862 ; brch_reg[2]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.786      ;
-; -0.841 ; opcode[2]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.765      ;
-; -0.826 ; twobit[0]      ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.750      ;
-; -0.825 ; twobit[0]      ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.749      ;
-; -0.825 ; twobit[0]      ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.749      ;
-; -0.782 ; twobit[0]      ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.706      ;
-; -0.765 ; opcode_reg[3]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.689      ;
-; -0.744 ; twobit[1]      ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.668      ;
-; -0.743 ; twobit[1]      ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.667      ;
-; -0.742 ; twobit[1]      ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.666      ;
-; -0.738 ; brch_reg[2]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.662      ;
-; -0.729 ; opcode_reg[2]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.653      ;
-; -0.717 ; opcode[1]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.641      ;
-; -0.707 ; brch_reg[0]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.631      ;
-; -0.706 ; brch_reg[0]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.630      ;
-; -0.706 ; brch_reg[0]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.630      ;
-; -0.701 ; twobit[1]      ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.074     ; 1.625      ;
-; -0.696 ; twobit[1]      ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.620      ;
-; -0.695 ; twobit[1]      ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.074     ; 1.619      ;
-; -0.694 ; twobit[1]      ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.618      ;
-; -0.689 ; twobit[1]      ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.613      ;
-; -0.680 ; opcode[3]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.604      ;
-; -0.638 ; twobit[1]      ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.341      ; 1.977      ;
-; -0.601 ; brch_reg[1]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.525      ;
-; -0.565 ; opcode_reg[3]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.074     ; 1.489      ;
-; -0.563 ; opcode[0]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.487      ;
-; -0.560 ; opcode_reg[3]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.484      ;
-; -0.559 ; opcode_reg[3]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.074     ; 1.483      ;
-; -0.558 ; opcode_reg[3]  ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.482      ;
-; -0.541 ; twobit[0]      ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.341      ; 1.880      ;
-; -0.531 ; opcode_reg[1]  ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.455      ;
-; -0.527 ; twobit[0]      ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.074     ; 1.451      ;
-; -0.526 ; opcode_reg[2]  ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.450      ;
-; -0.522 ; twobit[0]      ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.446      ;
-; -0.521 ; twobit[0]      ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.074     ; 1.445      ;
-; -0.520 ; twobit[0]      ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.444      ;
-; -0.512 ; brch_reg[1]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.436      ;
-; -0.502 ; opcode_reg[3]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.341      ; 1.841      ;
-; -0.483 ; twobit[0]      ; RegDst[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.407      ;
-; -0.464 ; twobit[0]      ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.341      ; 1.803      ;
-; -0.461 ; twobit[0]      ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.074     ; 1.385      ;
-; -0.460 ; twobit[1]      ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.074     ; 1.384      ;
-; -0.457 ; opcode_reg[1]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.381      ;
-; -0.450 ; twobit[0]      ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.374      ;
-; -0.444 ; twobit[1]      ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.341      ; 1.783      ;
-; -0.437 ; twobit[1]      ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.361      ;
-; -0.434 ; brch_reg[0]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.341      ; 1.773      ;
-; -0.414 ; twobit[1]      ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.338      ;
-; -0.409 ; brch_reg[2]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.341      ; 1.748      ;
-; -0.381 ; opcode_reg[0]  ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.305      ;
-; -0.376 ; opcode_reg[0]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.300      ;
-; -0.364 ; twobit[1]      ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.288      ;
-; -0.337 ; opcode_reg[0]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.261      ;
-; -0.337 ; opcode_reg[0]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.074     ; 1.261      ;
-; -0.336 ; opcode_reg[0]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.074     ; 1.260      ;
-; -0.329 ; brch_reg[0]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.253      ;
-; -0.300 ; twobit[1]      ; RegDst[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.224      ;
-; -0.285 ; opcode_reg[0]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.341      ; 1.624      ;
-; -0.268 ; twobit[1]      ; MemRead~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.192      ;
-; -0.267 ; twobit[1]      ; MemWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.191      ;
-; -0.243 ; opcode_reg[2]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.074     ; 1.167      ;
-; -0.228 ; brch_reg[2]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.152      ;
-; -0.227 ; brch_reg[2]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.151      ;
-; -0.227 ; opcode_reg[1]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.074     ; 1.151      ;
-; -0.226 ; brch_reg[2]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.150      ;
-; -0.224 ; opcode_reg[1]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.148      ;
-; -0.223 ; opcode_reg[1]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.074     ; 1.147      ;
-; -0.214 ; opcode_reg[2]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.074     ; 1.138      ;
-; -0.210 ; opcode_reg[2]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.134      ;
-; -0.210 ; brch_reg[2]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.134      ;
-; -0.175 ; opcode_reg[1]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.341      ; 1.514      ;
-; -0.157 ; opcode_reg[2]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.341      ; 1.496      ;
-; -0.138 ; twobit[0]      ; MemRead~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.062      ;
-; -0.135 ; twobit[0]      ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.074     ; 1.059      ;
-; -0.132 ; twobit[0]      ; MemWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.074     ; 1.056      ;
-; -0.128 ; twobit[0]      ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.052      ;
-; -0.100 ; twobit[0]      ; RegDst[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.024      ;
-; -0.100 ; twobit[0]      ; RegDst[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 1.024      ;
-; -0.061 ; opcode_reg[3]  ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.074     ; 0.985      ;
-; 0.034  ; twobit[1]      ; RegDst[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 0.890      ;
-; 0.034  ; twobit[1]      ; RegDst[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.074     ; 0.890      ;
-; 0.038  ; opcode_reg[2]  ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.074     ; 0.886      ;
-; 0.098  ; brch_reg[1]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.341      ; 1.241      ;
-+--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 100C Model Hold: 'clk'                                                                               ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.462 ; brch_reg[1]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.506      ; 1.154      ;
-; 0.488 ; opcode_reg[2]  ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.074      ; 0.748      ;
-; 0.499 ; twobit[1]      ; RegDst[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 0.759      ;
-; 0.500 ; twobit[1]      ; RegDst[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 0.760      ;
-; 0.530 ; twobit[0]      ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.505      ; 1.221      ;
-; 0.555 ; twobit[1]      ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.505      ; 1.246      ;
-; 0.579 ; opcode_reg[3]  ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.074      ; 0.839      ;
-; 0.600 ; twobit[0]      ; RegDst[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 0.860      ;
-; 0.601 ; twobit[0]      ; RegDst[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 0.861      ;
-; 0.641 ; opcode_reg[2]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.505      ; 1.332      ;
-; 0.649 ; opcode_reg[1]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.505      ; 1.340      ;
-; 0.682 ; twobit[0]      ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 0.942      ;
-; 0.685 ; twobit[0]      ; MemRead~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 0.945      ;
-; 0.689 ; twobit[0]      ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 0.949      ;
-; 0.693 ; twobit[0]      ; MemWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 0.953      ;
-; 0.724 ; opcode_reg[2]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.074      ; 0.984      ;
-; 0.727 ; opcode_reg[2]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.074      ; 0.987      ;
-; 0.737 ; opcode_reg[1]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.074      ; 0.997      ;
-; 0.745 ; twobit[0]      ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.005      ;
-; 0.746 ; opcode_reg[1]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.006      ;
-; 0.746 ; opcode_reg[1]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.006      ;
-; 0.752 ; brch_reg[0]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.012      ;
-; 0.756 ; brch_reg[0]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.016      ;
-; 0.759 ; brch_reg[2]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.019      ;
-; 0.760 ; opcode_reg[2]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.020      ;
-; 0.763 ; twobit[1]      ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.023      ;
-; 0.779 ; brch_reg[2]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.039      ;
-; 0.780 ; brch_reg[2]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.040      ;
-; 0.780 ; brch_reg[2]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.040      ;
-; 0.818 ; twobit[1]      ; RegDst[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.078      ;
-; 0.820 ; twobit[1]      ; MemRead~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.080      ;
-; 0.823 ; twobit[1]      ; MemWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.083      ;
-; 0.837 ; opcode_reg[0]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.505      ; 1.528      ;
-; 0.866 ; brch_reg[0]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.126      ;
-; 0.881 ; twobit[1]      ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.141      ;
-; 0.886 ; brch_reg[2]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.506      ; 1.578      ;
-; 0.891 ; twobit[0]      ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.151      ;
-; 0.892 ; twobit[0]      ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.152      ;
-; 0.893 ; opcode_reg[0]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.153      ;
-; 0.897 ; brch_reg[0]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.506      ; 1.589      ;
-; 0.905 ; brch_reg[1]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.165      ;
-; 0.917 ; twobit[1]      ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.177      ;
-; 0.923 ; twobit[1]      ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.506      ; 1.615      ;
-; 0.924 ; opcode_reg[0]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.184      ;
-; 0.925 ; opcode_reg[0]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.074      ; 1.185      ;
-; 0.927 ; twobit[0]      ; RegDst[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.187      ;
-; 0.932 ; opcode_reg[0]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.192      ;
-; 0.936 ; opcode_reg[0]  ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.196      ;
-; 0.945 ; twobit[1]      ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.205      ;
-; 0.946 ; twobit[0]      ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.074      ; 1.206      ;
-; 0.951 ; opcode_reg[3]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.505      ; 1.642      ;
-; 0.955 ; opcode_reg[1]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.215      ;
-; 0.963 ; twobit[1]      ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.074      ; 1.223      ;
-; 0.991 ; twobit[0]      ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.251      ;
-; 1.028 ; opcode_reg[3]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.288      ;
-; 1.029 ; twobit[1]      ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.289      ;
-; 1.031 ; twobit[1]      ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.291      ;
-; 1.033 ; opcode_reg[3]  ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.293      ;
-; 1.034 ; opcode_reg[3]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.074      ; 1.294      ;
-; 1.035 ; opcode_reg[3]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.295      ;
-; 1.044 ; twobit[0]      ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.506      ; 1.736      ;
-; 1.052 ; twobit[0]      ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.312      ;
-; 1.057 ; twobit[0]      ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.317      ;
-; 1.058 ; twobit[0]      ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.074      ; 1.318      ;
-; 1.059 ; twobit[0]      ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.319      ;
-; 1.067 ; brch_reg[1]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.327      ;
-; 1.070 ; opcode_reg[2]  ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.330      ;
-; 1.075 ; opcode_reg[1]  ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.335      ;
-; 1.103 ; brch_reg[1]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.363      ;
-; 1.128 ; opcode[0]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.388      ;
-; 1.138 ; opcode_reg[3]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.398      ;
-; 1.188 ; twobit[1]      ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.448      ;
-; 1.188 ; twobit[1]      ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.448      ;
-; 1.193 ; twobit[1]      ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.453      ;
-; 1.194 ; twobit[1]      ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.074      ; 1.454      ;
-; 1.195 ; twobit[1]      ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.455      ;
-; 1.199 ; opcode_reg[2]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.074      ; 1.459      ;
-; 1.214 ; opcode[1]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.474      ;
-; 1.215 ; twobit[1]      ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.475      ;
-; 1.241 ; brch_reg[0]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.501      ;
-; 1.242 ; brch_reg[0]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.502      ;
-; 1.243 ; brch_reg[0]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.503      ;
-; 1.258 ; opcode[3]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.518      ;
-; 1.277 ; brch_reg[2]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.537      ;
-; 1.296 ; twobit[0]      ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.556      ;
-; 1.329 ; brch_reg[2]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.589      ;
-; 1.339 ; opcode[2]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.599      ;
-; 1.353 ; twobit[0]      ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.613      ;
-; 1.439 ; brch_reg[1]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.699      ;
-; 1.440 ; brch_reg[1]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.700      ;
-; 1.441 ; brch_reg[1]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.701      ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
 ------------------------------------------------
@@ -377,32 +161,22 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV -40C Model Fmax Summary                                                                       ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 577.37 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+---------------------------------------
+; Slow 1200mV -40C Model Fmax Summary ;
+---------------------------------------
+No paths to report.
 
 
-+--------------------------------------+
+----------------------------------------
 ; Slow 1200mV -40C Model Setup Summary ;
-+-------+--------+---------------------+
-; Clock ; Slack  ; End Point TNS       ;
-+-------+--------+---------------------+
-; clk   ; -0.732 ; -7.595              ;
-+-------+--------+---------------------+
+----------------------------------------
+No paths to report.
 
 
-+-------------------------------------+
+---------------------------------------
 ; Slow 1200mV -40C Model Hold Summary ;
-+-------+-------+---------------------+
-; Clock ; Slack ; End Point TNS       ;
-+-------+-------+---------------------+
-; clk   ; 0.385 ; 0.000               ;
-+-------+-------+---------------------+
+---------------------------------------
+No paths to report.
 
 
 -------------------------------------------
@@ -422,206 +196,8 @@ No paths to report.
 +-------+--------+-----------------------------------+
 ; Clock ; Slack  ; End Point TNS                     ;
 +-------+--------+-----------------------------------+
-; clk   ; -3.000 ; -40.265                           ;
+; clk   ; -3.000 ; -23.560                           ;
 +-------+--------+-----------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV -40C Model Setup: 'clk'                                                                               ;
-+--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; -0.732 ; twobit[0]      ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.669      ;
-; -0.653 ; brch_reg[1]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.590      ;
-; -0.652 ; brch_reg[1]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.589      ;
-; -0.651 ; brch_reg[1]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.588      ;
-; -0.651 ; brch_reg[1]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.588      ;
-; -0.624 ; twobit[1]      ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.561      ;
-; -0.619 ; opcode[2]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.556      ;
-; -0.619 ; twobit[0]      ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.556      ;
-; -0.619 ; twobit[0]      ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.556      ;
-; -0.618 ; twobit[0]      ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.555      ;
-; -0.617 ; brch_reg[2]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.554      ;
-; -0.608 ; brch_reg[0]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.545      ;
-; -0.608 ; brch_reg[0]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.545      ;
-; -0.557 ; twobit[0]      ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.494      ;
-; -0.530 ; brch_reg[2]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.467      ;
-; -0.512 ; opcode_reg[3]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 1.448      ;
-; -0.498 ; opcode[1]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.435      ;
-; -0.482 ; opcode[3]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.419      ;
-; -0.482 ; twobit[1]      ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.419      ;
-; -0.482 ; twobit[1]      ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.419      ;
-; -0.481 ; twobit[1]      ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.418      ;
-; -0.478 ; brch_reg[0]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.415      ;
-; -0.478 ; brch_reg[0]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.415      ;
-; -0.477 ; brch_reg[0]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.414      ;
-; -0.476 ; opcode_reg[2]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 1.412      ;
-; -0.467 ; twobit[1]      ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.064     ; 1.403      ;
-; -0.450 ; twobit[1]      ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.064     ; 1.386      ;
-; -0.448 ; twobit[1]      ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.064     ; 1.384      ;
-; -0.447 ; twobit[1]      ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 1.383      ;
-; -0.440 ; twobit[1]      ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.377      ;
-; -0.398 ; twobit[1]      ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.310      ; 1.708      ;
-; -0.389 ; brch_reg[1]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.326      ;
-; -0.368 ; opcode[0]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 1.305      ;
-; -0.348 ; twobit[0]      ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.310      ; 1.658      ;
-; -0.343 ; opcode_reg[3]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.064     ; 1.279      ;
-; -0.330 ; opcode_reg[1]  ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.267      ;
-; -0.326 ; brch_reg[1]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.263      ;
-; -0.326 ; opcode_reg[3]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.064     ; 1.262      ;
-; -0.324 ; opcode_reg[3]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.064     ; 1.260      ;
-; -0.323 ; opcode_reg[3]  ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 1.259      ;
-; -0.321 ; opcode_reg[2]  ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 1.258      ;
-; -0.315 ; twobit[0]      ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.064     ; 1.251      ;
-; -0.314 ; twobit[0]      ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.064     ; 1.250      ;
-; -0.313 ; twobit[0]      ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 1.249      ;
-; -0.312 ; twobit[0]      ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.064     ; 1.248      ;
-; -0.277 ; twobit[0]      ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.214      ;
-; -0.271 ; twobit[0]      ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.310      ; 1.581      ;
-; -0.257 ; twobit[0]      ; RegDst[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 1.193      ;
-; -0.256 ; opcode_reg[3]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.310      ; 1.566      ;
-; -0.249 ; opcode_reg[1]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 1.185      ;
-; -0.241 ; twobit[1]      ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.064     ; 1.177      ;
-; -0.238 ; twobit[0]      ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.064     ; 1.174      ;
-; -0.230 ; twobit[1]      ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.310      ; 1.540      ;
-; -0.227 ; twobit[1]      ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 1.163      ;
-; -0.214 ; brch_reg[0]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.310      ; 1.524      ;
-; -0.209 ; opcode_reg[0]  ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 1.145      ;
-; -0.204 ; opcode_reg[0]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.064     ; 1.140      ;
-; -0.200 ; brch_reg[2]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.310      ; 1.510      ;
-; -0.199 ; twobit[1]      ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 1.135      ;
-; -0.195 ; opcode_reg[0]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.064     ; 1.131      ;
-; -0.194 ; opcode_reg[0]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.064     ; 1.130      ;
-; -0.161 ; twobit[1]      ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.098      ;
-; -0.147 ; opcode_reg[0]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 1.083      ;
-; -0.131 ; brch_reg[0]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.068      ;
-; -0.127 ; opcode_reg[0]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.310      ; 1.437      ;
-; -0.115 ; twobit[1]      ; RegDst[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 1.051      ;
-; -0.100 ; twobit[1]      ; MemRead~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 1.036      ;
-; -0.098 ; twobit[1]      ; MemWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.064     ; 1.034      ;
-; -0.068 ; opcode_reg[2]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.064     ; 1.004      ;
-; -0.049 ; opcode_reg[1]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.064     ; 0.985      ;
-; -0.049 ; opcode_reg[1]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.064     ; 0.985      ;
-; -0.048 ; opcode_reg[1]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.064     ; 0.984      ;
-; -0.047 ; brch_reg[2]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 0.984      ;
-; -0.046 ; brch_reg[2]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.063     ; 0.983      ;
-; -0.046 ; brch_reg[2]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 0.983      ;
-; -0.041 ; brch_reg[2]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.063     ; 0.978      ;
-; -0.031 ; opcode_reg[2]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.064     ; 0.967      ;
-; -0.029 ; opcode_reg[2]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.064     ; 0.965      ;
-; -0.005 ; opcode_reg[1]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.310      ; 1.315      ;
-; 0.018  ; twobit[0]      ; MemRead~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 0.918      ;
-; 0.021  ; twobit[0]      ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.064     ; 0.915      ;
-; 0.032  ; twobit[0]      ; MemWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.064     ; 0.904      ;
-; 0.036  ; twobit[0]      ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.064     ; 0.900      ;
-; 0.037  ; opcode_reg[2]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.310      ; 1.273      ;
-; 0.054  ; twobit[0]      ; RegDst[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 0.883      ;
-; 0.056  ; twobit[0]      ; RegDst[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 0.881      ;
-; 0.085  ; opcode_reg[3]  ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.064     ; 0.851      ;
-; 0.163  ; twobit[1]      ; RegDst[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 0.774      ;
-; 0.165  ; opcode_reg[2]  ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.064     ; 0.771      ;
-; 0.165  ; twobit[1]      ; RegDst[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.063     ; 0.772      ;
-; 0.226  ; brch_reg[1]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.310      ; 1.084      ;
-+--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV -40C Model Hold: 'clk'                                                                               ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.385 ; brch_reg[1]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.452      ; 1.005      ;
-; 0.427 ; opcode_reg[2]  ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.064      ; 0.659      ;
-; 0.437 ; twobit[1]      ; RegDst[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.668      ;
-; 0.438 ; twobit[1]      ; RegDst[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.669      ;
-; 0.471 ; twobit[0]      ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.452      ; 1.091      ;
-; 0.493 ; twobit[1]      ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.452      ; 1.113      ;
-; 0.520 ; opcode_reg[3]  ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.064      ; 0.752      ;
-; 0.529 ; twobit[0]      ; RegDst[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.760      ;
-; 0.530 ; twobit[0]      ; RegDst[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.761      ;
-; 0.550 ; opcode_reg[1]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.453      ; 1.171      ;
-; 0.575 ; opcode_reg[2]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.453      ; 1.196      ;
-; 0.610 ; twobit[0]      ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 0.841      ;
-; 0.613 ; twobit[0]      ; MemRead~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 0.844      ;
-; 0.617 ; twobit[0]      ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.848      ;
-; 0.620 ; twobit[0]      ; MemWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 0.851      ;
-; 0.635 ; brch_reg[0]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.866      ;
-; 0.646 ; opcode_reg[2]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.064      ; 0.878      ;
-; 0.646 ; opcode_reg[1]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.064      ; 0.878      ;
-; 0.650 ; opcode_reg[2]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.064      ; 0.882      ;
-; 0.656 ; opcode_reg[1]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.064      ; 0.888      ;
-; 0.656 ; opcode_reg[1]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.064      ; 0.888      ;
-; 0.660 ; twobit[0]      ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 0.891      ;
-; 0.666 ; opcode_reg[2]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.064      ; 0.898      ;
-; 0.671 ; twobit[1]      ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 0.902      ;
-; 0.680 ; brch_reg[0]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.911      ;
-; 0.683 ; brch_reg[2]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.914      ;
-; 0.684 ; brch_reg[2]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.915      ;
-; 0.684 ; brch_reg[2]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 0.915      ;
-; 0.690 ; brch_reg[2]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 0.921      ;
-; 0.732 ; twobit[1]      ; RegDst[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 0.963      ;
-; 0.732 ; opcode_reg[0]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.453      ; 1.353      ;
-; 0.736 ; twobit[1]      ; MemRead~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 0.967      ;
-; 0.738 ; twobit[1]      ; MemWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 0.969      ;
-; 0.774 ; opcode_reg[0]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.064      ; 1.006      ;
-; 0.775 ; brch_reg[0]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.006      ;
-; 0.789 ; brch_reg[1]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.020      ;
-; 0.792 ; brch_reg[2]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.452      ; 1.412      ;
-; 0.797 ; twobit[1]      ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.028      ;
-; 0.798 ; twobit[0]      ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.029      ;
-; 0.800 ; twobit[0]      ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.031      ;
-; 0.801 ; opcode_reg[0]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.064      ; 1.033      ;
-; 0.803 ; opcode_reg[0]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.064      ; 1.035      ;
-; 0.805 ; brch_reg[0]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.452      ; 1.425      ;
-; 0.818 ; opcode_reg[0]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.064      ; 1.050      ;
-; 0.823 ; opcode_reg[0]  ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.064      ; 1.055      ;
-; 0.826 ; twobit[1]      ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.452      ; 1.446      ;
-; 0.826 ; twobit[1]      ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.057      ;
-; 0.826 ; twobit[0]      ; RegDst[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.057      ;
-; 0.844 ; twobit[0]      ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.075      ;
-; 0.848 ; twobit[1]      ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.079      ;
-; 0.849 ; opcode_reg[3]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.453      ; 1.470      ;
-; 0.857 ; twobit[0]      ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.088      ;
-; 0.861 ; opcode_reg[1]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.064      ; 1.093      ;
-; 0.866 ; twobit[1]      ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.097      ;
-; 0.898 ; twobit[0]      ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.452      ; 1.518      ;
-; 0.902 ; twobit[1]      ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.133      ;
-; 0.904 ; twobit[1]      ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.135      ;
-; 0.913 ; opcode_reg[3]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.064      ; 1.145      ;
-; 0.924 ; brch_reg[1]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.155      ;
-; 0.928 ; opcode_reg[3]  ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.064      ; 1.160      ;
-; 0.929 ; opcode_reg[3]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.064      ; 1.161      ;
-; 0.930 ; opcode_reg[3]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.064      ; 1.162      ;
-; 0.933 ; twobit[0]      ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.164      ;
-; 0.934 ; twobit[0]      ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.063      ; 1.165      ;
-; 0.934 ; opcode_reg[2]  ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.064      ; 1.166      ;
-; 0.936 ; twobit[0]      ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.063      ; 1.167      ;
-; 0.939 ; opcode_reg[1]  ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.064      ; 1.171      ;
-; 0.948 ; twobit[0]      ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.063      ; 1.179      ;
-; 0.989 ; brch_reg[1]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.220      ;
-; 1.002 ; opcode[0]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.064      ; 1.234      ;
-; 1.018 ; opcode_reg[3]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.064      ; 1.250      ;
-; 1.057 ; opcode[1]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 1.288      ;
-; 1.059 ; twobit[1]      ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.290      ;
-; 1.069 ; twobit[1]      ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.063      ; 1.300      ;
-; 1.070 ; twobit[1]      ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.301      ;
-; 1.075 ; opcode_reg[2]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.064      ; 1.307      ;
-; 1.083 ; twobit[1]      ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.314      ;
-; 1.084 ; twobit[1]      ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.063      ; 1.315      ;
-; 1.086 ; twobit[1]      ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.063      ; 1.317      ;
-; 1.098 ; brch_reg[0]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.329      ;
-; 1.099 ; brch_reg[0]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.330      ;
-; 1.099 ; brch_reg[0]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 1.330      ;
-; 1.114 ; opcode[3]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.064      ; 1.346      ;
-; 1.116 ; twobit[0]      ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.347      ;
-; 1.135 ; brch_reg[2]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.366      ;
-; 1.186 ; opcode[2]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 1.417      ;
-; 1.197 ; twobit[0]      ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.428      ;
-; 1.199 ; brch_reg[2]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.430      ;
-; 1.265 ; brch_reg[1]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.063      ; 1.496      ;
-; 1.266 ; brch_reg[1]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.497      ;
-; 1.266 ; brch_reg[1]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.497      ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
 ------------------------------------------------
@@ -630,22 +206,16 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------+
+----------------------------------------
 ; Fast 1200mV -40C Model Setup Summary ;
-+-------+-------+----------------------+
-; Clock ; Slack ; End Point TNS        ;
-+-------+-------+----------------------+
-; clk   ; 0.108 ; 0.000                ;
-+-------+-------+----------------------+
+----------------------------------------
+No paths to report.
 
 
-+-------------------------------------+
+---------------------------------------
 ; Fast 1200mV -40C Model Hold Summary ;
-+-------+-------+---------------------+
-; Clock ; Slack ; End Point TNS       ;
-+-------+-------+---------------------+
-; clk   ; 0.191 ; 0.000               ;
-+-------+-------+---------------------+
+---------------------------------------
+No paths to report.
 
 
 -------------------------------------------
@@ -665,206 +235,8 @@ No paths to report.
 +-------+--------+-----------------------------------+
 ; Clock ; Slack  ; End Point TNS                     ;
 +-------+--------+-----------------------------------+
-; clk   ; -3.000 ; -33.519                           ;
+; clk   ; -3.000 ; -19.825                           ;
 +-------+--------+-----------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV -40C Model Setup: 'clk'                                                                              ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.108 ; brch_reg[1]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.843      ;
-; 0.111 ; brch_reg[0]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.840      ;
-; 0.115 ; twobit[0]      ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.836      ;
-; 0.116 ; twobit[1]      ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.835      ;
-; 0.118 ; brch_reg[0]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.833      ;
-; 0.128 ; brch_reg[1]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.823      ;
-; 0.128 ; brch_reg[2]    ; Branch[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.823      ;
-; 0.129 ; brch_reg[1]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.822      ;
-; 0.129 ; brch_reg[1]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.822      ;
-; 0.158 ; opcode[2]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.793      ;
-; 0.183 ; opcode_reg[3]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.768      ;
-; 0.187 ; twobit[0]      ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.764      ;
-; 0.188 ; twobit[0]      ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.763      ;
-; 0.188 ; twobit[0]      ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.763      ;
-; 0.188 ; twobit[1]      ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.763      ;
-; 0.189 ; twobit[1]      ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.762      ;
-; 0.189 ; twobit[1]      ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.762      ;
-; 0.194 ; twobit[0]      ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.757      ;
-; 0.198 ; opcode_reg[2]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.753      ;
-; 0.204 ; twobit[1]      ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.747      ;
-; 0.205 ; twobit[1]      ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.037     ; 0.746      ;
-; 0.206 ; twobit[1]      ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.745      ;
-; 0.207 ; twobit[1]      ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.037     ; 0.744      ;
-; 0.210 ; brch_reg[2]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.741      ;
-; 0.214 ; twobit[1]      ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.737      ;
-; 0.218 ; brch_reg[0]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.733      ;
-; 0.219 ; brch_reg[0]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.732      ;
-; 0.219 ; brch_reg[0]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.732      ;
-; 0.221 ; opcode[1]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.730      ;
-; 0.225 ; twobit[1]      ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.148      ; 0.911      ;
-; 0.243 ; brch_reg[1]    ; Branch[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.708      ;
-; 0.243 ; opcode[3]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.708      ;
-; 0.270 ; opcode_reg[3]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.681      ;
-; 0.271 ; opcode_reg[3]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.037     ; 0.680      ;
-; 0.272 ; opcode_reg[3]  ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.679      ;
-; 0.273 ; opcode_reg[3]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.037     ; 0.678      ;
-; 0.276 ; opcode_reg[2]  ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.675      ;
-; 0.277 ; opcode_reg[1]  ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.674      ;
-; 0.280 ; twobit[0]      ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.671      ;
-; 0.281 ; twobit[0]      ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.037     ; 0.670      ;
-; 0.282 ; twobit[0]      ; opcode[3]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.669      ;
-; 0.283 ; brch_reg[1]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.668      ;
-; 0.283 ; twobit[0]      ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.037     ; 0.668      ;
-; 0.291 ; opcode[0]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.660      ;
-; 0.291 ; opcode_reg[3]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.148      ; 0.845      ;
-; 0.301 ; twobit[0]      ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.148      ; 0.835      ;
-; 0.304 ; twobit[0]      ; RegDst[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.647      ;
-; 0.308 ; twobit[1]      ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.643      ;
-; 0.310 ; twobit[0]      ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.149      ; 0.827      ;
-; 0.311 ; twobit[0]      ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.640      ;
-; 0.321 ; brch_reg[0]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.149      ; 0.816      ;
-; 0.321 ; twobit[1]      ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.630      ;
-; 0.326 ; opcode_reg[1]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.625      ;
-; 0.326 ; twobit[1]      ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.149      ; 0.811      ;
-; 0.329 ; twobit[1]      ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.622      ;
-; 0.338 ; brch_reg[2]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.149      ; 0.799      ;
-; 0.346 ; twobit[0]      ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.605      ;
-; 0.347 ; opcode_reg[0]  ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.604      ;
-; 0.352 ; opcode_reg[0]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.599      ;
-; 0.361 ; twobit[1]      ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.590      ;
-; 0.376 ; opcode_reg[0]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.037     ; 0.575      ;
-; 0.378 ; opcode_reg[0]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.037     ; 0.573      ;
-; 0.378 ; brch_reg[0]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.573      ;
-; 0.380 ; opcode_reg[0]  ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.571      ;
-; 0.389 ; twobit[1]      ; RegDst[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.562      ;
-; 0.408 ; twobit[1]      ; MemWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.543      ;
-; 0.408 ; twobit[1]      ; MemRead~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.543      ;
-; 0.409 ; opcode_reg[0]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.148      ; 0.727      ;
-; 0.417 ; opcode_reg[2]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.037     ; 0.534      ;
-; 0.428 ; opcode_reg[1]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.037     ; 0.523      ;
-; 0.429 ; opcode_reg[1]  ; Halt~reg0         ; clk          ; clk         ; 1.000        ; -0.037     ; 0.522      ;
-; 0.430 ; opcode_reg[1]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.521      ;
-; 0.431 ; brch_reg[2]    ; opcode[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.520      ;
-; 0.432 ; brch_reg[2]    ; RegWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.519      ;
-; 0.432 ; brch_reg[2]    ; opcode[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.519      ;
-; 0.433 ; opcode_reg[2]  ; Output~reg0       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.518      ;
-; 0.433 ; opcode_reg[2]  ; Input~reg0        ; clk          ; clk         ; 1.000        ; -0.037     ; 0.518      ;
-; 0.433 ; brch_reg[2]    ; ALUSrc1~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.518      ;
-; 0.453 ; opcode_reg[2]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.148      ; 0.683      ;
-; 0.459 ; twobit[0]      ; MemWrite~reg0     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.492      ;
-; 0.461 ; opcode_reg[1]  ; MemtoReg~reg0     ; clk          ; clk         ; 1.000        ; 0.148      ; 0.675      ;
-; 0.462 ; twobit[0]      ; MemRead~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.489      ;
-; 0.463 ; twobit[0]      ; opcode[0]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.488      ;
-; 0.467 ; twobit[0]      ; ALUSrc2~reg0      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.484      ;
-; 0.486 ; twobit[0]      ; RegDst[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.465      ;
-; 0.488 ; twobit[0]      ; RegDst[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.463      ;
-; 0.507 ; opcode_reg[3]  ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.444      ;
-; 0.547 ; twobit[1]      ; RegDst[2]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.404      ;
-; 0.548 ; twobit[1]      ; RegDst[1]~reg0    ; clk          ; clk         ; 1.000        ; -0.037     ; 0.403      ;
-; 0.553 ; opcode_reg[2]  ; ALUorShifter~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.398      ;
-; 0.580 ; brch_reg[1]    ; Branch[2]~reg0    ; clk          ; clk         ; 1.000        ; 0.149      ; 0.557      ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV -40C Model Hold: 'clk'                                                                               ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.191 ; brch_reg[1]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.230      ; 0.503      ;
-; 0.218 ; opcode_reg[2]  ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.337      ;
-; 0.218 ; twobit[1]      ; RegDst[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.337      ;
-; 0.219 ; twobit[1]      ; RegDst[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.338      ;
-; 0.220 ; twobit[0]      ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.230      ; 0.532      ;
-; 0.227 ; twobit[1]      ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.230      ; 0.539      ;
-; 0.245 ; opcode_reg[3]  ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.364      ;
-; 0.260 ; twobit[0]      ; RegDst[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.379      ;
-; 0.261 ; twobit[0]      ; RegDst[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.380      ;
-; 0.268 ; opcode_reg[2]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.230      ; 0.580      ;
-; 0.288 ; opcode_reg[1]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.230      ; 0.600      ;
-; 0.291 ; twobit[0]      ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.410      ;
-; 0.294 ; twobit[0]      ; MemWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.413      ;
-; 0.296 ; twobit[0]      ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.415      ;
-; 0.299 ; twobit[0]      ; MemRead~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.418      ;
-; 0.314 ; opcode_reg[2]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.433      ;
-; 0.317 ; opcode_reg[2]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.436      ;
-; 0.318 ; brch_reg[2]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.437      ;
-; 0.320 ; brch_reg[0]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.439      ;
-; 0.321 ; twobit[0]      ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.440      ;
-; 0.322 ; opcode_reg[1]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.441      ;
-; 0.323 ; brch_reg[0]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.442      ;
-; 0.325 ; opcode_reg[1]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.444      ;
-; 0.325 ; opcode_reg[1]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.444      ;
-; 0.331 ; twobit[1]      ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.450      ;
-; 0.333 ; brch_reg[2]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.452      ;
-; 0.333 ; brch_reg[2]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.452      ;
-; 0.334 ; brch_reg[2]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.453      ;
-; 0.335 ; opcode_reg[2]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.454      ;
-; 0.347 ; twobit[1]      ; RegDst[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.466      ;
-; 0.352 ; opcode_reg[0]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.230      ; 0.664      ;
-; 0.352 ; twobit[1]      ; MemRead~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.471      ;
-; 0.353 ; twobit[1]      ; MemWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.472      ;
-; 0.365 ; brch_reg[0]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.484      ;
-; 0.370 ; brch_reg[2]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.230      ; 0.682      ;
-; 0.377 ; brch_reg[0]    ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.230      ; 0.689      ;
-; 0.377 ; twobit[1]      ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.496      ;
-; 0.378 ; twobit[0]      ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.497      ;
-; 0.378 ; opcode_reg[0]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.497      ;
-; 0.379 ; twobit[0]      ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.498      ;
-; 0.384 ; opcode_reg[0]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.503      ;
-; 0.384 ; brch_reg[1]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.503      ;
-; 0.384 ; opcode_reg[0]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.503      ;
-; 0.386 ; opcode_reg[0]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.505      ;
-; 0.388 ; opcode_reg[0]  ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.507      ;
-; 0.390 ; twobit[1]      ; opcode[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.509      ;
-; 0.391 ; twobit[1]      ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.230      ; 0.703      ;
-; 0.395 ; opcode_reg[3]  ; MemtoReg~reg0     ; clk          ; clk         ; 0.000        ; 0.230      ; 0.707      ;
-; 0.395 ; twobit[0]      ; RegDst[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.514      ;
-; 0.402 ; twobit[1]      ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.521      ;
-; 0.406 ; opcode_reg[1]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.525      ;
-; 0.407 ; twobit[0]      ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.526      ;
-; 0.411 ; twobit[1]      ; ALUorShifter~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.530      ;
-; 0.428 ; twobit[1]      ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.547      ;
-; 0.430 ; twobit[1]      ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.549      ;
-; 0.440 ; opcode_reg[3]  ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.559      ;
-; 0.441 ; opcode_reg[3]  ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.560      ;
-; 0.442 ; opcode_reg[3]  ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.561      ;
-; 0.442 ; twobit[0]      ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.561      ;
-; 0.446 ; opcode_reg[1]  ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.565      ;
-; 0.447 ; opcode_reg[3]  ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.566      ;
-; 0.448 ; twobit[0]      ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.567      ;
-; 0.449 ; twobit[0]      ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.568      ;
-; 0.450 ; opcode_reg[2]  ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.569      ;
-; 0.450 ; twobit[0]      ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.569      ;
-; 0.453 ; brch_reg[1]    ; ALUSrc1~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.572      ;
-; 0.455 ; twobit[0]      ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
-; 0.466 ; twobit[0]      ; Branch[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.230      ; 0.778      ;
-; 0.471 ; brch_reg[1]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.590      ;
-; 0.486 ; opcode_reg[3]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.605      ;
-; 0.492 ; opcode[0]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.611      ;
-; 0.505 ; twobit[1]      ; opcode[3]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.624      ;
-; 0.506 ; twobit[1]      ; Input~reg0        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.625      ;
-; 0.507 ; twobit[1]      ; Output~reg0       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.626      ;
-; 0.512 ; twobit[1]      ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.631      ;
-; 0.512 ; twobit[1]      ; Halt~reg0         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.631      ;
-; 0.518 ; opcode_reg[2]  ; ALUSrc2~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.637      ;
-; 0.536 ; opcode[1]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.655      ;
-; 0.538 ; twobit[1]      ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.657      ;
-; 0.539 ; brch_reg[0]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.658      ;
-; 0.540 ; brch_reg[0]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.659      ;
-; 0.541 ; brch_reg[0]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.660      ;
-; 0.544 ; opcode[3]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.663      ;
-; 0.563 ; brch_reg[2]    ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.682      ;
-; 0.565 ; brch_reg[2]    ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.684      ;
-; 0.576 ; twobit[0]      ; Branch[0]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.695      ;
-; 0.579 ; opcode[2]~reg0 ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.698      ;
-; 0.588 ; twobit[0]      ; Branch[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.707      ;
-; 0.623 ; brch_reg[1]    ; RegWrite~reg0     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.742      ;
-; 0.624 ; brch_reg[1]    ; opcode[2]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.743      ;
-; 0.625 ; brch_reg[1]    ; opcode[1]~reg0    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.744      ;
-+-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
 ------------------------------------------------
@@ -873,16 +245,16 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                           ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.954  ; 0.191 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -0.954  ; 0.191 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -11.811 ; 0.0   ; 0.0      ; 0.0     ; -40.265             ;
-;  clk             ; -11.811 ; 0.000 ; N/A      ; N/A     ; -40.265             ;
-+------------------+---------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -23.56              ;
+;  clk             ; N/A   ; N/A  ; N/A      ; N/A     ; -23.560             ;
++------------------+-------+------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -920,24 +292,24 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
+; rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[8]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[11]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[9]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[12]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[10]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[13]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[15]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; inst[14]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[4]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[5]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[6]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inst[7]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[14]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[15]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[13]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[11]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[12]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[8]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[9]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; inst[10]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -949,24 +321,24 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; MemRead       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; MemWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.34 V              ; -0.00659 V          ; 0.213 V                              ; 0.083 V                              ; 2.63e-09 s                  ; 2.52e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.34 V             ; -0.00659 V         ; 0.213 V                             ; 0.083 V                             ; 2.63e-09 s                 ; 2.52e-09 s                 ; No                        ; Yes                       ;
-; RegWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; MemRead       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; MemWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; RegWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.34 V              ; -0.00645 V          ; 0.188 V                              ; 0.108 V                              ; 2.83e-09 s                  ; 2.65e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.34 V             ; -0.00645 V         ; 0.188 V                             ; 0.108 V                             ; 2.83e-09 s                 ; 2.65e-09 s                 ; No                        ; Yes                       ;
 ; ALUSrc1       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
-; ALUSrc2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; MemtoReg      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; Output        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; Input         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; ALUorShifter  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; Halt          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; opcode[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.39 V              ; -0.0221 V           ; 0.159 V                              ; 0.03 V                               ; 4.72e-10 s                  ; 4.62e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.39 V             ; -0.0221 V          ; 0.159 V                             ; 0.03 V                              ; 4.72e-10 s                 ; 4.62e-10 s                 ; Yes                       ; Yes                       ;
+; ALUSrc2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; MemtoReg      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; Output        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; Input         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; ALUorShifter  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; Halt          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; opcode[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
 ; opcode[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
 ; opcode[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
-; opcode[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.39 V              ; -0.0221 V           ; 0.159 V                              ; 0.03 V                               ; 4.72e-10 s                  ; 4.62e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.39 V             ; -0.0221 V          ; 0.159 V                             ; 0.03 V                              ; 4.72e-10 s                 ; 4.62e-10 s                 ; Yes                       ; Yes                       ;
-; RegDst[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.87e-09 V                   ; 2.41 V              ; -0.0441 V           ; 0.217 V                              ; 0.126 V                              ; 2.86e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.87e-09 V                  ; 2.41 V             ; -0.0441 V          ; 0.217 V                             ; 0.126 V                             ; 2.86e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
-; RegDst[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.34 V              ; -0.00645 V          ; 0.188 V                              ; 0.108 V                              ; 2.83e-09 s                  ; 2.65e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.34 V             ; -0.00645 V         ; 0.188 V                             ; 0.108 V                             ; 2.83e-09 s                 ; 2.65e-09 s                 ; No                        ; Yes                       ;
-; RegDst[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
-; Branch[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; opcode[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; RegDst[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; RegDst[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
+; RegDst[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.34 V              ; -0.00645 V          ; 0.188 V                              ; 0.108 V                              ; 2.83e-09 s                  ; 2.65e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.34 V             ; -0.00645 V         ; 0.188 V                             ; 0.108 V                             ; 2.83e-09 s                 ; 2.65e-09 s                 ; No                        ; Yes                       ;
+; Branch[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.34 V              ; -0.00645 V          ; 0.188 V                              ; 0.108 V                              ; 2.83e-09 s                  ; 2.65e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.34 V             ; -0.00645 V         ; 0.188 V                             ; 0.108 V                             ; 2.83e-09 s                 ; 2.65e-09 s                 ; No                        ; Yes                       ;
 ; Branch[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
 ; Branch[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-09 V                   ; 2.37 V              ; -0.0241 V           ; 0.127 V                              ; 0.073 V                              ; 6.7e-10 s                   ; 6.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.46e-09 V                  ; 2.37 V             ; -0.0241 V          ; 0.127 V                             ; 0.073 V                             ; 6.7e-10 s                  ; 6.3e-10 s                  ; No                        ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-09 V                   ; 2.39 V              ; -0.0374 V           ; 0.127 V                              ; 0.051 V                              ; 4.57e-10 s                  ; 3.66e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.16e-09 V                  ; 2.39 V             ; -0.0374 V          ; 0.127 V                             ; 0.051 V                             ; 4.57e-10 s                 ; 3.66e-10 s                 ; No                        ; Yes                       ;
@@ -979,24 +351,24 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; MemRead       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; MemWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.33 V              ; -0.00235 V          ; 0.099 V                              ; 0.059 V                              ; 3.61e-09 s                  ; 3.5e-09 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.33 V             ; -0.00235 V         ; 0.099 V                             ; 0.059 V                             ; 3.61e-09 s                 ; 3.5e-09 s                  ; Yes                       ; Yes                       ;
-; RegWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; MemRead       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; MemWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; RegWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.33 V              ; -0.00223 V          ; 0.098 V                              ; 0.06 V                               ; 3.82e-09 s                  ; 3.69e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.33 V             ; -0.00223 V         ; 0.098 V                             ; 0.06 V                              ; 3.82e-09 s                 ; 3.69e-09 s                 ; Yes                       ; Yes                       ;
 ; ALUSrc1       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
-; ALUSrc2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; MemtoReg      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; Output        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; Input         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; ALUorShifter  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; Halt          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; opcode[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00688 V          ; 0.134 V                              ; 0.016 V                              ; 6.76e-10 s                  ; 6.63e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00688 V         ; 0.134 V                             ; 0.016 V                             ; 6.76e-10 s                 ; 6.63e-10 s                 ; Yes                       ; Yes                       ;
+; ALUSrc2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; MemtoReg      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; Output        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; Input         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; ALUorShifter  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; Halt          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; opcode[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
 ; opcode[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
 ; opcode[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
-; opcode[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00688 V          ; 0.134 V                              ; 0.016 V                              ; 6.76e-10 s                  ; 6.63e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00688 V         ; 0.134 V                             ; 0.016 V                             ; 6.76e-10 s                 ; 6.63e-10 s                 ; Yes                       ; Yes                       ;
-; RegDst[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.46e-06 V                   ; 2.35 V              ; -0.00264 V          ; 0.14 V                               ; 0.006 V                              ; 4.74e-10 s                  ; 4.84e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.46e-06 V                  ; 2.35 V             ; -0.00264 V         ; 0.14 V                              ; 0.006 V                             ; 4.74e-10 s                 ; 4.84e-10 s                 ; Yes                       ; Yes                       ;
-; RegDst[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.33 V              ; -0.00223 V          ; 0.098 V                              ; 0.06 V                               ; 3.82e-09 s                  ; 3.69e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.33 V             ; -0.00223 V         ; 0.098 V                             ; 0.06 V                              ; 3.82e-09 s                 ; 3.69e-09 s                 ; Yes                       ; Yes                       ;
-; RegDst[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
-; Branch[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; opcode[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; RegDst[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; RegDst[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
+; RegDst[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.33 V              ; -0.00223 V          ; 0.098 V                              ; 0.06 V                               ; 3.82e-09 s                  ; 3.69e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.33 V             ; -0.00223 V         ; 0.098 V                             ; 0.06 V                              ; 3.82e-09 s                 ; 3.69e-09 s                 ; Yes                       ; Yes                       ;
+; Branch[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.33 V              ; -0.00223 V          ; 0.098 V                              ; 0.06 V                               ; 3.82e-09 s                  ; 3.69e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.33 V             ; -0.00223 V         ; 0.098 V                             ; 0.06 V                              ; 3.82e-09 s                 ; 3.69e-09 s                 ; Yes                       ; Yes                       ;
 ; Branch[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
 ; Branch[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.79e-07 V                   ; 2.34 V              ; -0.00706 V          ; 0.07 V                               ; 0.022 V                              ; 8.91e-10 s                  ; 8.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.79e-07 V                  ; 2.34 V             ; -0.00706 V         ; 0.07 V                              ; 0.022 V                             ; 8.91e-10 s                 ; 8.65e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.67e-07 V                   ; 2.34 V              ; -0.00744 V          ; 0.095 V                              ; 0.013 V                              ; 6.35e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.67e-07 V                  ; 2.34 V             ; -0.00744 V         ; 0.095 V                             ; 0.013 V                             ; 6.35e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
@@ -1009,24 +381,24 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; MemRead       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; MemWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.65 V              ; -0.0145 V           ; 0.213 V                              ; 0.199 V                              ; 2.16e-09 s                  ; 2.07e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.65 V             ; -0.0145 V          ; 0.213 V                             ; 0.199 V                             ; 2.16e-09 s                 ; 2.07e-09 s                 ; No                        ; Yes                       ;
-; RegWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; MemRead       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; MemWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; RegWrite      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.65 V              ; -0.0136 V           ; 0.244 V                              ; 0.164 V                              ; 2.2e-09 s                   ; 2.13e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.65 V             ; -0.0136 V          ; 0.244 V                             ; 0.164 V                             ; 2.2e-09 s                  ; 2.13e-09 s                 ; No                        ; Yes                       ;
 ; ALUSrc1       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
-; ALUSrc2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; MemtoReg      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; Output        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; Input         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; ALUorShifter  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; Halt          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; opcode[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.74 V              ; -0.0602 V           ; 0.305 V                              ; 0.08 V                               ; 2.97e-10 s                  ; 3.46e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.74 V             ; -0.0602 V          ; 0.305 V                             ; 0.08 V                              ; 2.97e-10 s                 ; 3.46e-10 s                 ; No                        ; Yes                       ;
+; ALUSrc2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; MemtoReg      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; Output        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; Input         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; ALUorShifter  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; Halt          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; opcode[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
 ; opcode[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
 ; opcode[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
-; opcode[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.74 V              ; -0.0602 V           ; 0.305 V                              ; 0.08 V                               ; 2.97e-10 s                  ; 3.46e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.74 V             ; -0.0602 V          ; 0.305 V                             ; 0.08 V                              ; 2.97e-10 s                 ; 3.46e-10 s                 ; No                        ; Yes                       ;
-; RegDst[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.46e-09 V                   ; 2.76 V              ; -0.079 V            ; 0.178 V                              ; 0.111 V                              ; 2.58e-10 s                  ; 2.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.46e-09 V                  ; 2.76 V             ; -0.079 V           ; 0.178 V                             ; 0.111 V                             ; 2.58e-10 s                 ; 2.54e-10 s                 ; Yes                       ; Yes                       ;
-; RegDst[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.65 V              ; -0.0136 V           ; 0.244 V                              ; 0.164 V                              ; 2.2e-09 s                   ; 2.13e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.65 V             ; -0.0136 V          ; 0.244 V                             ; 0.164 V                             ; 2.2e-09 s                  ; 2.13e-09 s                 ; No                        ; Yes                       ;
-; RegDst[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
-; Branch[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; opcode[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; RegDst[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; RegDst[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; RegDst[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.65 V              ; -0.0136 V           ; 0.244 V                              ; 0.164 V                              ; 2.2e-09 s                   ; 2.13e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.65 V             ; -0.0136 V          ; 0.244 V                             ; 0.164 V                             ; 2.2e-09 s                  ; 2.13e-09 s                 ; No                        ; Yes                       ;
+; Branch[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.65 V              ; -0.0136 V           ; 0.244 V                              ; 0.164 V                              ; 2.2e-09 s                   ; 2.13e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.65 V             ; -0.0136 V          ; 0.244 V                             ; 0.164 V                             ; 2.2e-09 s                  ; 2.13e-09 s                 ; No                        ; Yes                       ;
 ; Branch[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
 ; Branch[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.43e-09 V                   ; 2.73 V              ; -0.043 V            ; 0.216 V                              ; 0.135 V                              ; 4.76e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.43e-09 V                  ; 2.73 V             ; -0.043 V           ; 0.216 V                             ; 0.135 V                             ; 4.76e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2e-09 V                      ; 2.74 V              ; -0.103 V            ; 0.233 V                              ; 0.159 V                              ; 2.85e-10 s                  ; 2.77e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2e-09 V                     ; 2.74 V             ; -0.103 V           ; 0.233 V                             ; 0.159 V                             ; 2.85e-10 s                 ; 2.77e-10 s                 ; Yes                       ; Yes                       ;
@@ -1034,24 +406,10 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------+
-; Setup Transfers                                                   ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 105      ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------+
-; Hold Transfers                                                    ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 105      ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
 
 
 ---------------
@@ -1073,8 +431,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 13    ; 13   ;
-; Unconstrained Input Port Paths  ; 47    ; 47   ;
+; Unconstrained Input Ports       ; 12    ; 12   ;
+; Unconstrained Input Port Paths  ; 86    ; 86   ;
 ; Unconstrained Output Ports      ; 20    ; 20   ;
 ; Unconstrained Output Port Paths ; 20    ; 20   ;
 +---------------------------------+-------+------+
@@ -1106,7 +464,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; inst[13]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; inst[14]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; inst[15]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -1155,7 +512,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; inst[13]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; inst[14]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; inst[15]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -1193,7 +549,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
-    Info: Processing started: Thu Apr 27 14:02:06 2023
+    Info: Processing started: Fri Apr 28 13:41:18 2023
 Info: Command: quartus_sta ctl -c ctl
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1205,55 +561,39 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 100C Model
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.954
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.954             -11.811 clk 
-Info (332146): Worst-case hold slack is 0.462
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.462               0.000 clk 
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -40.265 clk 
+    Info (332119):    -3.000             -23.560 clk 
 Info: Analyzing Slow 1200mV -40C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.732
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.732              -7.595 clk 
-Info (332146): Worst-case hold slack is 0.385
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.385               0.000 clk 
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -40.265 clk 
+    Info (332119):    -3.000             -23.560 clk 
 Info: Analyzing Fast 1200mV -40C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.108
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.108               0.000 clk 
-Info (332146): Worst-case hold slack is 0.191
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.191               0.000 clk 
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -1261,12 +601,12 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -33.519 clk 
+    Info (332119):    -3.000             -19.825 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 587 megabytes
-    Info: Processing ended: Thu Apr 27 14:02:07 2023
+    Info: Peak virtual memory: 591 megabytes
+    Info: Processing ended: Fri Apr 28 13:41:19 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
