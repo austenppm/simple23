@@ -1,3 +1,3 @@
-Warning (10268): Verilog HDL information at display.v(92): always construct contains both blocking and non-blocking assignments File: C:/Users/kazu4/2023-simple-2023-team23/simple/display.v Line: 92
+Warning (10268): Verilog HDL information at display.v(126): always construct contains both blocking and non-blocking assignments File: C:/Users/kazu4/2023-simple-2023-team23/simple/display.v Line: 126
 Info (10281): Verilog HDL Declaration information at simple.v(63): object "pc" differs only in case from object "PC" in the same scope File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 63
-Info (10281): Verilog HDL Declaration information at simple.v(71): object "BR" differs only in case from object "br" in the same scope File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 71
+Info (10281): Verilog HDL Declaration information at simple.v(72): object "BR" differs only in case from object "br" in the same scope File: C:/Users/kazu4/2023-simple-2023-team23/simple/simple.v Line: 72
