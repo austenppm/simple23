@@ -27,37 +27,69 @@ module display(
 	number reg7(.data_sig(wire_reg7), .disp_out1(disp_reg7_1), .disp_out2(disp_reg7_2), .disp_out3(disp_reg7_3), .disp_out4(disp_reg7_4));
 	number reg0(.data_sig(wire_reg0), .disp_out1(disp_reg0_1), .disp_out2(disp_reg0_2), .disp_out3(disp_reg0_3), .disp_out4(disp_reg0_4));
 	assign sl_out = sl_wire;
-	assign disp_1 =(sl_wire == 4'b0111)? disp_reg0_4:
-						(sl_wire == 4'b1011)? disp_reg2_4:
-						(sl_wire == 4'b1101)? disp_reg4_4:
+//	assign disp_1 =(sl_wire == 4'b0111)? disp_reg0_4:
+//						(sl_wire == 4'b1011)? disp_reg2_4:
+//						(sl_wire == 4'b1101)? disp_reg4_4:
+//						disp_reg6_4;
+//	assign disp_2 =(sl_wire == 4'b0111)? disp_reg0_3:
+//						(sl_wire == 4'b1011)? disp_reg2_3:
+//						(sl_wire == 4'b1101)? disp_reg4_3:
+//						disp_reg6_3;
+//	assign disp_3 =(sl_wire == 4'b0111)? disp_reg0_2:
+//						(sl_wire == 4'b1011)? disp_reg2_2:
+//						(sl_wire == 4'b1101)? disp_reg4_2:
+//						disp_reg6_2;
+//	assign disp_4 =(sl_wire == 4'b0111)? disp_reg0_1:
+//						(sl_wire == 4'b1011)? disp_reg2_1:
+//						(sl_wire == 4'b1101)? disp_reg4_1:
+//						disp_reg6_1;
+//	assign disp_5 =(sl_wire == 4'b0111)? disp_reg1_4:
+//						(sl_wire == 4'b1011)? disp_reg3_4:
+//						(sl_wire == 4'b1101)? disp_reg5_4:
+//						disp_reg7_4;
+//	assign disp_6 =(sl_wire == 4'b0111)? disp_reg1_3:
+//						(sl_wire == 4'b1011)? disp_reg3_3:
+//						(sl_wire == 4'b1101)? disp_reg5_3:
+//						disp_reg7_3;
+//	assign disp_7 =(sl_wire == 4'b0111)? disp_reg1_2:
+//						(sl_wire == 4'b1011)? disp_reg3_2:
+//						(sl_wire == 4'b1101)? disp_reg5_2:
+//						disp_reg7_2;
+//	assign disp_8 =(sl_wire == 4'b0111)? disp_reg1_1:
+//						(sl_wire == 4'b1011)? disp_reg3_1:
+//						(sl_wire == 4'b1101)? disp_reg5_1:
+//						disp_reg7_1;
+	assign disp_1 =(sl_wire == 4'b1000)? disp_reg0_4:
+						(sl_wire == 4'b0100)? disp_reg2_4:
+						(sl_wire == 4'b0010)? disp_reg4_4:
 						disp_reg6_4;
-	assign disp_2 =(sl_wire == 4'b0111)? disp_reg0_3:
-						(sl_wire == 4'b1011)? disp_reg2_3:
-						(sl_wire == 4'b1101)? disp_reg4_3:
+	assign disp_2 =(sl_wire == 4'b1000)? disp_reg0_3:
+						(sl_wire == 4'b0100)? disp_reg2_3:
+						(sl_wire == 4'b0010)? disp_reg4_3:
 						disp_reg6_3;
-	assign disp_3 =(sl_wire == 4'b0111)? disp_reg0_2:
-						(sl_wire == 4'b1011)? disp_reg2_2:
-						(sl_wire == 4'b1101)? disp_reg4_2:
+	assign disp_3 =(sl_wire == 4'b1000)? disp_reg0_2:
+						(sl_wire == 4'b0100)? disp_reg2_2:
+						(sl_wire == 4'b0010)? disp_reg4_2:
 						disp_reg6_2;
-	assign disp_4 =(sl_wire == 4'b0111)? disp_reg0_1:
-						(sl_wire == 4'b1011)? disp_reg2_1:
-						(sl_wire == 4'b1101)? disp_reg4_1:
+	assign disp_4 =(sl_wire == 4'b1000)? disp_reg0_1:
+						(sl_wire == 4'b0100)? disp_reg2_1:
+						(sl_wire == 4'b0010)? disp_reg4_1:
 						disp_reg6_1;
-	assign disp_5 =(sl_wire == 4'b0111)? disp_reg1_4:
-						(sl_wire == 4'b1011)? disp_reg3_4:
-						(sl_wire == 4'b1101)? disp_reg5_4:
+	assign disp_5 =(sl_wire == 4'b1000)? disp_reg1_4:
+						(sl_wire == 4'b0100)? disp_reg3_4:
+						(sl_wire == 4'b0010)? disp_reg5_4:
 						disp_reg7_4;
-	assign disp_6 =(sl_wire == 4'b0111)? disp_reg1_3:
-						(sl_wire == 4'b1011)? disp_reg3_3:
-						(sl_wire == 4'b1101)? disp_reg5_3:
+	assign disp_6 =(sl_wire == 4'b1000)? disp_reg1_3:
+						(sl_wire == 4'b0100)? disp_reg3_3:
+						(sl_wire == 4'b0010)? disp_reg5_3:
 						disp_reg7_3;
-	assign disp_7 =(sl_wire == 4'b0111)? disp_reg1_2:
-						(sl_wire == 4'b1011)? disp_reg3_2:
-						(sl_wire == 4'b1101)? disp_reg5_2:
+	assign disp_7 =(sl_wire == 4'b1000)? disp_reg1_2:
+						(sl_wire == 4'b0100)? disp_reg3_2:
+						(sl_wire == 4'b0010)? disp_reg5_2:
 						disp_reg7_2;
-	assign disp_8 =(sl_wire == 4'b0111)? disp_reg1_1:
-						(sl_wire == 4'b1011)? disp_reg3_1:
-						(sl_wire == 4'b1101)? disp_reg5_1:
+	assign disp_8 =(sl_wire == 4'b1000)? disp_reg1_1:
+						(sl_wire == 4'b0100)? disp_reg3_1:
+						(sl_wire == 4'b0010)? disp_reg5_1:
 						disp_reg7_1;
 	
 endmodule
@@ -89,14 +121,16 @@ endmodule
 module select_counter(
 	input rst_n,clk,
 	output reg [3:0] selecter);
-	always @ (posedge clk or negedge rst_n) begin
+	wire clk_300Hz;
+	divider b1(.clk(clk),.hz(30'd300),.rst_n(rst_n),.outclk(clk_300Hz));
+	always @ (posedge clk_300Hz or negedge rst_n) begin
 		if(!rst_n) begin
 			selecter <= 4'b0000;
 		end else begin
-			selecter = ( selecter == 4'b1011)?4'b0111:
-						  (selecter == 4'b1101)?4'b1011:
-						  (selecter == 4'b1110)?4'b1101:
-						  4'b1110;
+			selecter = (selecter == 4'b0100)?4'b1000:
+						  (selecter == 4'b0010)?4'b0100:
+						  (selecter == 4'b0001)?4'b0010:
+						  4'b0001;
 			
 		end
 	end
@@ -113,10 +147,10 @@ module number(
 	assign data_wire2 = data_sig [7:3];
 	assign data_wire3 = data_sig [11:4];
 	assign data_wire4 = data_sig [15:11];
-	SEVENSEG_LED l1(.a(data_wire1[3:0]), .output_signal(disp_wire1[7:0]));
-	SEVENSEG_LED l2(.a(data_wire2[3:0]), .output_signal(disp_wire2[7:0]));
-	SEVENSEG_LED l3(.a(data_wire3[3:0]), .output_signal(disp_wire3[7:0]));
-	SEVENSEG_LED l4(.a(data_wire4[3:0]), .output_signal(disp_wire4[7:0]));
+	SEVENSEG_LED l1(.a(data_wire1), .output_signal(disp_wire1));
+	SEVENSEG_LED l2(.a(data_wire2), .output_signal(disp_wire2));
+	SEVENSEG_LED l3(.a(data_wire3), .output_signal(disp_wire3));
+	SEVENSEG_LED l4(.a(data_wire4), .output_signal(disp_wire4));
 	assign disp_out1 =  disp_wire1;
 	assign disp_out2 =  disp_wire2;
 	assign disp_out3 =  disp_wire3;
