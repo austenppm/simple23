@@ -14,7 +14,7 @@ module PC(input clock,reset,branchFlag,ce,//changeEnable
 			pc <= 0;
 		end else begin
 			if(ce == 1'b1)begin
-				if(branchFlag == 1'b 1) begin
+				if(branchFlag == 1'b1) begin
 					pc <= dr;
 				end else  begin
 					pc <= pc+1;

@@ -10,14 +10,14 @@ z2
 cModel Technology
 Z0 dC:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim
 vALU
-Z1 !s110 1682002256
+Z1 !s110 1682671863
 !i10b 1
 !s100 H?WA^DUBoVJCoe@3]RPUO0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IWE84inVEe>UQg;gS6d9b_0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1682002007
+Z4 w1682033422
 Z5 8ALU.vo
 Z6 FALU.vo
 !i122 0
@@ -26,7 +26,7 @@ Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1682002256.000000
+Z8 !s108 1682671863.000000
 Z9 !s107 ALU.vo|
 Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|ALU.vo|
 !i113 1
@@ -35,7 +35,7 @@ Z12 !s92 -vlog01compat -work work +incdir+.
 Z13 tCvgOpt 0
 n@a@l@u
 vALU_vlg_tst
-!s110 1682002257
+!s110 1682671865
 !i10b 1
 !s100 EEd46i2[71]FcQJHIXX[Y1
 R2
@@ -51,7 +51,7 @@ R7
 r1
 !s85 0
 31
-!s108 1682002257.000000
+!s108 1682671865.000000
 !s107 C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test1.vt|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim|C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test1.vt|
 !i113 1
