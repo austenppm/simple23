@@ -1,15 +1,15 @@
-Fitter Status : Successful - Fri Apr 28 10:08:17 2023
+Fitter Status : Successful - Fri Apr 28 16:46:08 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 Revision Name : display
 Top-level Entity Name : display
 Family : Cyclone IV E
 Device : EP4CE30F23I7
 Timing Models : Final
-Total logic elements : 406 / 28,848 ( 1 % )
-    Total combinational functions : 406 / 28,848 ( 1 % )
-    Dedicated logic registers : 4 / 28,848 ( < 1 % )
-Total registers : 4
-Total pins : 198 / 329 ( 60 % )
+Total logic elements : 56 / 28,848 ( < 1 % )
+    Total combinational functions : 56 / 28,848 ( < 1 % )
+    Dedicated logic registers : 0 / 28,848 ( 0 % )
+Total registers : 0
+Total pins : 194 / 329 ( 59 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
