@@ -124,6 +124,58 @@
 					"strict" : false
 				},
 				{
+					"name" : "sl_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sl_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sl_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sl_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MemReadout",
+					"strict" : false
+				},
+				{
+					"name" : "MemWriteout",
+					"strict" : false
+				},
+				{
+					"name" : "RegWriteout",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrc1out",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrc2out",
+					"strict" : false
+				},
+				{
+					"name" : "MemtoRegout",
+					"strict" : false
+				},
+				{
+					"name" : "Outputout",
+					"strict" : false
+				},
+				{
+					"name" : "Inputout",
+					"strict" : false
+				},
+				{
+					"name" : "ALUorshifterout",
+					"strict" : false
+				},
+				{
 					"name" : "rst_n",
 					"strict" : false
 				},

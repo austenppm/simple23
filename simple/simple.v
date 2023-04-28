@@ -11,6 +11,7 @@
 `include "counta3.v"
 `include "segLED.v"
 `include "divider.v"
+`include "display.v"
 
 module simple(
 		input [15:0] in,
@@ -26,7 +27,10 @@ module simple(
 		output ce1out,
 		output ce2out,
 		output [4:0] clk2out,
-		output bfo
+		output bfo,
+		output [7:0] disp_1,disp_2,disp_3,disp_4,disp_5,disp_6,disp_7,disp_8,
+		output [3:0] sl_out,
+		output MemReadout,MemWriteout,RegWriteout,ALUSrc1out,ALUSrc2out,MemtoRegout,Outputout,Inputout,ALUorshifterout
 		);
 		wire [15:0] IROut;
 		wire [15:0] BROut;
@@ -61,6 +65,8 @@ module simple(
 		wire [15:0] pcIn;
 		wire [4:0] clk2;
 		wire [2:0] Branch;
+		wire [15:0] reg_1,reg_2,reg_3,reg_4,reg_5,reg_6,reg_7,reg_0;
+		wire [15:0] address;
 		register IR(.clk(clk2[3]),.rst_n(rst_n),.WriteData(Inst),.DataOut(IROut));
 		register BR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data2),.DataOut(BROut));
 		register AR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data1),.DataOut(AROut));
@@ -74,10 +80,11 @@ module simple(
 		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig),.ce(ce),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig));
-		ram ram(.address(pc),.clock(clk2[3]),.data(DROut),.wren(MemWrite),.q(Inst));
+		ram ram(.address(address),.clock(clk20),.data(DROut),.wren(MemWrite),.q(Inst));
 		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
 		counta2 c2(.rst_n(rst_n), .clk(clk20),.data(pc),.out2(out2),.sel2(sel2));
 		counta3 c3(.rst_n(rst_n), .clk(clk20),.data(Inst),.out2(out3),.sel2(sel3));
+		display ds(.sl_clk(clk20),.rst(rst_n),.reg_1(reg_1),.reg_2(reg_2),.reg_3(reg_3),.reg_4(reg_4),.reg_5(reg_5),.reg_6(reg_6),.reg_7(reg_7),.reg_0(reg_0),.disp_1(disp_1),.disp_2(disp_2),.disp_3(disp_3),.disp_4(disp_4),.disp_5(disp_5),.disp_6(disp_6),.disp_7(disp_7),.disp_8(disp_8),.sl_out(sl_out));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
 		assign dshift = IROut[3:0];
@@ -103,5 +110,16 @@ module simple(
 		assign ce2out = ce2;
 		assign clk2out = clk2;
 		assign bfo = brch_sig;
+		assign address = (MemRead==1'b1) ? DROut:
+								pc;
+		assign MemReadout = MemRead;
+		assign MemWriteout = MemWrite;
+		assign RegWriteout = RegWrite;
+		assign ALUSrc1out = ALUSrc1;
+		assign ALUSrc2out = ALUSrc2;
+		assign MemtoRegout = MemtoReg;
+		assign Outputout = Output;
+		assign Inputout = Input;
+		assign ALUorshifterout = ALUorshifter;
 endmodule
 		
