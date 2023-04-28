@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Apr 28 10:08:11 2023
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Fri Apr 28 15:30:14 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : display
 Top-level Entity Name : display
 Family : Cyclone IV E
-Total logic elements : 406
-    Total combinational functions : 406
+Total logic elements : 4
+    Total combinational functions : 4
     Dedicated logic registers : 4
 Total registers : 4
 Total pins : 198
