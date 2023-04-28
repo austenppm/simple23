@@ -64,26 +64,26 @@ endmodule
 
 
 module SEVENSEG_LED (
-	input [3:0] input_signal,
-	output [7:0] output_signal);
-	assign output_signal = (input_signal == 4'b0000)?8'b01111110:
-								  (input_signal == 4'b0001)?8'b00110000:
-								  (input_signal == 4'b0010)?8'b01101101:
-								  (input_signal == 4'b0011)?8'b01111001:	
-								  (input_signal == 4'b0100)?8'b00110011:
-								  (input_signal == 4'b0101)?8'b01011011:
-								  (input_signal == 4'b0110)?8'b01011111:
-								  (input_signal == 4'b0111)?8'b01110010:
-								  (input_signal == 4'b1000)?8'b01111111:
-								  (input_signal == 4'b1001)?8'b01111011:
-								  (input_signal == 4'b1010)?8'b01110111:
-								  (input_signal == 4'b1011)?8'b00011111:
-								  (input_signal == 4'b1100)?8'b00001101:
-								  (input_signal == 4'b1101)?8'b00111101:
-								  (input_signal == 4'b1110)?8'b01001111:
-								  (input_signal == 4'b1111)?8'b01000111:
-								  8'b10000000;
-								  
+    input [3:0] input_signal,
+    output [7:0] output_signal);
+    assign output_signal = (input_signal == 4'b0000)?8'b11111100:
+                                      (input_signal == 4'b0001)?8'b01100000:
+                                      (input_signal == 4'b0010)?8'b11011010:
+                                      (input_signal == 4'b0011)?8'b11110010:
+                                      (input_signal == 4'b0100)?8'b01100110:
+                                      (input_signal == 4'b0101)?8'b10110110:
+                                      (input_signal == 4'b0110)?8'b10111110:
+                                      (input_signal == 4'b0111)?8'b11100000:
+                                      (input_signal == 4'b1000)?8'b11111110:
+                                      (input_signal == 4'b1001)?8'b11110110:
+                                      (input_signal == 4'b1010)?8'b11101110:
+                                      (input_signal == 4'b1011)?8'b00111110:
+                                      (input_signal == 4'b1100)?8'b10001110:
+                                      (input_signal == 4'b1101)?8'b01111010:
+                                      (input_signal == 4'b1110)?8'b10011110:
+                                      (input_signal == 4'b1111)?8'b10001110:
+                                      8'b10000000;
+
 endmodule
 
 
