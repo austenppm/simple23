@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Apr 20 18:21:38 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : intro7seg2
+Top-level Entity Name : intro7seg2
+Family : Cyclone IV E
+Total logic elements : 1,622
+    Total combinational functions : 1,622
+    Dedicated logic registers : 38
+Total registers : 38
+Total pins : 13
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

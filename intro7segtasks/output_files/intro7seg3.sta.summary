@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 100C Model Setup 'clock'
+Slack : -154.022
+TNS   : -1094.966
+
+Type  : Slow 1200mV 100C Model Setup 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : -3.001
+TNS   : -24.871
+
+Type  : Slow 1200mV 100C Model Setup 'chattercounter:comb_57|ispressed'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'clock'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'chattercounter:comb_57|ispressed'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -32.555
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : -1.285
+TNS   : -25.700
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'chattercounter:comb_57|ispressed'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV -40C Model Setup 'clock'
+Slack : -133.155
+TNS   : -944.701
+
+Type  : Slow 1200mV -40C Model Setup 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : -2.574
+TNS   : -19.048
+
+Type  : Slow 1200mV -40C Model Setup 'chattercounter:comb_57|ispressed'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'clock'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'chattercounter:comb_57|ispressed'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -32.555
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : -1.285
+TNS   : -25.700
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'chattercounter:comb_57|ispressed'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Fast 1200mV -40C Model Setup 'clock'
+Slack : -69.956
+TNS   : -490.436
+
+Type  : Fast 1200mV -40C Model Setup 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : -1.140
+TNS   : -3.684
+
+Type  : Fast 1200mV -40C Model Setup 'chattercounter:comb_57|ispressed'
+Slack : 0.642
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'clock'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'chattercounter:comb_57|ispressed'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -27.355
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'clock_divider:clk_div_inst|clk_div_reg'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'chattercounter:comb_57|ispressed'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

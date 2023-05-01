@@ -1,0 +1,19 @@
+|intro7seg
+number[0] => Decoder0.IN3
+number[1] => Decoder0.IN2
+number[2] => Decoder0.IN1
+number[3] => Decoder0.IN0
+signal[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+signal[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+signal[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+signal[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+signal[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+signal[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+signal[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+signal[7] <= <VCC>
+selector[0] <= <GND>
+selector[1] <= <GND>
+selector[2] <= <GND>
+selector[3] <= <GND>
+
+
