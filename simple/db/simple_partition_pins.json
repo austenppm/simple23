@@ -164,6 +164,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ceout",
+					"strict" : false
+				},
+				{
 					"name" : "clk2out[0]",
 					"strict" : false
 				},

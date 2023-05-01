@@ -12,31 +12,31 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {ALU.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:51:03 on Apr 28,2023
+# Start time: 18:08:41 on May 01,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." ALU.vo 
 # -- Compiling module ALU
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	ALU
-# End time: 17:51:03 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 18:08:41 on May 01,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim {C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test1.vt}
+# vlog -vlog01compat -work work +incdir+C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim {C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test2.vt}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:51:05 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim" C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test1.vt 
+# Start time: 18:08:41 on May 01,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim" C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test2.vt 
 # -- Compiling module ALU_vlg_tst
 # 
 # Top level modules:
 # 	ALU_vlg_tst
-# End time: 17:51:05 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 18:08:41 on May 01,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
-# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test1 
-# Start time: 17:51:05 on Apr 28,2023
-# ** Error: (vsim-3170) Could not find 'test1'.
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test2
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test2 
+# Start time: 18:08:41 on May 01,2023
+# ** Error: (vsim-3170) Could not find 'test2'.
 #         Searched libraries:
 #             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
 #             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
@@ -48,7 +48,7 @@
 # MACRO ./ALU_run_msim_gate_verilog.do PAUSED at line 12
 vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.ALU_vlg_tst
 # vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.ALU_vlg_tst 
-# Start time: 17:51:05 on Apr 28,2023
+# Start time: 18:08:41 on May 01,2023
 # Loading work.ALU_vlg_tst
 # Loading work.ALU
 # Loading work.hard_block
@@ -59,7 +59,6 @@ vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+ac
 # Loading cycloneive_ver.cycloneive_mux41
 # Loading cycloneive_ver.cycloneive_ena_reg
 add wave -position insertpoint sim:/ALU_vlg_tst/*
-add wave -position insertpoint sim:/ALU_vlg_tst/*
 run
 # Running testbench
 run
@@ -67,9 +66,5 @@ run
 run
 run
 run
-run
-run
-run
-run
-# End time: 20:19:21 on Apr 28,2023, Elapsed time: 2:28:16
+# End time: 18:09:26 on May 01,2023, Elapsed time: 0:00:45
 # Errors: 1, Warnings: 0

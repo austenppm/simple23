@@ -25,7 +25,13 @@ module ALU(
 				2: C <= A & B;
 				3: C <= A | B;
 				4: C <= A ^ B;
-				5: C <= A - B;
+				5: begin
+						C <= A - B;
+					if(A[15]!=B[15] && A[15]!=C[15])
+						cond[0] <= 1'b1;
+					else
+						cond[0] <= 1'b0;
+					end
 				6: C <= B;
 			endcase
 			
@@ -33,7 +39,10 @@ module ALU(
 				cond[2] <= 1'b1;
 			else
 				cond[2] <= 1'b0;
-			cond[3] <= C[15];
+			if (cond[0]==1'b1)
+				cond[3] <= !C[15];
+			else
+				cond[3] <= C[15];
 			cond[1] <= C[16];
 		end
 		assign Outcond = cond;

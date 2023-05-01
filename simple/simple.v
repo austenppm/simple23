@@ -26,6 +26,7 @@ module simple(
 		output [3:0] sel3,
 		output ce1out,
 		output ce2out,
+		output ceout,
 		output [4:0] clk2out,
 		output bfo,
 		output [7:0] disp_1,disp_2,disp_3,disp_4,disp_5,disp_6,disp_7,disp_8,
@@ -48,7 +49,7 @@ module simple(
 		wire [7:0] d;
 		wire [15:0] exd;
 		wire [15:0] WriteData;
-		wire MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorshifter,ce,ce1,ce2,brch_sig;
+		wire MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorshifter,ce_1,ce_2,ce1,ce2,brch_sig;
 		wire [15:0] A_wire;
 		wire [15:0] B_wire;
 		wire [15:0] Data1;
@@ -83,8 +84,8 @@ module simple(
 		ALU ALU(.ALUctl(opcode_wire1),.A(A_wire),.B(B_wire),.Out(ALUOut),.Outcond(ALUcondout));
 		ctl ctl(.clk(clk2[3]),.rst_n(rst_n),.inst(Inst),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Halt(ce1),.Output(Output),.Input(Input),.opcode(opcode_wire),.RegDst(RegDst_wire),.Branch(Branch),.BranchCond(BC),.AS_BC(AS_BC));
 		shifter sf(.A(shifterIn),.opcode(opcode_wire2),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
-		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
-		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
+		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce_1),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
+		phasecounter a0(.clk(clk),.rst_n(rst_n),.ce(ce_2),.p(clk2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig_wire));
 		ram ram(.address(address),.clock(clk20),.data(AROut),.wren(MemWrite&&clk2[1]),.q(Inst));
 		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
@@ -119,9 +120,13 @@ module simple(
 		assign opcode_wire1 = opcode_wire;
 		assign opcode_wire2 = opcode_wire;
 		assign PCIn = WriteData;
-		assign ce = ce1 && ce2;
+//		assign ce_1 = ce1 && ce2;
+//		assign ce_2 = ce1 && ce2;
+		assign ce_1 = ce2;
+		assign ce_2 = ce2;
+//		assign ce = ce1;
 		assign pcout = pc;
-//		assign ceout = ce;
+		assign ceout = ce_1;
 		assign ce1out = ce1;
 		assign ce2out = ce2;
 		assign clk2out = clk2;

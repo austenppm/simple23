@@ -110,7 +110,9 @@ module ctl(
 	assign opcode_reg = inst[7:4];
 	assign brch_reg = inst[13:11];
 	always @ (posedge clk ) begin
-		if(clk) begin
+		if(!rst_n) begin
+			Halt_wire <= 1'b1;
+		end else begin
 			if (( twobit == 2'b11 && opcode_reg != 4'b0111 && opcode_reg != 4'b1101 && opcode_reg != 4'b1110 && opcode_reg != 4'b1111 && opcode_reg != 4'b0101) || (twobit == 2'b00 ) || (twobit == 2'b10 && brch_reg == 3'b000)) begin
 				RegWrite_wire <= 1'b1;
 			end else begin

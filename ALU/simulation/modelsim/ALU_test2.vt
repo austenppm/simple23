@@ -50,9 +50,9 @@ initial
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
-A <= 16'b0010011100101011;
-B <= 16'b0000001011110001;
-ALUctl <= 4'b0000;                                     
+A <= 16'b0101_0001_1010_1100;
+B <= 16'b1000_1110_0000_0111;
+ALUctl <= 4'b0101;                                     
 // --> end                                             
 $display("Running testbench");                       
 end                                                    

@@ -84,6 +84,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ALUctl[0]",
+					"strict" : false
+				},
+				{
 					"name" : "B[0]",
 					"strict" : false
 				},
@@ -97,10 +101,6 @@
 				},
 				{
 					"name" : "ALUctl[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ALUctl[0]",
 					"strict" : false
 				},
 				{

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Fri Apr 21 08:29:54 2023
+Mon May 01 18:07:49 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 21 08:29:54 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 01 18:07:49 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; ALU                                         ;
 ; Top-level Entity Name              ; ALU                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 113                                         ;
-;     Total combinational functions  ; 113                                         ;
+; Total logic elements               ; 98                                          ;
+;     Total combinational functions  ; 98                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 56                                          ;
@@ -175,36 +175,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 113     ;
-;                                             ;         ;
-; Total combinational functions               ; 113     ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 54      ;
-;     -- 3 input functions                    ; 39      ;
-;     -- <=2 input functions                  ; 20      ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 96      ;
-;     -- arithmetic mode                      ; 17      ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 56      ;
-;                                             ;         ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-;                                             ;         ;
-; Maximum fan-out node                        ; Mux13~0 ;
-; Maximum fan-out                             ; 31      ;
-; Total fan-out                               ; 448     ;
-; Average fan-out                             ; 1.99    ;
-+---------------------------------------------+---------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 98              ;
+;                                             ;                 ;
+; Total combinational functions               ; 98              ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 25              ;
+;     -- 3 input functions                    ; 52              ;
+;     -- <=2 input functions                  ; 21              ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 81              ;
+;     -- arithmetic mode                      ; 17              ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 56              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; ALUctl[0]~input ;
+; Maximum fan-out                             ; 24              ;
+; Total fan-out                               ; 373             ;
+; Average fan-out                             ; 1.78            ;
++---------------------------------------------+-----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |ALU                       ; 113 (113)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |ALU                ; ALU         ; work         ;
+; |ALU                       ; 98 (98)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |ALU                ; ALU         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -222,24 +222,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; C[0]                                                ; Mux16               ; yes                    ;
-; C[1]                                                ; Mux16               ; yes                    ;
-; C[2]                                                ; Mux16               ; yes                    ;
-; C[3]                                                ; Mux16               ; yes                    ;
-; C[4]                                                ; Mux16               ; yes                    ;
-; C[5]                                                ; Mux16               ; yes                    ;
-; C[6]                                                ; Mux16               ; yes                    ;
-; C[7]                                                ; Mux16               ; yes                    ;
-; C[8]                                                ; Mux16               ; yes                    ;
-; C[9]                                                ; Mux16               ; yes                    ;
-; C[10]                                               ; Mux16               ; yes                    ;
-; C[11]                                               ; Mux16               ; yes                    ;
-; C[12]                                               ; Mux16               ; yes                    ;
-; C[13]                                               ; Mux16               ; yes                    ;
-; C[14]                                               ; Mux16               ; yes                    ;
-; C[15]                                               ; Mux16               ; yes                    ;
-; cond[0]                                             ; WideOr0             ; yes                    ;
-; C[16]                                               ; Mux16               ; yes                    ;
+; C[0]                                                ; Mux18               ; yes                    ;
+; C[1]                                                ; Mux18               ; yes                    ;
+; C[2]                                                ; Mux18               ; yes                    ;
+; C[3]                                                ; Mux18               ; yes                    ;
+; C[4]                                                ; Mux18               ; yes                    ;
+; C[5]                                                ; Mux18               ; yes                    ;
+; C[6]                                                ; Mux18               ; yes                    ;
+; C[7]                                                ; Mux18               ; yes                    ;
+; C[8]                                                ; Mux18               ; yes                    ;
+; C[9]                                                ; Mux18               ; yes                    ;
+; C[10]                                               ; Mux18               ; yes                    ;
+; C[11]                                               ; Mux18               ; yes                    ;
+; C[12]                                               ; Mux18               ; yes                    ;
+; C[13]                                               ; Mux18               ; yes                    ;
+; C[14]                                               ; Mux18               ; yes                    ;
+; C[15]                                               ; Mux18               ; yes                    ;
+; cond[0]                                             ; Mux1                ; yes                    ;
+; C[16]                                               ; Mux18               ; yes                    ;
 ; Number of user-specified and inferred latches = 18  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -265,7 +265,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 6:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |ALU|Mux13                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; No         ; |ALU|Add0                  ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |ALU|Mux14                 ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; No         ; |ALU|Add0                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -275,18 +277,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 56                          ;
-; cycloneiii_lcell_comb ; 113                         ;
+; cycloneiii_lcell_comb ; 98                          ;
 ;     arith             ; 17                          ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 16                          ;
-;     normal            ; 96                          ;
+;     normal            ; 81                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 18                          ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 54                          ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 36                          ;
+;         4 data inputs ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.20                        ;
-; Average LUT depth     ; 5.32                        ;
+; Max LUT depth         ; 5.60                        ;
+; Average LUT depth     ; 4.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -295,7 +297,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -305,7 +307,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 21 08:29:18 2023
+    Info: Processing started: Mon May 01 18:07:38 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -314,10 +316,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
 Warning (10235): Verilog HDL Always Construct warning at ALU.v(13): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 13
 Warning (10235): Verilog HDL Always Construct warning at ALU.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 20
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(30): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 30
 Warning (10270): Verilog HDL Case Statement warning at ALU.v(10): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 10
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(31): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 31
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(35): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 35
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(36): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 36
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(38): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 38
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(42): variable "cond" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 42
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(43): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 43
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(45): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(46): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 46
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(9): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(9): inferring latch(es) for variable "cond", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
 Info (10041): Inferred latch for "cond[0]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
@@ -339,50 +344,52 @@ Info (10041): Inferred latch for "C[14]" at ALU.v(9) File: C:/Users/kazu4/2023-s
 Info (10041): Inferred latch for "C[15]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
 Info (10041): Inferred latch for "C[16]" at ALU.v(9) File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
 Warning (13012): Latch C[0] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[1] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[2] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[3] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[4] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[5] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[6] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[7] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[8] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[9] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[10] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[11] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[12] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[13] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[14] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[15] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+Warning (13012): Latch cond[0] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[0] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Warning (13012): Latch C[16] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[2] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUctl[1] File: C:/Users/kazu4/2023-simple-2023-team23/ALU/ALU.v Line: 2
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 169 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 154 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 36 input pins
     Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 113 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Fri Apr 21 08:29:54 2023
-    Info: Elapsed time: 00:00:36
+    Info (21061): Implemented 98 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Mon May 01 18:07:49 2023
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:12
 
 
