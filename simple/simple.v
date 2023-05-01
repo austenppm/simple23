@@ -83,14 +83,14 @@ module simple(
 		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(RegDst_wire),.WriteData(WriteData),.clk(clk2[0]),.RegWrite(RegWrite&&clk2[0]),.Data1(Data1),.Data2(Data2),.reg_1(reg_1),.reg_2(reg_2),.reg_3(reg_3),.reg_4(reg_4),.reg_5(reg_5),.reg_6(reg_6),.reg_7(reg_7),.reg_0(reg_0));
 		ALU ALU(.ALUctl(opcode_wire1),.A(A_wire),.B(B_wire),.Out(ALUOut),.Outcond(ALUcondout));
 		ctl ctl(.clk(clk2[3]),.rst_n(rst_n),.inst(Inst),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Halt(ce1),.Output(Output),.Input(Input),.opcode(opcode_wire),.RegDst(RegDst_wire),.Branch(Branch),.BranchCond(BC),.AS_BC(AS_BC));
-		shifter sf(.A(shifterIn),.opcode(shifterctl),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
+		shifter sf(.A(shifterIn),.opcode(opcode_wire2),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
 		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.p(clk2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig_wire));
 		ram ram(.address(address),.clock(clk20),.data(AROut),.wren(MemWrite&&clk2[1]),.q(Inst));
 		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
 		counta2 c2(.rst_n(rst_n), .clk(clk20),.data(pc),.out2(out2),.sel2(sel2));
-		counta3 c3(.rst_n(rst_n), .clk(clk20),.data(Inst),.out2(out3),.sel2(sel3));
+		counta3 c3(.rst_n(rst_n), .clk(clk20),.data(out),.out2(out3),.sel2(sel3));
 		display ds(.reg_1(reg_0),.reg_2(reg_1),.reg_3(reg_2),.reg_4(reg_3),.reg_5(SZCVOut[3]),.reg_6(SZCVOut[2]),.reg_7(SZCVOut[1]),.reg_0(SZCVOut[0]),.disp_1(disp_1),.disp_2(disp_2),.disp_3(disp_3),.disp_4(disp_4),.disp_5(disp_5),.disp_6(disp_6),.disp_7(disp_7),.disp_8(disp_8),.selecter(sl_out2));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
@@ -98,8 +98,11 @@ module simple(
 		assign d = IROut[7:0];
 		assign A_wire = (ALUSrc1==1'b1) ? pcPlusOne:
 					  BROut;
+		assign shifterIn = (ALUSrc1==1'b1) ? pcPlusOne:
+					  BROut;
 		assign B_wire = (ALUSrc2==1'b1) ? exd:
 					  AROut;
+		assign out = AROut;
 		assign DRIn = (ALUorshifter==1'b0) ? ALUOut:
 					  shifterOut;
 		assign SZCVIn = (ALUorshifter==1'b0 && AS_BC==1'b1) ? ALUcondout:

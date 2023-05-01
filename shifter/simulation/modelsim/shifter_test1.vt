@@ -37,6 +37,7 @@ reg [3:0] d;
 // wires                                               
 wire [15:0]  Out;
 wire [3:0]  Outcond;
+wire [31:0] OutC;
 
 // assign statements (if any)                          
 shifter i1 (
@@ -45,14 +46,15 @@ shifter i1 (
 	.Out(Out),
 	.Outcond(Outcond),
 	.d(d),
-	.opcode(opcode)
+	.opcode(opcode),
+	.OutC(OutC)
 );
 initial                                                
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
 A <= 16'b1010011100101011;
-opcode <= 4'b1001;    
+opcode <= 4'b1000;    
 d <= 4'b0110;    
 // --> end                                             
 $display("Running testbench");                       
@@ -64,11 +66,11 @@ begin
 // code executes for every event on sensitivity list   
 // insert code here --> begin                          
 #100
-d <= 4'b1001; 
+opcode <= 4'b1001; 
 #100
-d <= 4'b1010;
+opcode <= 4'b1010;
 #100
-d <= 4'b1011;                                                       
+opcode <= 4'b1011;                                                       
 @eachvec;                                              
 // --> end                                             
 end                                                    

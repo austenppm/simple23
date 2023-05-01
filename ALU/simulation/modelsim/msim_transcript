@@ -62,3 +62,14 @@ add wave -position insertpoint sim:/ALU_vlg_tst/*
 add wave -position insertpoint sim:/ALU_vlg_tst/*
 run
 # Running testbench
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 20:19:21 on Apr 28,2023, Elapsed time: 2:28:16
+# Errors: 1, Warnings: 0

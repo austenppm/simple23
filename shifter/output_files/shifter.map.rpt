@@ -1,5 +1,5 @@
 Analysis & Synthesis report for shifter
-Tue Apr 25 00:14:07 2023
+Mon May 01 11:57:39 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -19,6 +19,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 25 00:14:07 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 01 11:57:39 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; shifter                                     ;
 ; Top-level Entity Name              ; shifter                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 255                                         ;
-;     Total combinational functions  ; 255                                         ;
+; Total logic elements               ; 289                                         ;
+;     Total combinational functions  ; 289                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 44                                          ;
+; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -179,30 +180,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 255        ;
+; Estimated Total logic elements              ; 289        ;
 ;                                             ;            ;
-; Total combinational functions               ; 255        ;
+; Total combinational functions               ; 289        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 144        ;
-;     -- 3 input functions                    ; 98         ;
-;     -- <=2 input functions                  ; 13         ;
+;     -- 4 input functions                    ; 148        ;
+;     -- 3 input functions                    ; 129        ;
+;     -- <=2 input functions                  ; 12         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 255        ;
+;     -- normal mode                          ; 289        ;
 ;     -- arithmetic mode                      ; 0          ;
 ;                                             ;            ;
 ; Total registers                             ; 0          ;
 ;     -- Dedicated logic registers            ; 0          ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
-; I/O pins                                    ; 44         ;
+; I/O pins                                    ; 76         ;
 ;                                             ;            ;
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
-; Maximum fan-out node                        ; d[1]~input ;
-; Maximum fan-out                             ; 68         ;
-; Total fan-out                               ; 959        ;
-; Average fan-out                             ; 2.80       ;
+; Maximum fan-out node                        ; d[3]~input ;
+; Maximum fan-out                             ; 77         ;
+; Total fan-out                               ; 1130       ;
+; Average fan-out                             ; 2.56       ;
 +---------------------------------------------+------------+
 
 
@@ -211,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |shifter                   ; 255 (255)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |shifter            ; shifter     ; work         ;
+; |shifter                   ; 289 (289)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 76   ; 0            ; |shifter            ; shifter     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -221,38 +222,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; C[0]                                                ; Mux16               ; yes                    ;
-; C[1]                                                ; Mux16               ; yes                    ;
-; C[2]                                                ; Mux16               ; yes                    ;
-; C[3]                                                ; Mux16               ; yes                    ;
-; C[4]                                                ; Mux16               ; yes                    ;
-; C[5]                                                ; Mux16               ; yes                    ;
-; C[6]                                                ; Mux16               ; yes                    ;
-; C[7]                                                ; Mux16               ; yes                    ;
-; C[8]                                                ; Mux16               ; yes                    ;
-; C[9]                                                ; Mux16               ; yes                    ;
-; C[10]                                               ; Mux16               ; yes                    ;
-; C[11]                                               ; Mux16               ; yes                    ;
-; C[12]                                               ; Mux16               ; yes                    ;
-; C[13]                                               ; Mux16               ; yes                    ;
-; C[14]                                               ; Mux16               ; yes                    ;
-; C[15]                                               ; Mux16               ; yes                    ;
-; C[16]                                               ; Mux16               ; yes                    ;
-; C[17]                                               ; Mux16               ; yes                    ;
-; C[18]                                               ; Mux16               ; yes                    ;
-; C[19]                                               ; Mux16               ; yes                    ;
-; C[20]                                               ; Mux16               ; yes                    ;
-; C[21]                                               ; Mux16               ; yes                    ;
-; C[22]                                               ; Mux16               ; yes                    ;
-; C[23]                                               ; Mux16               ; yes                    ;
-; C[24]                                               ; Mux16               ; yes                    ;
-; C[25]                                               ; Mux16               ; yes                    ;
-; C[26]                                               ; Mux16               ; yes                    ;
-; C[27]                                               ; Mux16               ; yes                    ;
-; C[28]                                               ; Mux16               ; yes                    ;
-; C[29]                                               ; Mux16               ; yes                    ;
-; C[30]                                               ; Mux16               ; yes                    ;
-; Number of user-specified and inferred latches = 31  ;                     ;                        ;
+; D[0]                                                ; Mux18               ; yes                    ;
+; D[1]                                                ; Mux18               ; yes                    ;
+; D[2]                                                ; Mux18               ; yes                    ;
+; D[3]                                                ; Mux18               ; yes                    ;
+; D[4]                                                ; Mux18               ; yes                    ;
+; D[5]                                                ; Mux18               ; yes                    ;
+; D[6]                                                ; Mux18               ; yes                    ;
+; D[7]                                                ; Mux18               ; yes                    ;
+; D[8]                                                ; Mux18               ; yes                    ;
+; D[9]                                                ; Mux18               ; yes                    ;
+; D[10]                                               ; Mux18               ; yes                    ;
+; D[11]                                               ; Mux18               ; yes                    ;
+; D[12]                                               ; Mux18               ; yes                    ;
+; D[13]                                               ; Mux18               ; yes                    ;
+; D[14]                                               ; Mux18               ; yes                    ;
+; D[15]                                               ; Mux18               ; yes                    ;
+; Carry                                               ; Selector34          ; yes                    ;
+; C[16]                                               ; WideOr9             ; yes                    ;
+; C[0]                                                ; WideOr9             ; yes                    ;
+; C[1]                                                ; WideOr9             ; yes                    ;
+; C[2]                                                ; WideOr9             ; yes                    ;
+; C[3]                                                ; WideOr9             ; yes                    ;
+; C[4]                                                ; WideOr9             ; yes                    ;
+; C[5]                                                ; WideOr9             ; yes                    ;
+; C[6]                                                ; WideOr9             ; yes                    ;
+; C[7]                                                ; WideOr9             ; yes                    ;
+; C[8]                                                ; WideOr9             ; yes                    ;
+; C[9]                                                ; WideOr9             ; yes                    ;
+; C[10]                                               ; WideOr9             ; yes                    ;
+; C[11]                                               ; WideOr9             ; yes                    ;
+; C[12]                                               ; WideOr9             ; yes                    ;
+; C[13]                                               ; WideOr9             ; yes                    ;
+; C[14]                                               ; WideOr9             ; yes                    ;
+; C[15]                                               ; WideOr9             ; yes                    ;
+; C[17]                                               ; WideOr9             ; yes                    ;
+; C[18]                                               ; WideOr9             ; yes                    ;
+; C[19]                                               ; WideOr9             ; yes                    ;
+; C[20]                                               ; WideOr9             ; yes                    ;
+; C[21]                                               ; WideOr9             ; yes                    ;
+; C[22]                                               ; WideOr9             ; yes                    ;
+; C[23]                                               ; WideOr9             ; yes                    ;
+; C[24]                                               ; WideOr9             ; yes                    ;
+; C[25]                                               ; WideOr9             ; yes                    ;
+; C[26]                                               ; WideOr9             ; yes                    ;
+; C[27]                                               ; WideOr9             ; yes                    ;
+; C[28]                                               ; WideOr9             ; yes                    ;
+; C[29]                                               ; WideOr9             ; yes                    ;
+; C[30]                                               ; WideOr9             ; yes                    ;
+; C[31]                                               ; WideOr9             ; yes                    ;
+; Number of user-specified and inferred latches = 49  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -277,8 +296,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |shifter|Mux31             ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |shifter|Mux23             ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |shifter|Mux16             ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |shifter|Mux8              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |shifter|Mux4              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -287,16 +307,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 44                          ;
-; cycloneiii_lcell_comb ; 256                         ;
-;     normal            ; 256                         ;
+; boundary_port         ; 76                          ;
+; cycloneiii_lcell_comb ; 290                         ;
+;     normal            ; 290                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 98                          ;
-;         4 data inputs ; 144                         ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 129                         ;
+;         4 data inputs ; 148                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.83                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 5.62                        ;
 +-----------------------+-----------------------------+
 
 
@@ -305,7 +325,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -315,94 +335,157 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 25 00:13:58 2023
+    Info: Processing started: Mon May 01 11:57:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off shifter -c shifter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (10229): Verilog HDL Expression warning at shifter.v(36): truncated literal to match 3 bits File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
     Info (12023): Found entity 1: shifter File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 1
 Info (12127): Elaborating entity "shifter" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(16): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 16
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(17): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 17
-Warning (10230): Verilog HDL assignment warning at shifter.v(17): truncated value with size 3 to match size of target (2) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 17
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(18): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 18
-Warning (10230): Verilog HDL assignment warning at shifter.v(18): truncated value with size 4 to match size of target (3) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 18
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(19): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 19
-Warning (10230): Verilog HDL assignment warning at shifter.v(19): truncated value with size 5 to match size of target (4) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 19
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(20): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 20
-Warning (10230): Verilog HDL assignment warning at shifter.v(20): truncated value with size 6 to match size of target (5) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(21): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 21
-Warning (10230): Verilog HDL assignment warning at shifter.v(21): truncated value with size 7 to match size of target (6) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 21
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(22): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 22
-Warning (10230): Verilog HDL assignment warning at shifter.v(22): truncated value with size 8 to match size of target (7) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 22
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(23): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 23
-Warning (10230): Verilog HDL assignment warning at shifter.v(23): truncated value with size 9 to match size of target (8) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 23
+Warning (10230): Verilog HDL assignment warning at shifter.v(23): truncated value with size 3 to match size of target (2) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 23
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(24): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 24
-Warning (10230): Verilog HDL assignment warning at shifter.v(24): truncated value with size 10 to match size of target (9) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 24
+Warning (10230): Verilog HDL assignment warning at shifter.v(24): truncated value with size 4 to match size of target (3) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 24
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(25): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 25
-Warning (10230): Verilog HDL assignment warning at shifter.v(25): truncated value with size 11 to match size of target (10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 25
+Warning (10230): Verilog HDL assignment warning at shifter.v(25): truncated value with size 5 to match size of target (4) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 25
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(26): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 26
-Warning (10230): Verilog HDL assignment warning at shifter.v(26): truncated value with size 12 to match size of target (11) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 26
+Warning (10230): Verilog HDL assignment warning at shifter.v(26): truncated value with size 6 to match size of target (5) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 26
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(27): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 27
-Warning (10230): Verilog HDL assignment warning at shifter.v(27): truncated value with size 13 to match size of target (12) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 27
+Warning (10230): Verilog HDL assignment warning at shifter.v(27): truncated value with size 7 to match size of target (6) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 27
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(28): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 28
-Warning (10230): Verilog HDL assignment warning at shifter.v(28): truncated value with size 14 to match size of target (13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 28
+Warning (10230): Verilog HDL assignment warning at shifter.v(28): truncated value with size 8 to match size of target (7) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 28
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(29): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 29
-Warning (10230): Verilog HDL assignment warning at shifter.v(29): truncated value with size 15 to match size of target (14) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 29
+Warning (10230): Verilog HDL assignment warning at shifter.v(29): truncated value with size 9 to match size of target (8) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 29
 Warning (10235): Verilog HDL Always Construct warning at shifter.v(30): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 30
-Warning (10230): Verilog HDL assignment warning at shifter.v(30): truncated value with size 16 to match size of target (15) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 30
-Warning (10270): Verilog HDL Case Statement warning at shifter.v(15): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 15
-Warning (10270): Verilog HDL Case Statement warning at shifter.v(11): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 11
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(39): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 39
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(40): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 40
-Warning (10235): Verilog HDL Always Construct warning at shifter.v(45): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 45
-Warning (10240): Verilog HDL Always Construct warning at shifter.v(10): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[0]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[1]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[2]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[3]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[4]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[5]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[6]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[7]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[8]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[9]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[10]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[11]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[12]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[13]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[14]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[15]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[16]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[17]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[18]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[19]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[20]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[21]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[22]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[23]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[24]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[25]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[26]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[27]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[28]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[29]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[30]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
-Info (10041): Inferred latch for "C[31]" at shifter.v(10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 10
+Warning (10230): Verilog HDL assignment warning at shifter.v(30): truncated value with size 10 to match size of target (9) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(31): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 31
+Warning (10230): Verilog HDL assignment warning at shifter.v(31): truncated value with size 11 to match size of target (10) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(32): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at shifter.v(32): truncated value with size 12 to match size of target (11) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 32
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(33): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 33
+Warning (10230): Verilog HDL assignment warning at shifter.v(33): truncated value with size 13 to match size of target (12) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(34): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at shifter.v(34): truncated value with size 14 to match size of target (13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(35): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 35
+Warning (10230): Verilog HDL assignment warning at shifter.v(35): truncated value with size 15 to match size of target (14) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 35
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(36): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 36
+Warning (10230): Verilog HDL assignment warning at shifter.v(36): truncated value with size 16 to match size of target (15) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 36
+Warning (10270): Verilog HDL Case Statement warning at shifter.v(21): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(38): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 38
+Warning (10270): Verilog HDL Case Statement warning at shifter.v(42): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 42
+Warning (10270): Verilog HDL Case Statement warning at shifter.v(62): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 62
+Warning (10270): Verilog HDL Case Statement warning at shifter.v(14): incomplete case statement has no default case item File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 14
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(84): variable "C" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 84
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(86): variable "Carry" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 86
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(87): variable "D" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 87
+Warning (10235): Verilog HDL Always Construct warning at shifter.v(92): variable "D" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 92
+Warning (10240): Verilog HDL Always Construct warning at shifter.v(13): inferring latch(es) for variable "D", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Warning (10240): Verilog HDL Always Construct warning at shifter.v(13): inferring latch(es) for variable "Carry", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Warning (10240): Verilog HDL Always Construct warning at shifter.v(13): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[0]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[1]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[2]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[3]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[4]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[5]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[6]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[7]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[8]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[9]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[10]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[11]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[12]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[13]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[14]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[15]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[16]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[17]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[18]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[19]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[20]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[21]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[22]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[23]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[24]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[25]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[26]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[27]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[28]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[29]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[30]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "C[31]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "Carry" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[0]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[1]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[2]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[3]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[4]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[5]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[6]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[7]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[8]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[9]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[10]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[11]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[12]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[13]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[14]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (10041): Inferred latch for "D[15]" at shifter.v(13) File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "C[31]" merged with LATCH primitive "C[30]" File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+Warning (13012): Latch Carry has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 12
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal d[3] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 4
+Warning (13012): Latch C[0] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[1] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[2] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[3] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[4] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[5] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[6] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[7] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[8] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[9] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[10] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[11] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[12] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[13] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
+Warning (13012): Latch C[14] has unsafe behavior File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[1] File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Outcond[0]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 7
+    Warning (13410): Pin "Outcond[0]" is stuck at GND File: C:/Users/kazu4/2023-simple-2023-team23/shifter/shifter.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/kazu4/2023-simple-2023-team23/shifter/output_files/shifter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 299 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 365 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 255 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Tue Apr 25 00:14:07 2023
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 289 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Mon May 01 11:57:39 2023
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/kazu4/2023-simple-2023-team23/shifter/output_files/shifter.map.smsg.
 
 
