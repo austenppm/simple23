@@ -296,6 +296,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "disp_5[1]",
+					"strict" : false
+				},
+				{
 					"name" : "disp_5[2]",
 					"strict" : false
 				},
@@ -308,7 +312,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "disp_5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_5[6]",
+					"strict" : false
+				},
+				{
 					"name" : "disp_5[7]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_6[1]",
 					"strict" : false
 				},
 				{
@@ -324,7 +340,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "disp_6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_6[6]",
+					"strict" : false
+				},
+				{
 					"name" : "disp_6[7]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_7[1]",
 					"strict" : false
 				},
 				{
@@ -340,7 +368,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "disp_7[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_7[6]",
+					"strict" : false
+				},
+				{
 					"name" : "disp_7[7]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_8[1]",
 					"strict" : false
 				},
 				{
@@ -356,7 +396,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "disp_8[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_8[6]",
+					"strict" : false
+				},
+				{
 					"name" : "disp_8[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sl_out2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sl_out2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sl_out2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sl_out2[3]",
 					"strict" : false
 				},
 				{
@@ -416,11 +480,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[3]",
-					"strict" : false
-				},
-				{
-					"name" : "in[2]",
+					"name" : "in[0]",
 					"strict" : false
 				},
 				{
@@ -428,7 +488,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[0]",
+					"name" : "in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "in[3]",
 					"strict" : false
 				},
 				{

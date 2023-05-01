@@ -29,7 +29,7 @@ module simple(
 		output [4:0] clk2out,
 		output bfo,
 		output [7:0] disp_1,disp_2,disp_3,disp_4,disp_5,disp_6,disp_7,disp_8,
-		output sl_out,
+		output [3:0] sl_out2,
 		output MemReadout,MemWriteout,RegWriteout,ALUSrc1out,ALUSrc2out,MemtoRegout,Outputout,Inputout,ALUorshifterout,
 		output brch_sigout
 		);
@@ -68,7 +68,6 @@ module simple(
 		wire [2:0] Branch;
 		wire [15:0] reg_1,reg_2,reg_3,reg_4,reg_5,reg_6,reg_7,reg_0;
 		wire [15:0] address;
-		wire [3:0] sl_out2;
 		wire [2:0] RegDst_wire;
 		wire [3:0] opcode_wire;
 		wire [3:0] opcode_wire1;
@@ -91,7 +90,10 @@ module simple(
 		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
 		counta2 c2(.rst_n(rst_n), .clk(clk20),.data(pc),.out2(out2),.sel2(sel2));
 		counta3 c3(.rst_n(rst_n), .clk(clk20),.data(out),.out2(out3),.sel2(sel3));
-		display ds(.reg_1(reg_0),.reg_2(reg_1),.reg_3(reg_2),.reg_4(reg_3),.reg_5(SZCVOut[3]),.reg_6(SZCVOut[2]),.reg_7(SZCVOut[1]),.reg_0(SZCVOut[0]),.disp_1(disp_1),.disp_2(disp_2),.disp_3(disp_3),.disp_4(disp_4),.disp_5(disp_5),.disp_6(disp_6),.disp_7(disp_7),.disp_8(disp_8),.selecter(sl_out2));
+//		display ds(.reg_1(reg_0),.reg_2(reg_1),.reg_3(reg_2),.reg_4(reg_3),.reg_5(SZCVOut[3]),.reg_6(SZCVOut[2]),.reg_7(SZCVOut[1]),.reg_0(SZCVOut[0]),.disp_1(disp_1),.disp_2(disp_2),.disp_3(disp_3),.disp_4(disp_4),.disp_5(disp_5),.disp_6(disp_6),.disp_7(disp_7),.disp_8(disp_8),.selecter(sl_out2));
+		display ds(.sl_clk(clk20),.rst(rst_n),
+						.reg_0(reg_0),.reg_1(reg_1),.reg_2(reg_2),.reg_3(reg_3),.reg_4(reg_4),.reg_5(reg_5),.reg_6(reg_6),.reg_7(reg_7),
+						.disp_1(disp_1),.disp_2(disp_2),.disp_3(disp_3),.disp_4(disp_4),.disp_5(disp_5),.disp_6(disp_6),.disp_7(disp_7),.disp_8(disp_8),.sl_out(sl_out2));
 		assign Rs = IROut[13:11];
 		assign Rd = IROut[10:8];
 		assign dshift = IROut[3:0];
@@ -136,7 +138,6 @@ module simple(
 		assign Outputout = Output;
 		assign Inputout = Input;
 		assign ALUorshifterout = ALUorshifter;
-		assign sl_out = sl_out2;
 		assign brch_sigout = brch_sig_wire;
 endmodule
 		
