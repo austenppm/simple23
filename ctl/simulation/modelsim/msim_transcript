@@ -1,0 +1,23 @@
+# do ctl_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {ctl.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:44:21 on Apr 28,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." ctl.vo 
+# -- Compiling module ctl
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	ctl
+# End time: 17:44:22 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 

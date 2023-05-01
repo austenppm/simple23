@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ctl
-Fri Apr 28 13:41:13 2023
+Fri Apr 28 17:44:02 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 28 13:41:13 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 28 17:44:02 2023           ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                      ; ctl                                             ;
 ; Top-level Entity Name              ; ctl                                             ;
@@ -272,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
-    Info: Processing started: Fri Apr 28 13:41:09 2023
+    Info: Processing started: Fri Apr 28 17:43:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ctl -c ctl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -295,9 +295,9 @@ Info (21057): Implemented 62 device resources after synthesis - the final resour
     Info (21059): Implemented 20 output pins
     Info (21061): Implemented 24 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 439 megabytes
-    Info: Processing ended: Fri Apr 28 13:41:13 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 442 megabytes
+    Info: Processing ended: Fri Apr 28 17:44:02 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:11
 
 

@@ -1,5 +1,5 @@
 Fitter report for ctl
-Fri Apr 28 13:41:16 2023
+Fri Apr 28 17:44:05 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 28 13:41:16 2023           ;
+; Fitter Status                      ; Successful - Fri Apr 28 17:44:05 2023           ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                      ; ctl                                             ;
 ; Top-level Entity Name              ; ctl                                             ;
@@ -1471,7 +1471,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  36 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1494,7 +1494,7 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/output_files/ctl.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 1619 megabytes
-    Info: Processing ended: Fri Apr 28 13:41:17 2023
+    Info: Processing ended: Fri Apr 28 17:44:05 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
