@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Apr 25 00:14:14 2023
+Fitter Status : Successful - Mon May 01 11:57:52 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : shifter
 Top-level Entity Name : shifter
 Family : Cyclone IV E
 Device : EP4CE30F23I7
 Timing Models : Final
-Total logic elements : 255 / 28,848 ( < 1 % )
-    Total combinational functions : 255 / 28,848 ( < 1 % )
+Total logic elements : 289 / 28,848 ( 1 % )
+    Total combinational functions : 289 / 28,848 ( 1 % )
     Dedicated logic registers : 0 / 28,848 ( 0 % )
 Total registers : 0
-Total pins : 44 / 329 ( 13 % )
+Total pins : 76 / 329 ( 23 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )

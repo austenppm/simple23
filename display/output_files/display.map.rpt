@@ -1,6 +1,6 @@
 Analysis & Synthesis report for display
-Fri Apr 28 15:47:30 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fri Apr 28 10:08:11 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
 ---------------------
@@ -42,24 +42,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 28 15:47:30 2023       ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                      ; display                                     ;
-; Top-level Entity Name              ; display                                     ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 397                                         ;
-;     Total combinational functions  ; 397                                         ;
-;     Dedicated logic registers      ; 4                                           ;
-; Total registers                    ; 4                                           ;
-; Total pins                         ; 198                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 28 10:08:11 2023           ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
+; Revision Name                      ; display                                         ;
+; Top-level Entity Name              ; display                                         ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 406                                             ;
+;     Total combinational functions  ; 406                                             ;
+;     Dedicated logic registers      ; 4                                               ;
+; Total registers                    ; 4                                               ;
+; Total pins                         ; 198                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -165,13 +165,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
-; display.v                        ; yes             ; User Verilog HDL File  ; /export/home/019/a0192807/2023-simple-2023-team23/display/display.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; display.v                        ; yes             ; User Verilog HDL File  ; /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -179,16 +179,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 397      ;
+; Estimated Total logic elements              ; 406      ;
 ;                                             ;          ;
-; Total combinational functions               ; 397      ;
+; Total combinational functions               ; 406      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 325      ;
-;     -- 3 input functions                    ; 72       ;
-;     -- <=2 input functions                  ; 0        ;
+;     -- 4 input functions                    ; 361      ;
+;     -- 3 input functions                    ; 10       ;
+;     -- <=2 input functions                  ; 35       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 397      ;
+;     -- normal mode                          ; 406      ;
 ;     -- arithmetic mode                      ; 0        ;
 ;                                             ;          ;
 ; Total registers                             ; 4        ;
@@ -199,10 +199,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;          ;
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ;                                             ;          ;
-; Maximum fan-out node                        ; Equal0~0 ;
-; Maximum fan-out                             ; 112      ;
-; Total fan-out                               ; 1786     ;
-; Average fan-out                             ; 2.24     ;
+; Maximum fan-out node                        ; Equal2~0 ;
+; Maximum fan-out                             ; 63       ;
+; Total fan-out                               ; 1814     ;
+; Average fan-out                             ; 2.25     ;
 +---------------------------------------------+----------+
 
 
@@ -211,46 +211,46 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+----------------+--------------+
-; |display                   ; 397 (331)           ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 198  ; 0            ; |display                             ; display        ; work         ;
-;    |number:reg0|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg0                 ; number         ; work         ;
+; |display                   ; 406 (324)           ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 198  ; 0            ; |display                             ; display        ; work         ;
+;    |number:reg0|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg0                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg0|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg0|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg0|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg0|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg0|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
-;    |number:reg1|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg1                 ; number         ; work         ;
+;    |number:reg1|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg1                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg1|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg1|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg1|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg1|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg1|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
-;    |number:reg2|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg2                 ; number         ; work         ;
+;    |number:reg2|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg2                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg2|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg2|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg2|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg2|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg2|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
-;    |number:reg3|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg3                 ; number         ; work         ;
+;    |number:reg3|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg3                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg3|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg3|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg3|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg3|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg3|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
-;    |number:reg4|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg4                 ; number         ; work         ;
+;    |number:reg4|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg4                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg4|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg4|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg4|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg4|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg4|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
-;    |number:reg5|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg5                 ; number         ; work         ;
+;    |number:reg5|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg5                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg5|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg5|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg5|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg5|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg5|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
-;    |number:reg6|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg6                 ; number         ; work         ;
+;    |number:reg6|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg6                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg6|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg6|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg6|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg6|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg6|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
-;    |number:reg7|           ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg7                 ; number         ; work         ;
+;    |number:reg7|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg7                 ; number         ; work         ;
 ;       |SEVENSEG_LED:l1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg7|SEVENSEG_LED:l1 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg7|SEVENSEG_LED:l2 ; SEVENSEG_LED   ; work         ;
-;       |SEVENSEG_LED:l3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg7|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
+;       |SEVENSEG_LED:l3|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg7|SEVENSEG_LED:l3 ; SEVENSEG_LED   ; work         ;
 ;       |SEVENSEG_LED:l4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|number:reg7|SEVENSEG_LED:l4 ; SEVENSEG_LED   ; work         ;
 ;    |select_counter:sl|     ; 2 (2)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display|select_counter:sl           ; select_counter ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+----------------+--------------+
@@ -289,15 +289,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; boundary_port         ; 198                         ;
 ; cycloneiii_ff         ; 4                           ;
 ;     CLR               ; 4                           ;
-; cycloneiii_lcell_comb ; 406                         ;
-;     normal            ; 406                         ;
+; cycloneiii_lcell_comb ; 415                         ;
+;     normal            ; 415                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         3 data inputs ; 72                          ;
-;         4 data inputs ; 325                         ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 361                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.46                        ;
+; Average LUT depth     ; 3.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -315,50 +316,83 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 28 15:47:24 2023
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+    Info: Processing started: Fri Apr 28 10:08:06 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display -c display
-Warning (125092): Tcl Script File ram.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE ram.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file display.v
-    Info (12023): Found entity 1: display File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 1
-    Info (12023): Found entity 2: SEVENSEG_LED File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 66
-    Info (12023): Found entity 3: select_counter File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 90
-    Info (12023): Found entity 4: number File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 107
-Warning (12019): Can't analyze file -- file simple.v is missing
+    Info (12023): Found entity 1: display File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 1
+    Info (12023): Found entity 2: SEVENSEG_LED File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 66
+    Info (12023): Found entity 3: select_counter File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 90
+    Info (12023): Found entity 4: number File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 107
 Info (12127): Elaborating entity "display" for the top level hierarchy
-Info (12128): Elaborating entity "select_counter" for hierarchy "select_counter:sl" File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 20
-Info (12128): Elaborating entity "number" for hierarchy "number:reg1" File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 21
-Info (12128): Elaborating entity "SEVENSEG_LED" for hierarchy "number:reg1|SEVENSEG_LED:l1" File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 117
+Info (12128): Elaborating entity "select_counter" for hierarchy "select_counter:sl" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 20
+Info (12128): Elaborating entity "number" for hierarchy "number:reg1" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 21
+Warning (10230): Verilog HDL assignment warning at display.v(114): truncated value with size 5 to match size of target (4) File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 114
+Warning (10230): Verilog HDL assignment warning at display.v(115): truncated value with size 8 to match size of target (4) File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 115
+Warning (10230): Verilog HDL assignment warning at display.v(116): truncated value with size 5 to match size of target (4) File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 116
+Info (12128): Elaborating entity "SEVENSEG_LED" for hierarchy "number:reg1|SEVENSEG_LED:l1" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 117
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "disp_1[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
-    Warning (13410): Pin "disp_2[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
-    Warning (13410): Pin "disp_3[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
-    Warning (13410): Pin "disp_4[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
-    Warning (13410): Pin "disp_5[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
-    Warning (13410): Pin "disp_6[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
-    Warning (13410): Pin "disp_7[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
-    Warning (13410): Pin "disp_8[7]" is stuck at GND File: /export/home/019/a0192807/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_1[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_2[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_3[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_4[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_5[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_6[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_7[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
+    Warning (13410): Pin "disp_8[7]" is stuck at GND File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 4
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /export/home/019/a0192807/2023-simple-2023-team23/display/output_files/display.map.smsg
+Info (144001): Generated suppressed messages file /export/home/021/a0211195/simple/2023-simple-2023-team23/display/output_files/display.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 597 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 32 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reg_1[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_1[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_1[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_1[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_2[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_2[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_2[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_2[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_3[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_3[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_3[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_3[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_4[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_4[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_4[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_4[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_5[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_5[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_5[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_5[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_6[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_6[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_6[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_6[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_7[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_7[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_7[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_7[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_0[8]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_0[9]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_0[10]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+    Warning (15610): No output dependent on input pin "reg_0[15]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 3
+Info (21057): Implemented 606 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 130 input pins
     Info (21059): Implemented 68 output pins
-    Info (21061): Implemented 399 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 502 megabytes
-    Info: Processing ended: Fri Apr 28 15:47:30 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+    Info (21061): Implemented 408 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 492 megabytes
+    Info: Processing ended: Fri Apr 28 10:08:11 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /export/home/019/a0192807/2023-simple-2023-team23/display/output_files/display.map.smsg.
+The suppressed messages can be found in /export/home/021/a0211195/simple/2023-simple-2023-team23/display/output_files/display.map.smsg.
 
 

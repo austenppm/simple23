@@ -15,9 +15,19 @@ module RegisterFile(
 	assign reg_5 = RegFile[5];
 	assign reg_6 = RegFile[6];
 	assign reg_7 = RegFile[7];
-	always @ (posedge clk) begin
-		if(!RegWrite) begin
-			RegFile [WriteReg] <= WriteData;
+	always @ (WriteData) begin
+		if(RegWrite==1'b1) begin
+//			RegFile [WriteReg] <= WriteData;
+			case (WriteReg)
+				0:RegFile [0] <= WriteData;
+				1:RegFile [1] <= WriteData;
+				2:RegFile [2] <= WriteData;
+				3:RegFile [3] <= WriteData;
+				4:RegFile [4] <= WriteData;
+				5:RegFile [5] <= WriteData;
+				6:RegFile [6] <= WriteData;
+				7:RegFile [7] <= WriteData;
+			endcase
 		end
 	end
 endmodule

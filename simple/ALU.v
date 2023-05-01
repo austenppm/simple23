@@ -25,6 +25,7 @@ module ALU(
 				2: C <= A & B;
 				3: C <= A | B;
 				4: C <= A ^ B;
+				5: C <= A - B;
 				6: C <= B;
 			endcase
 			

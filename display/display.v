@@ -64,26 +64,26 @@ endmodule
 
 
 module SEVENSEG_LED (
-    input [3:0] input_signal,
-    output [7:0] output_signal);
-    assign output_signal = (input_signal == 4'b0000)?8'b11111100:
-                                      (input_signal == 4'b0001)?8'b01100000:
-                                      (input_signal == 4'b0010)?8'b11011010:
-                                      (input_signal == 4'b0011)?8'b11110010:
-                                      (input_signal == 4'b0100)?8'b01100110:
-                                      (input_signal == 4'b0101)?8'b10110110:
-                                      (input_signal == 4'b0110)?8'b10111110:
-                                      (input_signal == 4'b0111)?8'b11100000:
-                                      (input_signal == 4'b1000)?8'b11111110:
-                                      (input_signal == 4'b1001)?8'b11110110:
-                                      (input_signal == 4'b1010)?8'b11101110:
-                                      (input_signal == 4'b1011)?8'b00111110:
-                                      (input_signal == 4'b1100)?8'b10001110:
-                                      (input_signal == 4'b1101)?8'b01111010:
-                                      (input_signal == 4'b1110)?8'b10011110:
-                                      (input_signal == 4'b1111)?8'b10001110:
-                                      8'b10000000;
-
+	input [3:0] input_signal,
+	output [7:0] output_signal);
+	assign output_signal = (input_signal == 4'b0000)?8'b01111110:
+								  (input_signal == 4'b0001)?8'b00110000:
+								  (input_signal == 4'b0010)?8'b01101101:
+								  (input_signal == 4'b0011)?8'b01111001:	
+								  (input_signal == 4'b0100)?8'b00110011:
+								  (input_signal == 4'b0101)?8'b01011011:
+								  (input_signal == 4'b0110)?8'b01011111:
+								  (input_signal == 4'b0111)?8'b01110010:
+								  (input_signal == 4'b1000)?8'b01111111:
+								  (input_signal == 4'b1001)?8'b01111011:
+								  (input_signal == 4'b1010)?8'b01110111:
+								  (input_signal == 4'b1011)?8'b00011111:
+								  (input_signal == 4'b1100)?8'b00001101:
+								  (input_signal == 4'b1101)?8'b00111101:
+								  (input_signal == 4'b1110)?8'b01001111:
+								  (input_signal == 4'b1111)?8'b01000111:
+								  8'b10000000;
+								  
 endmodule
 
 
@@ -111,9 +111,9 @@ module number(
 	wire [7:0] disp_wire1,disp_wire2,disp_wire3,disp_wire4;
 	wire [3:0] data_wire1,data_wire2,data_wire3,data_wire4;
 	assign data_wire1 = data_sig [3:0];
-	assign data_wire2 = data_sig [7:4];
-	assign data_wire3 = data_sig [11:8];
-	assign data_wire4 = data_sig [15:12];
+	assign data_wire2 = data_sig [7:3];
+	assign data_wire3 = data_sig [11:4];
+	assign data_wire4 = data_sig [15:11];
 	SEVENSEG_LED l1(.input_signal(data_wire1[3:0]), .output_signal(disp_wire1[7:0]));
 	SEVENSEG_LED l2(.input_signal(data_wire2[3:0]), .output_signal(disp_wire2[7:0]));
 	SEVENSEG_LED l3(.input_signal(data_wire3[3:0]), .output_signal(disp_wire3[7:0]));
