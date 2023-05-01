@@ -184,182 +184,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "disp_1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_1[7]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_2[7]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_3[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_3[6]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_3[7]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_4[1]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_4[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_4[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_4[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_4[5]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_4[6]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_4[7]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_5[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_5[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_5[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_5[7]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_6[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_6[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_6[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_6[7]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_7[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_7[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_7[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_7[7]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_8[2]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_8[3]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_8[4]",
-					"strict" : false
-				},
-				{
-					"name" : "disp_8[7]",
-					"strict" : false
-				},
-				{
 					"name" : "MemReadout",
 					"strict" : false
 				},
@@ -416,11 +240,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[3]",
-					"strict" : false
-				},
-				{
-					"name" : "in[2]",
+					"name" : "in[0]",
 					"strict" : false
 				},
 				{
@@ -428,7 +248,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[0]",
+					"name" : "in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "in[3]",
 					"strict" : false
 				},
 				{
