@@ -22,9 +22,9 @@ module ALU(
 					else
 						cond[0] <= 1'b0;
 					end
-				2: C <= A & B;
-				3: C <= A | B;
-				4: C <= A ^ B;
+				2: C[15:0] <= A & B;
+				3: C[15:0] <= A | B;
+				4: C[15:0] <= A ^ B;
 				5: begin
 						C <= A - B;
 					if(A[15]!=B[15] && A[15]!=C[15])
@@ -32,17 +32,16 @@ module ALU(
 					else
 						cond[0] <= 1'b0;
 					end
-				6: C <= B;
+				6: begin 
+						C[15:0] <= B;
+						C[16] <= 1'b0;
+					end
 			endcase
 			
 			if(C==16'b0)
 				cond[2] <= 1'b1;
 			else
 				cond[2] <= 1'b0;
-//			if (cond[0]==1'b1)
-//				cond[3] <= !C[15];
-//			else
-//				cond[3] <= C[15];
 			cond[3] <= C[15];
 			cond[1] <= C[16];
 		end
