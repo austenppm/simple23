@@ -189,7 +189,6 @@ set_location_assignment PIN_AB15 -to disp_8[4]
 set_location_assignment PIN_AA16 -to disp_8[5]
 set_location_assignment PIN_U16 -to disp_8[6]
 set_location_assignment PIN_AB16 -to disp_8[7]
-set_location_assignment PIN_C8 -to MemWriteout
 set_location_assignment PIN_AA17 -to sl_out2[3]
 set_location_assignment PIN_AB17 -to sl_out2[2]
 set_location_assignment PIN_AB19 -to sl_out2[1]

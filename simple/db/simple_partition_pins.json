@@ -4,70 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "out[2]",
-					"strict" : false
-				},
-				{
-					"name" : "out[3]",
-					"strict" : false
-				},
-				{
-					"name" : "out[4]",
-					"strict" : false
-				},
-				{
-					"name" : "out[5]",
-					"strict" : false
-				},
-				{
-					"name" : "out[6]",
-					"strict" : false
-				},
-				{
-					"name" : "out[7]",
-					"strict" : false
-				},
-				{
-					"name" : "out[8]",
-					"strict" : false
-				},
-				{
-					"name" : "out[9]",
-					"strict" : false
-				},
-				{
-					"name" : "out[10]",
-					"strict" : false
-				},
-				{
-					"name" : "out[11]",
-					"strict" : false
-				},
-				{
-					"name" : "out[12]",
-					"strict" : false
-				},
-				{
-					"name" : "out[13]",
-					"strict" : false
-				},
-				{
-					"name" : "out[14]",
-					"strict" : false
-				},
-				{
-					"name" : "out[15]",
-					"strict" : false
-				},
-				{
 					"name" : "out2[1]",
 					"strict" : false
 				},
@@ -112,10 +48,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "out3[1]",
-					"strict" : false
-				},
-				{
 					"name" : "out3[2]",
 					"strict" : false
 				},
@@ -125,14 +57,6 @@
 				},
 				{
 					"name" : "out3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "out3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "out3[6]",
 					"strict" : false
 				},
 				{
@@ -452,46 +376,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "MemReadout",
-					"strict" : false
-				},
-				{
-					"name" : "MemWriteout",
-					"strict" : false
-				},
-				{
-					"name" : "RegWriteout",
-					"strict" : false
-				},
-				{
-					"name" : "ALUSrc1out",
-					"strict" : false
-				},
-				{
-					"name" : "ALUSrc2out",
-					"strict" : false
-				},
-				{
-					"name" : "MemtoRegout",
-					"strict" : false
-				},
-				{
-					"name" : "Outputout",
-					"strict" : false
-				},
-				{
-					"name" : "Inputout",
-					"strict" : false
-				},
-				{
-					"name" : "ALUorshifterout",
-					"strict" : false
-				},
-				{
-					"name" : "brch_sigout",
-					"strict" : false
-				},
-				{
 					"name" : "rst_n",
 					"strict" : false
 				},
@@ -508,10 +392,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[13]",
-					"strict" : false
-				},
-				{
 					"name" : "in[14]",
 					"strict" : false
 				},
@@ -520,7 +400,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "in[13]",
+					"strict" : false
+				},
+				{
 					"name" : "in[12]",
+					"strict" : false
+				},
+				{
+					"name" : "in[8]",
+					"strict" : false
+				},
+				{
+					"name" : "in[10]",
 					"strict" : false
 				},
 				{
@@ -532,11 +424,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[10]",
+					"name" : "in[5]",
 					"strict" : false
 				},
 				{
-					"name" : "in[8]",
+					"name" : "in[4]",
 					"strict" : false
 				},
 				{
@@ -544,15 +436,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[5]",
-					"strict" : false
-				},
-				{
 					"name" : "in[6]",
 					"strict" : false
 				},
 				{
-					"name" : "in[4]",
+					"name" : "in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "in[2]",
 					"strict" : false
 				},
 				{
@@ -561,14 +453,6 @@
 				},
 				{
 					"name" : "in[1]",
-					"strict" : false
-				},
-				{
-					"name" : "in[2]",
-					"strict" : false
-				},
-				{
-					"name" : "in[0]",
 					"strict" : false
 				},
 				{

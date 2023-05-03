@@ -17,7 +17,6 @@ module RegisterFile(
 	assign reg_7 = RegFile[7];
 	always @ (WriteData) begin
 		if(RegWrite==1'b1) begin
-//			RegFile [WriteReg] <= WriteData;
 			case (WriteReg)
 				0:RegFile [0] <= WriteData;
 				1:RegFile [1] <= WriteData;
