@@ -75,6 +75,7 @@ module simple(
 		wire [3:0] opcode_wire2;
 		wire brch_sig_wire;
 		wire [7:0] ctlcheck;
+		wire [15:0] SZCV10;
 		register IR(.clk(clk2[3]),.rst_n(rst_n),.WriteData(Inst),.DataOut(IROut));
 		register BR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data2),.DataOut(BROut));
 		register AR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data1),.DataOut(AROut));
@@ -131,6 +132,10 @@ module simple(
 		assign ctlcheck[5] = Branch;
 		assign ctlcheck[6] = MemtoReg;
 		assign ctlcheck[7] = AS_BC;
+		assign SZCV10[15:12] = SZCVOut % 8;
+		assign SZCV10[11:8] = SZCVOut % 6;
+		assign SZCV10[7:4] = SZCVOut % 4;
+		assign SZCV10[3:0] = SZCVOut % 2;
 		assign opcode_wire1 = opcode_wire;
 		assign opcode_wire2 = opcode_wire;
 		assign PCIn = WriteData;
@@ -158,7 +163,7 @@ module simple(
 		assign brch_sigout = brch_sig_wire;
 		assign reg_8 = address;
 		assign reg_9 = DROut;
-		assign reg_10 = SZCVOut;
+		assign reg_10 = SZCV10;
 		assign reg_11 = WriteData;
 		assign reg_12 = exd;
 		assign reg_13 = ALUOut;
