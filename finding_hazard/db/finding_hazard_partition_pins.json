@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hazard_ctl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[7]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[8]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[9]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[10]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[11]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[12]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[13]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[14]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[15]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[16]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[17]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[18]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[19]",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_ctl[20]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_stop",
+					"strict" : false
+				},
+				{
+					"name" : "ID_EX_MemRead",
+					"strict" : false
+				},
+				{
+					"name" : "IF_ID_RegisterRb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IF_ID_RegisterRb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IF_ID_RegisterRb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ID_EX_RegisterRa[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IF_ID_RegisterRa[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ID_EX_RegisterRa[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ID_EX_RegisterRa[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IF_ID_RegisterRa[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IF_ID_RegisterRa[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

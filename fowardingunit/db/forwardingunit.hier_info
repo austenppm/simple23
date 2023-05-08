@@ -1,0 +1,21 @@
+|forwardingunit
+EX_MEM_RegWrite => ~NO_FANOUT~
+MEM_WB_RegWrite => ~NO_FANOUT~
+EX_MEM_RegDst[0] => ~NO_FANOUT~
+EX_MEM_RegDst[1] => ~NO_FANOUT~
+EX_MEM_RegDst[2] => ~NO_FANOUT~
+MEM_WB_RegDst[0] => ~NO_FANOUT~
+MEM_WB_RegDst[1] => ~NO_FANOUT~
+MEM_WB_RegDst[2] => ~NO_FANOUT~
+ID_EX_RegisterRa[0] => ~NO_FANOUT~
+ID_EX_RegisterRa[1] => ~NO_FANOUT~
+ID_EX_RegisterRa[2] => ~NO_FANOUT~
+ID_EX_RegisterRb[0] => ~NO_FANOUT~
+ID_EX_RegisterRb[1] => ~NO_FANOUT~
+ID_EX_RegisterRb[2] => ~NO_FANOUT~
+ForwardA[0] <= <GND>
+ForwardA[1] <= <GND>
+ForwardB[0] <= <GND>
+ForwardB[1] <= <GND>
+
+

@@ -1,0 +1,35 @@
+|finding_hazard
+ID_EX_MemRead => concat.IN1
+ID_EX_RegisterRa[0] => Equal0.IN2
+ID_EX_RegisterRa[1] => Equal0.IN1
+ID_EX_RegisterRa[2] => Equal0.IN0
+IF_ID_RegisterRa[0] => Equal0.IN5
+IF_ID_RegisterRa[1] => Equal0.IN4
+IF_ID_RegisterRa[2] => Equal0.IN3
+IF_ID_RegisterRb[0] => WideOr0.IN0
+IF_ID_RegisterRb[1] => WideOr0.IN1
+IF_ID_RegisterRb[2] => WideOr0.IN2
+hazard_ctl[0] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[1] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[2] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[3] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[4] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[5] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[6] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[7] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[8] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[9] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[10] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[11] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[12] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[13] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[14] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[15] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[16] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[17] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[18] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[19] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+hazard_ctl[20] <= concat.DB_MAX_OUTPUT_PORT_TYPE
+pc_stop <= concat.DB_MAX_OUTPUT_PORT_TYPE
+
+
