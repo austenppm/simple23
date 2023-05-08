@@ -212,7 +212,7 @@ VCCIO8                       : E8        : power  :                   : 2.5V    
 clk2out[1]                   : E9        : output : 2.5 V             :         : 8         : Y              
 in[11]                       : E10       : input  : 2.5 V             :         : 8         : Y              
 in[7]                        : E11       : input  : 2.5 V             :         : 7         : Y              
-ce1out                       : E12       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
 in[1]                        : E13       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7         :                
 rst_n                        : E15       : input  : 2.5 V             :         : 7         : Y              
@@ -354,7 +354,7 @@ MSEL1                        : L18       :        :                   :         
 VCCIO6                       : L19       : power  :                   : 2.5V    : 6         :                
 GND                          : L20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 6         :                
+ce1out                       : L22       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 2         :                

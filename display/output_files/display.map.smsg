@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at display.v(93): always construct contains both blocking and non-blocking assignments File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 93
+Warning (10268): Verilog HDL information at display.v(112): always construct contains both blocking and non-blocking assignments File: /export/home/021/a0211195/simple/2023-simple-2023-team23/display/display.v Line: 112
