@@ -112,6 +112,7 @@ module simple(
 		assign PCIn = WriteData;
 		assign ce_1 = !ce1 && ce2;
 		assign ce_2 = !ce1 && ce2;
+		
 		//デバッグ用アサイン
 		assign ctlcheck = {AS_BC,MemtoReg,Branch,RegWrite,MemWrite,MemRead,ALUSrc2,ALUSrc1};
 		assign SZCV10[15:12] = (SZCVOut / 6) % 2;
