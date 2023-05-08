@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MemRead",
+					"strict" : false
+				},
+				{
+					"name" : "MemWrite",
+					"strict" : false
+				},
+				{
+					"name" : "RegWrite",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrc1",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrc2",
+					"strict" : false
+				},
+				{
+					"name" : "MemtoReg",
+					"strict" : false
+				},
+				{
+					"name" : "Output",
+					"strict" : false
+				},
+				{
+					"name" : "Input",
+					"strict" : false
+				},
+				{
+					"name" : "ALUorShifter",
+					"strict" : false
+				},
+				{
+					"name" : "Halt",
+					"strict" : false
+				},
+				{
+					"name" : "AS_BC",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RegDst[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegDst[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RegDst[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Branch[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Branch[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Branch[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[14]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[10]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
