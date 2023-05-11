@@ -1,6 +1,6 @@
 Assembler report for simple_pipeline
-Mon May 08 16:55:33 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Thu May 11 17:36:23 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
 ---------------------
@@ -11,7 +11,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/Users/kazu4/2023-simple-2023-team23/simple_pipeline/output_files/simple_pipeline.sof
+  6. Assembler Device Options: simple_pipeline.sof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 08 16:55:33 2023 ;
+; Assembler Status      ; Successful - Thu May 11 17:36:23 2023 ;
 ; Revision Name         ; simple_pipeline                       ;
 ; Top-level Entity Name ; simple_pipeline                       ;
 ; Family                ; Cyclone IV E                          ;
@@ -64,23 +64,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+------------------------+--------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                               ;
-+-----------------------------------------------------------------------------------------+
-; File Name                                                                               ;
-+-----------------------------------------------------------------------------------------+
-; C:/Users/kazu4/2023-simple-2023-team23/simple_pipeline/output_files/simple_pipeline.sof ;
-+-----------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                          ;
++----------------------------------------------------------------------------------------------------+
+; File Name                                                                                          ;
++----------------------------------------------------------------------------------------------------+
+; /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/output_files/simple_pipeline.sof ;
++----------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/kazu4/2023-simple-2023-team23/simple_pipeline/output_files/simple_pipeline.sof ;
-+----------------+--------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                          ;
-+----------------+--------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0048876E                                                                                       ;
-; Checksum       ; 0x0048876E                                                                                       ;
-+----------------+--------------------------------------------------------------------------------------------------+
++-----------------------------------------------+
+; Assembler Device Options: simple_pipeline.sof ;
++----------------+------------------------------+
+; Option         ; Setting                      ;
++----------------+------------------------------+
+; JTAG usercode  ; 0x0048F7AA                   ;
+; Checksum       ; 0x0048F7AA                   ;
++----------------+------------------------------+
 
 
 +--------------------+
@@ -88,15 +88,15 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon May 08 16:55:32 2023
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+    Info: Processing started: Thu May 11 17:36:22 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off simple_pipeline -c simple_pipeline
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4698 megabytes
-    Info: Processing ended: Mon May 08 16:55:33 2023
+    Info: Peak virtual memory: 384 megabytes
+    Info: Processing ended: Thu May 11 17:36:23 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
