@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ctl
-Fri Apr 28 17:44:02 2023
+Thu May 11 13:43:50 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -44,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 28 17:44:02 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 11 13:43:50 2023           ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                      ; ctl                                             ;
 ; Top-level Entity Name              ; ctl                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 23                                              ;
-;     Total combinational functions  ; 23                                              ;
-;     Dedicated logic registers      ; 16                                              ;
-; Total registers                    ; 16                                              ;
-; Total pins                         ; 38                                              ;
+; Total logic elements               ; 29                                              ;
+;     Total combinational functions  ; 29                                              ;
+;     Dedicated logic registers      ; 22                                              ;
+; Total registers                    ; 22                                              ;
+; Total pins                         ; 40                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -177,30 +177,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 23        ;
+; Estimated Total logic elements              ; 29        ;
 ;                                             ;           ;
-; Total combinational functions               ; 23        ;
+; Total combinational functions               ; 29        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 13        ;
+;     -- 4 input functions                    ; 17        ;
 ;     -- 3 input functions                    ; 6         ;
-;     -- <=2 input functions                  ; 4         ;
+;     -- <=2 input functions                  ; 6         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 23        ;
+;     -- normal mode                          ; 29        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 16        ;
-;     -- Dedicated logic registers            ; 16        ;
+; Total registers                             ; 22        ;
+;     -- Dedicated logic registers            ; 22        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 38        ;
+; I/O pins                                    ; 40        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 16        ;
-; Total fan-out                               ; 168       ;
-; Average fan-out                             ; 1.46      ;
+; Maximum fan-out                             ; 22        ;
+; Total fan-out                               ; 226       ;
+; Average fan-out                             ; 1.73      ;
 +---------------------------------------------+-----------+
 
 
@@ -209,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |ctl                       ; 23 (23)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |ctl                ; ctl         ; work         ;
+; |ctl                       ; 29 (29)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |ctl                ; ctl         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -219,12 +219,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 22    ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -243,17 +243,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 38                          ;
-; cycloneiii_ff         ; 16                          ;
-;     plain             ; 16                          ;
-; cycloneiii_lcell_comb ; 23                          ;
-;     normal            ; 23                          ;
-;         2 data inputs ; 4                           ;
+; boundary_port         ; 40                          ;
+; cycloneiii_ff         ; 22                          ;
+;     ENA               ; 21                          ;
+;     SCLR              ; 1                           ;
+; cycloneiii_lcell_comb ; 29                          ;
+;     normal            ; 29                          ;
+;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 6                           ;
-;         4 data inputs ; 13                          ;
+;         4 data inputs ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.38                        ;
+; Average LUT depth     ; 1.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,7 +273,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
-    Info: Processing started: Fri Apr 28 17:43:57 2023
+    Info: Processing started: Thu May 11 13:43:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ctl -c ctl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -280,24 +281,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file ctl.v
     Info (12023): Found entity 1: ctl File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 1
 Info (12127): Elaborating entity "ctl" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at ctl.v(10): object "inst_reg" assigned a value but never read File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 10
-Warning (10036): Verilog HDL or VHDL warning at ctl.v(13): object "opcode_wire" assigned a value but never read File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rst_n" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 2
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "inst[0]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 3
     Warning (15610): No output dependent on input pin "inst[1]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 3
     Warning (15610): No output dependent on input pin "inst[2]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 3
     Warning (15610): No output dependent on input pin "inst[3]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl/ctl.v Line: 3
-Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 24 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 442 megabytes
-    Info: Processing ended: Fri Apr 28 17:44:02 2023
-    Info: Elapsed time: 00:00:05
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 33 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 448 megabytes
+    Info: Processing ended: Thu May 11 13:43:50 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:11
 
 

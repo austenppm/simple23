@@ -1,7 +1,7 @@
 module ctl(
 	input clk,rst_n,
 	input [15:0] inst,
-	output  MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorShifter,Halt,
+	output  MemRead,MemWrite,RegWrite,ALUSrc1,ALUSrc2,MemtoReg,Output,Input,ALUorShifter,Halt,BranchCond,AS_BC,
 	output  [3:0] opcode,
 	output  [2:0] RegDst,
 	output  [2:0] Branch);
@@ -9,7 +9,7 @@ module ctl(
 	wire [3:0] opcode_reg;
 	wire [15:0] inst_reg;
 	wire [2:0] brch_reg;
-	reg MemRead_wire,MemWrite_wire,RegWrite_wire,ALUSrc1_wire,ALUSrc2_wire,MemtoReg_wire,Output_wire,Input_wire,ALUorShifter_wire,Halt_wire;
+	reg MemRead_wire,MemWrite_wire,RegWrite_wire,ALUSrc1_wire,ALUSrc2_wire,MemtoReg_wire,Output_wire,Input_wire,ALUorShifter_wire,Halt_wire,BranchCond_wire,AS_BC_wire;
 	reg [3:0] opcode_wire;
 	reg [2:0] brch_wire;
 	reg [2:0] reg_dst_wire;
@@ -18,8 +18,10 @@ module ctl(
 	assign opcode_reg = inst[7:4];
 	assign brch_reg = inst[13:11];
 	always @ (posedge clk ) begin
-		if(clk) begin
-			if (( twobit == 2'b11 && opcode_reg != 4'b0111 && opcode_reg != 4'b1101 && opcode_reg != 4'b1110 && opcode_reg != 4'b1111) || (twobit == 2'b00 ) || (twobit == 2'b10 && brch_reg == 3'b000)) begin
+		if(!rst_n) begin
+			Halt_wire <= 1'b0;
+		end else begin
+			if (( twobit == 2'b11 && opcode_reg != 4'b0111 && opcode_reg != 4'b1101 && opcode_reg != 4'b1110 && opcode_reg != 4'b1111 && opcode_reg != 4'b0101) || (twobit == 2'b00 ) || (twobit == 2'b10 && brch_reg == 3'b000)) begin
 				RegWrite_wire <= 1'b1;
 			end else begin
 				RegWrite_wire <= 1'b0;
@@ -68,10 +70,13 @@ module ctl(
 			end
 			if(twobit == 2'b10 && brch_reg == 3'b111) begin
 				brch_wire <= inst[10:8];
+				BranchCond_wire <=1'b1;
 			end else if(twobit == 2'b10 && brch_reg == 3'b100) begin
 				brch_wire <= brch_reg;
+				BranchCond_wire <=1'b1;
 			end else begin
 				brch_wire <= 3'b111;
+				BranchCond_wire <=1'b0;
 			end
 			if(twobit == 2'b00 ) begin
 				reg_dst_wire <= inst[13:11];
@@ -84,9 +89,14 @@ module ctl(
 				ALUorShifter_wire <= 1'b0;
 			end
 			if(twobit == 2'b11 && opcode_reg == 4'b1111) begin
-				Halt_wire <= 1'b0;
-			end else begin
 				Halt_wire <= 1'b1;
+			end else begin
+				Halt_wire <= 1'b0;
+			end
+			if(twobit == 2'b11  && opcode_reg != 4'b0111 && opcode_reg != 4'b1101 && opcode_reg != 4'b1110 && opcode_reg != 4'b1111 && opcode_reg != 4'b1100) begin
+				AS_BC_wire <= 1'b1;
+			end else begin
+				AS_BC_wire <= 1'b0;
 			end
 		end
 	end
@@ -100,8 +110,9 @@ module ctl(
 	assign Input = Input_wire;
 	assign ALUorShifter = ALUorShifter_wire;
 	assign Halt = Halt_wire;
-	assign opcode = opcode_reg;
+	assign opcode = opcode_wire;
 	assign Branch = brch_wire;
 	assign RegDst = reg_dst_wire;
-	
+	assign BranchCond = BranchCond_wire;
+	assign AS_BC = AS_BC_wire;
 endmodule

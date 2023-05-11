@@ -44,6 +44,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "BranchCond",
+					"strict" : false
+				},
+				{
+					"name" : "AS_BC",
+					"strict" : false
+				},
+				{
 					"name" : "opcode[0]",
 					"strict" : false
 				},
@@ -84,22 +92,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "inst[4]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[5]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[6]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[7]",
-					"strict" : false
-				},
-				{
 					"name" : "inst[14]",
 					"strict" : false
 				},
@@ -112,6 +104,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
 					"name" : "inst[13]",
 					"strict" : false
 				},
@@ -121,6 +117,22 @@
 				},
 				{
 					"name" : "inst[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[6]",
 					"strict" : false
 				},
 				{
