@@ -68,7 +68,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "WriteData[0]",
 					"strict" : false
 				},
 				{
@@ -76,7 +76,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "WriteData[0]",
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ce",
 					"strict" : false
 				},
 				{
