@@ -15,7 +15,7 @@ module ctl_pipeline(
 	assign brch_wire = inst[13:11];
 	
 	
-	assign RegWrite = (( twobit == 2'b11 && opcode_wire != 4'b0111 && opcode_wire != 4'b1101 && opcode_wire != 4'b1110 && opcode_wire != 4'b1111 && opcode_wire != 4'b0101) || (twobit == 2'b00 ) || (twobit == 2'b10 && brch_wire == 3'b000)) ? 1'b1:
+	assign RegWrite = (( twobit == 2'b11 && opcode_wire != 4'b0111 && opcode_wire != 4'b1101 && opcode_wire != 4'b1110 && opcode_wire != 4'b1111 && opcode_wire != 4'b0101) || (twobit == 2'b00 ) || (twobit == 2'b10 && (brch_wire == 3'b000 || brch_wire ==  3'b001))) ? 1'b1:
 							1'b0;
 	assign MemWrite = (twobit == 2'b01 ) ? 1'b1:
 							1'b0;
