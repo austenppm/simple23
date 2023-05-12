@@ -48,6 +48,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "out3[1]",
+					"strict" : false
+				},
+				{
 					"name" : "out3[2]",
 					"strict" : false
 				},
@@ -57,6 +61,14 @@
 				},
 				{
 					"name" : "out3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out3[6]",
 					"strict" : false
 				},
 				{
@@ -89,26 +101,6 @@
 				},
 				{
 					"name" : "ceout",
-					"strict" : false
-				},
-				{
-					"name" : "clk2out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "clk2out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "clk2out[2]",
-					"strict" : false
-				},
-				{
-					"name" : "clk2out[3]",
-					"strict" : false
-				},
-				{
-					"name" : "clk2out[4]",
 					"strict" : false
 				},
 				{
@@ -392,7 +384,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[13]",
+					"name" : "in[12]",
 					"strict" : false
 				},
 				{
@@ -404,11 +396,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[12]",
+					"name" : "in[13]",
 					"strict" : false
 				},
 				{
-					"name" : "in[9]",
+					"name" : "in[8]",
 					"strict" : false
 				},
 				{
@@ -420,7 +412,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[8]",
+					"name" : "in[9]",
 					"strict" : false
 				},
 				{
@@ -440,11 +432,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[3]",
+					"name" : "in[0]",
 					"strict" : false
 				},
 				{
-					"name" : "in[1]",
+					"name" : "in[3]",
 					"strict" : false
 				},
 				{
@@ -452,7 +444,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[0]",
+					"name" : "in[1]",
 					"strict" : false
 				},
 				{

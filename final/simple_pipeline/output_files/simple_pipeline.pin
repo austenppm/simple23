@@ -77,7 +77,7 @@ out2[4]                      : A5        : output : 2.5 V             :         
 out2[5]                      : A6        : output : 2.5 V             :         : 8         : Y              
 out3[1]                      : A7        : output : 2.5 V             :         : 8         : Y              
 ceout                        : A8        : output : 2.5 V             :         : 8         : Y              
-clk2out[3]                   : A9        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 8         :                
 in[15]                       : A10       : input  : 2.5 V             :         : 8         : Y              
 GND+                         : A11       :        :                   :         : 8         :                
 clk20                        : A12       : input  : 2.5 V             :         : 7         : Y              
@@ -143,7 +143,7 @@ out2[0]                      : B5        : output : 2.5 V             :         
 out2[6]                      : B6        : output : 2.5 V             :         : 8         : Y              
 out3[3]                      : B7        : output : 2.5 V             :         : 8         : Y              
 ce2out                       : B8        : output : 2.5 V             :         : 8         : Y              
-clk2out[2]                   : B9        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 8         :                
 in[14]                       : B10       : input  : 2.5 V             :         : 8         : Y              
 GND+                         : B11       :        :                   :         : 8         :                
 clk                          : B12       : input  : 2.5 V             :         : 7         : Y              
@@ -209,7 +209,7 @@ sel2[2]                      : E5        : output : 2.5 V             :         
 sel2[3]                      : E6        : output : 2.5 V             :         : 8         : Y              
 out3[5]                      : E7        : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : E8        : power  :                   : 2.5V    : 8         :                
-clk2out[1]                   : E9        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8         :                
 in[11]                       : E10       : input  : 2.5 V             :         : 8         : Y              
 in[7]                        : E11       : input  : 2.5 V             :         : 7         : Y              
 ce1out                       : E12       : output : 2.5 V             :         : 7         : N              
@@ -230,8 +230,8 @@ VCCIO1                       : F4        : power  :                   : 2.5V    
 GNDA3                        : F5        : gnd    :                   :         :           :                
 VCCD_PLL3                    : F6        : power  :                   : 1.2V    :           :                
 out3[6]                      : F7        : output : 2.5 V             :         : 8         : Y              
-clk2out[4]                   : F8        : output : 2.5 V             :         : 8         : Y              
-clk2out[0]                   : F9        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 8         :                
 in[10]                       : F10       : input  : 2.5 V             :         : 8         : Y              
 in[6]                        : F11       : input  : 2.5 V             :         : 7         : Y              
 GND                          : F12       : gnd    :                   :         :           :                
