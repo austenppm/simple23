@@ -15,9 +15,9 @@ in[12] => MDRIn.DATAB
 in[13] => MDRIn.DATAB
 in[14] => MDRIn.DATAB
 in[15] => MDRIn.DATAB
-clk => clk.IN1
+clk => clk.IN10
 clk20 => clk20.IN6
-rst_n => rst_n.IN12
+rst_n => rst_n.IN21
 exec => exec.IN1
 out2[0] <= counta2:c2.out2
 out2[1] <= counta2:c2.out2
@@ -1709,6 +1709,237 @@ p[1] <= p[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 p[2] <= p[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 p[3] <= p[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 p[4] <= p[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase3ctl:p30
+ALUSrc1in => ALUSrc1out.DATAA
+ALUSrc2in => ALUSrc2out.DATAA
+ALUorshifterin => ALUorshifterout.DATAA
+AS_BCin => AS_BCout.DATAA
+opcodein[0] => opcodeout.DATAA
+opcodein[1] => opcodeout.DATAA
+opcodein[2] => opcodeout.DATAA
+opcodein[3] => opcodeout.DATAA
+clk => opcodeout[0]~reg0.CLK
+clk => opcodeout[1]~reg0.CLK
+clk => opcodeout[2]~reg0.CLK
+clk => opcodeout[3]~reg0.CLK
+clk => AS_BCout~reg0.CLK
+clk => ALUorshifterout~reg0.CLK
+clk => ALUSrc2out~reg0.CLK
+clk => ALUSrc1out~reg0.CLK
+rst_n => ALUSrc1out.OUTPUTSELECT
+rst_n => ALUSrc2out.OUTPUTSELECT
+rst_n => ALUorshifterout.OUTPUTSELECT
+rst_n => AS_BCout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+ALUSrc1out <= ALUSrc1out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ALUSrc2out <= ALUSrc2out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ALUorshifterout <= ALUorshifterout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+AS_BCout <= AS_BCout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[0] <= opcodeout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[1] <= opcodeout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[2] <= opcodeout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[3] <= opcodeout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase3ctl:p31
+ALUSrc1in => ALUSrc1out.DATAA
+ALUSrc2in => ALUSrc2out.DATAA
+ALUorshifterin => ALUorshifterout.DATAA
+AS_BCin => AS_BCout.DATAA
+opcodein[0] => opcodeout.DATAA
+opcodein[1] => opcodeout.DATAA
+opcodein[2] => opcodeout.DATAA
+opcodein[3] => opcodeout.DATAA
+clk => opcodeout[0]~reg0.CLK
+clk => opcodeout[1]~reg0.CLK
+clk => opcodeout[2]~reg0.CLK
+clk => opcodeout[3]~reg0.CLK
+clk => AS_BCout~reg0.CLK
+clk => ALUorshifterout~reg0.CLK
+clk => ALUSrc2out~reg0.CLK
+clk => ALUSrc1out~reg0.CLK
+rst_n => ALUSrc1out.OUTPUTSELECT
+rst_n => ALUSrc2out.OUTPUTSELECT
+rst_n => ALUorshifterout.OUTPUTSELECT
+rst_n => AS_BCout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+rst_n => opcodeout.OUTPUTSELECT
+ALUSrc1out <= ALUSrc1out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ALUSrc2out <= ALUSrc2out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ALUorshifterout <= ALUorshifterout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+AS_BCout <= AS_BCout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[0] <= opcodeout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[1] <= opcodeout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[2] <= opcodeout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcodeout[3] <= opcodeout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase4ctl:p40
+MemWritein => MemWriteout.DATAA
+Inputin => Inputout.DATAA
+Branchin[0] => Branchout.DATAA
+Branchin[1] => Branchout.DATAA
+Branchin[2] => Branchout.DATAA
+clk => Branchout[0]~reg0.CLK
+clk => Branchout[1]~reg0.CLK
+clk => Branchout[2]~reg0.CLK
+clk => Inputout~reg0.CLK
+clk => MemWriteout~reg0.CLK
+rst_n => MemWriteout.OUTPUTSELECT
+rst_n => Inputout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+MemWriteout <= MemWriteout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Inputout <= Inputout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[0] <= Branchout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[1] <= Branchout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[2] <= Branchout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase4ctl:p41
+MemWritein => MemWriteout.DATAA
+Inputin => Inputout.DATAA
+Branchin[0] => Branchout.DATAA
+Branchin[1] => Branchout.DATAA
+Branchin[2] => Branchout.DATAA
+clk => Branchout[0]~reg0.CLK
+clk => Branchout[1]~reg0.CLK
+clk => Branchout[2]~reg0.CLK
+clk => Inputout~reg0.CLK
+clk => MemWriteout~reg0.CLK
+rst_n => MemWriteout.OUTPUTSELECT
+rst_n => Inputout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+MemWriteout <= MemWriteout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Inputout <= Inputout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[0] <= Branchout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[1] <= Branchout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[2] <= Branchout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase4ctl:p42
+MemWritein => MemWriteout.DATAA
+Inputin => Inputout.DATAA
+Branchin[0] => Branchout.DATAA
+Branchin[1] => Branchout.DATAA
+Branchin[2] => Branchout.DATAA
+clk => Branchout[0]~reg0.CLK
+clk => Branchout[1]~reg0.CLK
+clk => Branchout[2]~reg0.CLK
+clk => Inputout~reg0.CLK
+clk => MemWriteout~reg0.CLK
+rst_n => MemWriteout.OUTPUTSELECT
+rst_n => Inputout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+rst_n => Branchout.OUTPUTSELECT
+MemWriteout <= MemWriteout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Inputout <= Inputout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[0] <= Branchout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[1] <= Branchout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Branchout[2] <= Branchout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase5ctl:p50
+MemtoRegin => MemtoRegout.DATAA
+RegWritein => RegWriteout.DATAA
+RegDstin[0] => RegDstout.DATAA
+RegDstin[1] => RegDstout.DATAA
+RegDstin[2] => RegDstout.DATAA
+clk => RegDstout[0]~reg0.CLK
+clk => RegDstout[1]~reg0.CLK
+clk => RegDstout[2]~reg0.CLK
+clk => RegWriteout~reg0.CLK
+clk => MemtoRegout~reg0.CLK
+rst_n => MemtoRegout.OUTPUTSELECT
+rst_n => RegWriteout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+MemtoRegout <= MemtoRegout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegWriteout <= RegWriteout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[0] <= RegDstout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[1] <= RegDstout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[2] <= RegDstout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase5ctl:p51
+MemtoRegin => MemtoRegout.DATAA
+RegWritein => RegWriteout.DATAA
+RegDstin[0] => RegDstout.DATAA
+RegDstin[1] => RegDstout.DATAA
+RegDstin[2] => RegDstout.DATAA
+clk => RegDstout[0]~reg0.CLK
+clk => RegDstout[1]~reg0.CLK
+clk => RegDstout[2]~reg0.CLK
+clk => RegWriteout~reg0.CLK
+clk => MemtoRegout~reg0.CLK
+rst_n => MemtoRegout.OUTPUTSELECT
+rst_n => RegWriteout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+MemtoRegout <= MemtoRegout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegWriteout <= RegWriteout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[0] <= RegDstout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[1] <= RegDstout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[2] <= RegDstout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase5ctl:p52
+MemtoRegin => MemtoRegout.DATAA
+RegWritein => RegWriteout.DATAA
+RegDstin[0] => RegDstout.DATAA
+RegDstin[1] => RegDstout.DATAA
+RegDstin[2] => RegDstout.DATAA
+clk => RegDstout[0]~reg0.CLK
+clk => RegDstout[1]~reg0.CLK
+clk => RegDstout[2]~reg0.CLK
+clk => RegWriteout~reg0.CLK
+clk => MemtoRegout~reg0.CLK
+rst_n => MemtoRegout.OUTPUTSELECT
+rst_n => RegWriteout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+MemtoRegout <= MemtoRegout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegWriteout <= RegWriteout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[0] <= RegDstout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[1] <= RegDstout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[2] <= RegDstout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simple_pipeline|phase5ctl:p53
+MemtoRegin => MemtoRegout.DATAA
+RegWritein => RegWriteout.DATAA
+RegDstin[0] => RegDstout.DATAA
+RegDstin[1] => RegDstout.DATAA
+RegDstin[2] => RegDstout.DATAA
+clk => RegDstout[0]~reg0.CLK
+clk => RegDstout[1]~reg0.CLK
+clk => RegDstout[2]~reg0.CLK
+clk => RegWriteout~reg0.CLK
+clk => MemtoRegout~reg0.CLK
+rst_n => MemtoRegout.OUTPUTSELECT
+rst_n => RegWriteout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+rst_n => RegDstout.OUTPUTSELECT
+MemtoRegout <= MemtoRegout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegWriteout <= RegWriteout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[0] <= RegDstout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[1] <= RegDstout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RegDstout[2] <= RegDstout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |simple_pipeline|branch:br

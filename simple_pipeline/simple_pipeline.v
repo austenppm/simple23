@@ -4,6 +4,9 @@
 `include "shifter.v"
 `include "PC.v"
 `include "phasecounter.v"
+`include "phase3ctl.v"
+`include "phase4ctl.v"
+`include "phase5ctl.v"
 `include "ctl.v"
 `include "branch.v"
 `include "RemoveChattering.v"
@@ -12,6 +15,7 @@
 `include "segLED.v"
 `include "divider.v"
 `include "display.v"
+`include "forwardingunit.v"
 
 module simple_pipeline(
 		input [15:0] in,//input
@@ -51,21 +55,38 @@ module simple_pipeline(
 		wire [7:0] ctlcheck;
 		wire [15:0] SZCV10;
 		wire [15:0] MemData;
+		wire x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15;
+		wire [3:0] y0;
+		wire [2:0] z0,z1,z2,z3,z4;
+		wire MemReadout,MemWriteout,RegWriteout,ALUSrc1out,ALUSrc2out,MemtoRegout,Outputout,Inputout,ALUorshifterout,AS_BCout;
+		wire [3:0] opcodeout;
+		wire [2:0] RegDstout,Branchout;
 		register IR(.clk(clk2[3]),.rst_n(rst_n),.WriteData(Inst_wire1),.DataOut(IROut));
 		register BR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data2),.DataOut(BROut));
 		register AR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data1),.DataOut(AROut));
 		register SZCV(.clk(clk2[1]),.rst_n(rst_n),.WriteData(SZCVIn),.DataOut(SZCVOut));
 		register DR(.clk(clk2[1]),.rst_n(rst_n),.WriteData(DRIn),.DataOut(DROut));
 		register MDR(.clk(clk2[0]),.rst_n(rst_n),.WriteData(MDRIn),.DataOut(MDROut));
-		phase3ctl phase3ctl_1(.ALUSrc1in(),.ALUSrc2in(),.ALUorshifterin(),.AS_BCin(),.opcodein(),.clk(),.ALUSrc1out(),.ALUSrc2out(),.ALUorshifterout(),.AS_BCout(),.opcodeout());
 		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(RegDst_wire),.WriteData(WriteData),.clk(clk2[0]),.RegWrite(RegWrite&&clk2[0]),.Data1(Data1),.Data2(Data2),
 							 .reg_1(reg_1),.reg_2(reg_2),.reg_3(reg_3),.reg_4(reg_4),.reg_5(reg_5),.reg_6(reg_6),.reg_7(reg_7),.reg_0(reg_0));
 		ALU ALU(.ALUctl(opcode_wire1),.A(A_wire),.B(B_wire),.Out(ALUOut),.Outcond(ALUcondout));
 		ctl ctl(.inst(Inst_wire2),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Halt(ce1),
 				  .Output(Output),.Input(Input),.opcode(opcode_wire),.RegDst(RegDst_wire),.Branch(Branch),.AS_BC(AS_BC));
+		finding_hazard fh(.ID_EX_MemRead(x15),.ID_EX_RegisterRa(z3),.IF_ID_RegisterRa(Rs),.IF_ID_RegisterRb(Rd),.hazard_ctl());
 		shifter sf(.A(shifterIn),.opcode(opcode_wire2),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
 		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce_1),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phasecounter a0(.clk(clk),.rst_n(rst_n),.ce(ce_2),.p(clk2));
+		phase3ctl p30(.ALUSrc1in(ALUSrc1),.ALUSrc2in(ALUSrc2),.ALUorshifterin(ALUorshifter),.AS_BCin(AS_BC),.MemReadin(MemRead),.opcodein(opcode_wire),
+							.clk(clk),.rst_n(rst_n),.ALUSrc1out(x0),.ALUSrc2out(x1),.ALUorshifterout(x2),.AS_BCout(x3),.MemReadout(x14),.opcodeout(y0));
+		phase3ctl p31(.ALUSrc1in(x0),.ALUSrc2in(x1),.ALUorshifterin(x2),.AS_BCin(x3),.MemReadin(x14),.opcodein(y0),
+							.clk(clk),.rst_n(rst_n),.ALUSrc1out(ALUSrc1out),.ALUSrc2out(ALUSrc2out),.ALUorshifterout(ALUorshifterout),.AS_BCout(AS_BCout),.MemReadout(x15),.opcodeout(opcodeout));
+		phase4ctl p40(.MemWritein(MemWrite), .Inputin(Input),.Branchin(Branch),.clk(clk),.rst_n(rst_n),.MemWriteout(x4), .Inputout(x5),.Branchout(z0));
+		phase4ctl p41(.MemWritein(x4), .Inputin(x5),.Branchin(z0),.clk(clk),.rst_n(rst_n),.MemWriteout(x6), .Inputout(x7),.Branchout(z1));
+		phase4ctl p42(.MemWritein(x6), .Inputin(x7),.Branchin(z1),.clk(clk),.rst_n(rst_n),.MemWriteout(MemWriteout), .Inputout(Inputout),.Branchout(Branchout));
+		phase5ctl p50(.MemtoRegin(MemtoReg),.RegWritein(RegWrite),.RegDstin(RegDst_wire),.clk(clk),.rst_n(rst_n),.MemtoRegout(x8),.RegWriteout(x9),.RegDstout(z2));
+		phase5ctl p51(.MemtoRegin(x8),.RegWritein(x9),.RegDstin(z2),.clk(clk),.rst_n(rst_n),.MemtoRegout(x10),.RegWriteout(x11),.RegDstout(z3));
+		phase5ctl p52(.MemtoRegin(x10),.RegWritein(x11),.RegDstin(z3),.clk(clk),.rst_n(rst_n),.MemtoRegout(x12),.RegWriteout(x13),.RegDstout(z4));
+		phase5ctl p53(.MemtoRegin(x12),.RegWritein(x13),.RegDstin(z4),.clk(clk),.rst_n(rst_n),.MemtoRegout(MemtoRegout),.RegWriteout(RegWriteout),.RegDstout(RegDstout));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig_wire));
 		ram ram1(.address(pc),.clock(clk20),.data(0),.wren(1'b0),.q(Inst));
 		ram ram2(.address(DRIn),.clock(clk20),.data(AROut),.wren(MemWrite&&clk2[1]),.q(MemData));
@@ -82,24 +103,24 @@ module simple_pipeline(
 		assign dshift = IROut[3:0];
 		assign d = IROut[7:0];
 		//BRを消すか否か-----------------------------
-		assign A_wire = (ALUSrc1==1'b1) ? pcPlusOne:
+		assign A_wire = (ALUSrc1out==1'b1) ? pcPlusOne:
 					  BROut;
-//		assign A_wire = (ALUSrc1==1'b1) ? pcPlusOne:
+//		assign A_wire = (ALUSrc1out==1'b1) ? pcPlusOne:
 //					  Data2;
 		//------------------------------------------
-		assign shifterIn = (ALUSrc1==1'b1) ? pcPlusOne:
+		assign shifterIn = (ALUSrc1out==1'b1) ? pcPlusOne:
 					  BROut;
-		assign B_wire = (ALUSrc2==1'b1) ? exd:
+		assign B_wire = (ALUSrc2out==1'b1) ? exd:
 					  AROut;
 		assign out = AROut;
-		assign DRIn = (ALUorshifter==1'b0) ? ALUOut:
+		assign DRIn = (ALUorshifterout==1'b0) ? ALUOut:
 					  shifterOut;
-		assign SZCVIn = (ALUorshifter==1'b0 && AS_BC==1'b1) ? ALUcondout:
-							 (ALUorshifter==1'b1 && AS_BC==1'b1) ? shiftercondout:
+		assign SZCVIn = (ALUorshifterout==1'b0 && AS_BCout==1'b1) ? ALUcondout:
+							 (ALUorshifterout==1'b1 && AS_BCout==1'b1) ? shiftercondout:
 					  SZCVOut;
-		assign MDRIn = (Input==1'b1) ? in:
+		assign MDRIn = (Inputout==1'b1) ? in:
 					  MemData;
-		assign WriteData = (MemtoReg==1'b1) ? MDROut:
+		assign WriteData = (MemtoRegout==1'b1) ? MDROut:
 					  DROut;
 		assign exd = {{8{d[7]}},d};
 		assign opcode_wire1 = opcode_wire;

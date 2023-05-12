@@ -1,9 +1,9 @@
-module phase4ctl(
+module phase5ctl(
 	input MemtoRegin,RegWritein,
 	input [2:0] RegDstin,
-	input clk,
-	output MemtoRegout, RegWriteout,
-	output [2:0] RegDstout);
+	input clk,rst_n,
+	output reg MemtoRegout, RegWriteout,
+	output reg [2:0] RegDstout);
 	always @ (posedge clk) begin
 		if(!rst_n) begin
 			MemtoRegout <= 1'b0;
