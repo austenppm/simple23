@@ -1,0 +1,70 @@
+# Reading pref.tcl
+# do ALU_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {ALU.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:41 on May 01,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." ALU.vo 
+# -- Compiling module ALU
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	ALU
+# End time: 18:08:41 on May 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim {C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test2.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:41 on May 01,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim" C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/ALU_test2.vt 
+# -- Compiling module ALU_vlg_tst
+# 
+# Top level modules:
+# 	ALU_vlg_tst
+# End time: 18:08:41 on May 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test2
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test2 
+# Start time: 18:08:41 on May 01,2023
+# ** Error: (vsim-3170) Could not find 'test2'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/gate_work
+#             C:/Users/kazu4/2023-simple-2023-team23/ALU/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./ALU_run_msim_gate_verilog.do PAUSED at line 12
+vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.ALU_vlg_tst
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.ALU_vlg_tst 
+# Start time: 18:08:41 on May 01,2023
+# Loading work.ALU_vlg_tst
+# Loading work.ALU
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+add wave -position insertpoint sim:/ALU_vlg_tst/*
+run
+# Running testbench
+run
+run
+run
+run
+run
+# End time: 18:09:26 on May 01,2023, Elapsed time: 0:00:45
+# Errors: 1, Warnings: 0
