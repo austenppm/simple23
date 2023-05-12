@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu May 11 17:27:27 2023
+Fitter Status : Successful - Fri May 12 09:35:59 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 Revision Name : ctl_pipeline
 Top-level Entity Name : ctl_pipeline
 Family : Cyclone IV E
 Device : EP4CE30F23I7
 Timing Models : Final
-Total logic elements : 29 / 28,848 ( < 1 % )
-    Total combinational functions : 29 / 28,848 ( < 1 % )
+Total logic elements : 32 / 28,848 ( < 1 % )
+    Total combinational functions : 32 / 28,848 ( < 1 % )
     Dedicated logic registers : 0 / 28,848 ( 0 % )
 Total registers : 0
 Total pins : 39 / 329 ( 12 % )

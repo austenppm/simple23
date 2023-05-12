@@ -96,11 +96,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "inst[13]",
+					"name" : "inst[11]",
 					"strict" : false
 				},
 				{
 					"name" : "inst[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[13]",
 					"strict" : false
 				},
 				{
@@ -117,10 +121,6 @@
 				},
 				{
 					"name" : "inst[6]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[11]",
 					"strict" : false
 				},
 				{

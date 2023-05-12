@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ctl_pipeline
-Thu May 11 17:27:25 2023
+Fri May 12 09:35:56 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -44,13 +44,13 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 11 17:27:25 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 12 09:35:56 2023           ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                      ; ctl_pipeline                                    ;
 ; Top-level Entity Name              ; ctl_pipeline                                    ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 29                                              ;
-;     Total combinational functions  ; 29                                              ;
+; Total logic elements               ; 32                                              ;
+;     Total combinational functions  ; 32                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 39                                              ;
@@ -177,16 +177,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 29             ;
+; Estimated Total logic elements              ; 32             ;
 ;                                             ;                ;
-; Total combinational functions               ; 29             ;
+; Total combinational functions               ; 32             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 18             ;
-;     -- 3 input functions                    ; 7              ;
-;     -- <=2 input functions                  ; 4              ;
+;     -- 4 input functions                    ; 22             ;
+;     -- 3 input functions                    ; 5              ;
+;     -- <=2 input functions                  ; 5              ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 29             ;
+;     -- normal mode                          ; 32             ;
 ;     -- arithmetic mode                      ; 0              ;
 ;                                             ;                ;
 ; Total registers                             ; 0              ;
@@ -198,9 +198,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; inst[14]~input ;
-; Maximum fan-out                             ; 16             ;
-; Total fan-out                               ; 161            ;
-; Average fan-out                             ; 1.50           ;
+; Maximum fan-out                             ; 15             ;
+; Total fan-out                               ; 173            ;
+; Average fan-out                             ; 1.57           ;
 +---------------------------------------------+----------------+
 
 
@@ -209,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; |ctl_pipeline              ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |ctl_pipeline       ; ctl_pipeline ; work         ;
+; |ctl_pipeline              ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |ctl_pipeline       ; ctl_pipeline ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -235,6 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ctl_pipeline|Branch       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ctl_pipeline|opcode       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -244,15 +245,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 39                          ;
-; cycloneiii_lcell_comb ; 31                          ;
-;     normal            ; 31                          ;
+; cycloneiii_lcell_comb ; 34                          ;
+;     normal            ; 34                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 18                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 22                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.28                        ;
+; Average LUT depth     ; 2.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -271,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
-    Info: Processing started: Thu May 11 17:27:20 2023
+    Info: Processing started: Fri May 12 09:35:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ctl_pipeline -c ctl_pipeline
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -289,14 +290,14 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "inst[1]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl_pipeline/ctl_pipeline.v Line: 3
     Warning (15610): No output dependent on input pin "inst[2]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl_pipeline/ctl_pipeline.v Line: 3
     Warning (15610): No output dependent on input pin "inst[3]" File: /export/home/021/a0211195/simple/2023-simple-2023-team23/ctl_pipeline/ctl_pipeline.v Line: 3
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 29 logic cells
+    Info (21061): Implemented 32 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 438 megabytes
-    Info: Processing ended: Thu May 11 17:27:25 2023
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 439 megabytes
+    Info: Processing ended: Fri May 12 09:35:56 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:11
 
 
