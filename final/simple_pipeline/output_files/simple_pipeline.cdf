@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE30F23) Path("/export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/output_files/") File("simple_pipeline.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE30F23) Path("/export/home/021/a0218457/2023-simple-2023-team23/final/simple_pipeline/output_files/") File("simple_pipeline.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -67,13 +67,13 @@ module simple_pipeline(
 		register SZCV(.clk(clk),.rst_n(rst_n),.WriteData(SZCVIn),.DataOut(SZCVOut));
 		register DR(.clk(clk),.rst_n(rst_n),.WriteData(DRIn),.DataOut(DROut));
 		register MDR(.clk(clk),.rst_n(rst_n),.WriteData(MDRIn),.DataOut(MDROut));
-		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(RegDst_wire),.WriteData(WriteData),.clk(clk20),.rst_n(rst_n),.RegWrite(RegWriteout),.Data1(Data1),.Data2(Data2),
+		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(RegDstout),.WriteData(WriteData),.clk(clk20),.rst_n(rst_n),.RegWrite(RegWriteout),.Data1(Data1),.Data2(Data2),
 							 .reg_1(reg_1),.reg_2(reg_2),.reg_3(reg_3),.reg_4(reg_4),.reg_5(reg_5),.reg_6(reg_6),.reg_7(reg_7),.reg_0(reg_0));
 		ALU ALU(.ALUctl(opcodeout),.A(A_wire),.B(B_wire),.Out(ALUOut),.Outcond(ALUcondout));
 		ctl ctl(.inst(Inst_wire2),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Halt(ce1),
 				  .Output(Output),.Input(Input),.opcode(opcode_wire),.RegDst(RegDst_wire),.Branch(Branch),.AS_BC(AS_BC));
 		finding_hazard fh(.ID_EX_MemRead(x14),.ID_EX_RegisterRa(z2),.IF_ID_RegisterRa(Inst_wire1[13:11]),.IF_ID_RegisterRb(Inst_wire1[10:8]),.hazard_ctl(hazard));
-		forwardingunit fd(.EX_MEM_RegWrite(x13),.MEM_WB_RegWrite(RegWriteout),.EX_MEM_RegDst(z4),.MEM_WB_RegDst(RegDstout),.ID_EX_RegisterRa(z7),.ID_EX_RegisterRb(z8),.ForwardA(ForwardA),.ForwardB(ForwardB));
+		forwardingunit fd(.EX_MEM_RegWrite(x13),.MEM_WB_RegWrite(1),.EX_MEM_RegDst(z4),.MEM_WB_RegDst(1),.ID_EX_RegisterRa(1),.ID_EX_RegisterRb(z8),.ForwardA(ForwardA),.ForwardB(ForwardB));
 		shifter sf(.A(shifterIn),.opcode(opcodeout),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
 		PC PC(.clock(clk),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce_1),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
 		phase3ctl p3IFID(.ALUSrc1in(ALUSrc1&hazard),.ALUSrc2in(ALUSrc2&hazard),.ALUorshifterin(ALUorshifter&hazard),.AS_BCin(AS_BC&hazard),.MemReadin(MemRead&hazard),.Rain(IROut[13:11]&{3{hazard}}),.Rbin(IROut[10:8]&{3{hazard}}),.opcodein(opcode_wire&{4{hazard}}),
@@ -142,12 +142,12 @@ module simple_pipeline(
 		assign ceout = ce_1;
 		assign ce1out = ce1;
 		assign ce2out = ce2;
-		assign reg_8 = MemData;
+		assign reg_8 = opcodeout;
 		assign reg_9 = DROut;
 		assign reg_10 = ForwardA;
-		assign reg_11 = WriteData;
-		assign reg_12 = exdout;
+		assign reg_11 = ForwardB;
+		assign reg_12 = RegDst_wire;
 		assign reg_13 = ALUOut;
 		assign reg_14 = B_wire;
-		assign reg_15 = AROut;
+		assign reg_15 = A_wire;
 endmodule
