@@ -16,7 +16,7 @@ in[13] => MDRIn.DATAB
 in[14] => MDRIn.DATAB
 in[15] => MDRIn.DATAB
 clk => clk.IN17
-clk20 => clk20.IN7
+clk20 => clk20.IN6
 rst_n => rst_n.IN22
 exec => exec.IN1
 out2[0] <= counta2:c2.out2
@@ -1791,24 +1791,38 @@ hazard_ctl <= hazard_ctl.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |simple_pipeline|forwardingunit:fd
-EX_MEM_RegWrite => ~NO_FANOUT~
-MEM_WB_RegWrite => ~NO_FANOUT~
-EX_MEM_RegDst[0] => ~NO_FANOUT~
-EX_MEM_RegDst[1] => ~NO_FANOUT~
-EX_MEM_RegDst[2] => ~NO_FANOUT~
-MEM_WB_RegDst[0] => ~NO_FANOUT~
-MEM_WB_RegDst[1] => ~NO_FANOUT~
-MEM_WB_RegDst[2] => ~NO_FANOUT~
-ID_EX_RegisterRa[0] => ~NO_FANOUT~
-ID_EX_RegisterRa[1] => ~NO_FANOUT~
-ID_EX_RegisterRa[2] => ~NO_FANOUT~
-ID_EX_RegisterRb[0] => ~NO_FANOUT~
-ID_EX_RegisterRb[1] => ~NO_FANOUT~
-ID_EX_RegisterRb[2] => ~NO_FANOUT~
-ForwardA[0] <= <GND>
-ForwardA[1] <= <GND>
-ForwardB[0] <= <GND>
-ForwardB[1] <= <GND>
+EX_MEM_RegWrite => ForwardA.IN1
+EX_MEM_RegWrite => ForwardB.IN1
+MEM_WB_RegWrite => ForwardA.IN1
+MEM_WB_RegWrite => ForwardB.IN1
+EX_MEM_RegDst[0] => Equal0.IN2
+EX_MEM_RegDst[0] => Equal2.IN2
+EX_MEM_RegDst[1] => Equal0.IN1
+EX_MEM_RegDst[1] => Equal2.IN1
+EX_MEM_RegDst[2] => Equal0.IN0
+EX_MEM_RegDst[2] => Equal2.IN0
+MEM_WB_RegDst[0] => Equal1.IN2
+MEM_WB_RegDst[0] => Equal3.IN2
+MEM_WB_RegDst[1] => Equal1.IN1
+MEM_WB_RegDst[1] => Equal3.IN1
+MEM_WB_RegDst[2] => Equal1.IN0
+MEM_WB_RegDst[2] => Equal3.IN0
+ID_EX_RegisterRa[0] => Equal0.IN5
+ID_EX_RegisterRa[0] => Equal1.IN5
+ID_EX_RegisterRa[1] => Equal0.IN4
+ID_EX_RegisterRa[1] => Equal1.IN4
+ID_EX_RegisterRa[2] => Equal0.IN3
+ID_EX_RegisterRa[2] => Equal1.IN3
+ID_EX_RegisterRb[0] => Equal2.IN5
+ID_EX_RegisterRb[0] => Equal3.IN5
+ID_EX_RegisterRb[1] => Equal2.IN4
+ID_EX_RegisterRb[1] => Equal3.IN4
+ID_EX_RegisterRb[2] => Equal2.IN3
+ID_EX_RegisterRb[2] => Equal3.IN3
+ForwardA[0] <= ForwardA.DB_MAX_OUTPUT_PORT_TYPE
+ForwardA[1] <= ForwardA.DB_MAX_OUTPUT_PORT_TYPE
+ForwardB[0] <= ForwardB.DB_MAX_OUTPUT_PORT_TYPE
+ForwardB[1] <= ForwardB.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |simple_pipeline|shifter:sf
@@ -2501,43 +2515,43 @@ q[15] <= altsyncram:altsyncram_component.q_a
 
 
 |simple_pipeline|ram:ram1|altsyncram:altsyncram_component
-wren_a => altsyncram_59k1:auto_generated.wren_a
+wren_a => altsyncram_bjl1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_59k1:auto_generated.data_a[0]
-data_a[1] => altsyncram_59k1:auto_generated.data_a[1]
-data_a[2] => altsyncram_59k1:auto_generated.data_a[2]
-data_a[3] => altsyncram_59k1:auto_generated.data_a[3]
-data_a[4] => altsyncram_59k1:auto_generated.data_a[4]
-data_a[5] => altsyncram_59k1:auto_generated.data_a[5]
-data_a[6] => altsyncram_59k1:auto_generated.data_a[6]
-data_a[7] => altsyncram_59k1:auto_generated.data_a[7]
-data_a[8] => altsyncram_59k1:auto_generated.data_a[8]
-data_a[9] => altsyncram_59k1:auto_generated.data_a[9]
-data_a[10] => altsyncram_59k1:auto_generated.data_a[10]
-data_a[11] => altsyncram_59k1:auto_generated.data_a[11]
-data_a[12] => altsyncram_59k1:auto_generated.data_a[12]
-data_a[13] => altsyncram_59k1:auto_generated.data_a[13]
-data_a[14] => altsyncram_59k1:auto_generated.data_a[14]
-data_a[15] => altsyncram_59k1:auto_generated.data_a[15]
+data_a[0] => altsyncram_bjl1:auto_generated.data_a[0]
+data_a[1] => altsyncram_bjl1:auto_generated.data_a[1]
+data_a[2] => altsyncram_bjl1:auto_generated.data_a[2]
+data_a[3] => altsyncram_bjl1:auto_generated.data_a[3]
+data_a[4] => altsyncram_bjl1:auto_generated.data_a[4]
+data_a[5] => altsyncram_bjl1:auto_generated.data_a[5]
+data_a[6] => altsyncram_bjl1:auto_generated.data_a[6]
+data_a[7] => altsyncram_bjl1:auto_generated.data_a[7]
+data_a[8] => altsyncram_bjl1:auto_generated.data_a[8]
+data_a[9] => altsyncram_bjl1:auto_generated.data_a[9]
+data_a[10] => altsyncram_bjl1:auto_generated.data_a[10]
+data_a[11] => altsyncram_bjl1:auto_generated.data_a[11]
+data_a[12] => altsyncram_bjl1:auto_generated.data_a[12]
+data_a[13] => altsyncram_bjl1:auto_generated.data_a[13]
+data_a[14] => altsyncram_bjl1:auto_generated.data_a[14]
+data_a[15] => altsyncram_bjl1:auto_generated.data_a[15]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_59k1:auto_generated.address_a[0]
-address_a[1] => altsyncram_59k1:auto_generated.address_a[1]
-address_a[2] => altsyncram_59k1:auto_generated.address_a[2]
-address_a[3] => altsyncram_59k1:auto_generated.address_a[3]
-address_a[4] => altsyncram_59k1:auto_generated.address_a[4]
-address_a[5] => altsyncram_59k1:auto_generated.address_a[5]
-address_a[6] => altsyncram_59k1:auto_generated.address_a[6]
-address_a[7] => altsyncram_59k1:auto_generated.address_a[7]
-address_a[8] => altsyncram_59k1:auto_generated.address_a[8]
-address_a[9] => altsyncram_59k1:auto_generated.address_a[9]
-address_a[10] => altsyncram_59k1:auto_generated.address_a[10]
-address_a[11] => altsyncram_59k1:auto_generated.address_a[11]
+address_a[0] => altsyncram_bjl1:auto_generated.address_a[0]
+address_a[1] => altsyncram_bjl1:auto_generated.address_a[1]
+address_a[2] => altsyncram_bjl1:auto_generated.address_a[2]
+address_a[3] => altsyncram_bjl1:auto_generated.address_a[3]
+address_a[4] => altsyncram_bjl1:auto_generated.address_a[4]
+address_a[5] => altsyncram_bjl1:auto_generated.address_a[5]
+address_a[6] => altsyncram_bjl1:auto_generated.address_a[6]
+address_a[7] => altsyncram_bjl1:auto_generated.address_a[7]
+address_a[8] => altsyncram_bjl1:auto_generated.address_a[8]
+address_a[9] => altsyncram_bjl1:auto_generated.address_a[9]
+address_a[10] => altsyncram_bjl1:auto_generated.address_a[10]
+address_a[11] => altsyncram_bjl1:auto_generated.address_a[11]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_59k1:auto_generated.clock0
+clock0 => altsyncram_bjl1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -2547,78 +2561,78 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_59k1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_59k1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_59k1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_59k1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_59k1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_59k1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_59k1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_59k1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_59k1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_59k1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_59k1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_59k1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_59k1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_59k1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_59k1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_59k1:auto_generated.q_a[15]
+q_a[0] <= altsyncram_bjl1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_bjl1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_bjl1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_bjl1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_bjl1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_bjl1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_bjl1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_bjl1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_bjl1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_bjl1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_bjl1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_bjl1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_bjl1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_bjl1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_bjl1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_bjl1:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated
-address_a[0] => altsyncram_3ja2:altsyncram1.address_a[0]
-address_a[1] => altsyncram_3ja2:altsyncram1.address_a[1]
-address_a[2] => altsyncram_3ja2:altsyncram1.address_a[2]
-address_a[3] => altsyncram_3ja2:altsyncram1.address_a[3]
-address_a[4] => altsyncram_3ja2:altsyncram1.address_a[4]
-address_a[5] => altsyncram_3ja2:altsyncram1.address_a[5]
-address_a[6] => altsyncram_3ja2:altsyncram1.address_a[6]
-address_a[7] => altsyncram_3ja2:altsyncram1.address_a[7]
-address_a[8] => altsyncram_3ja2:altsyncram1.address_a[8]
-address_a[9] => altsyncram_3ja2:altsyncram1.address_a[9]
-address_a[10] => altsyncram_3ja2:altsyncram1.address_a[10]
-address_a[11] => altsyncram_3ja2:altsyncram1.address_a[11]
-clock0 => altsyncram_3ja2:altsyncram1.clock0
-data_a[0] => altsyncram_3ja2:altsyncram1.data_a[0]
-data_a[1] => altsyncram_3ja2:altsyncram1.data_a[1]
-data_a[2] => altsyncram_3ja2:altsyncram1.data_a[2]
-data_a[3] => altsyncram_3ja2:altsyncram1.data_a[3]
-data_a[4] => altsyncram_3ja2:altsyncram1.data_a[4]
-data_a[5] => altsyncram_3ja2:altsyncram1.data_a[5]
-data_a[6] => altsyncram_3ja2:altsyncram1.data_a[6]
-data_a[7] => altsyncram_3ja2:altsyncram1.data_a[7]
-data_a[8] => altsyncram_3ja2:altsyncram1.data_a[8]
-data_a[9] => altsyncram_3ja2:altsyncram1.data_a[9]
-data_a[10] => altsyncram_3ja2:altsyncram1.data_a[10]
-data_a[11] => altsyncram_3ja2:altsyncram1.data_a[11]
-data_a[12] => altsyncram_3ja2:altsyncram1.data_a[12]
-data_a[13] => altsyncram_3ja2:altsyncram1.data_a[13]
-data_a[14] => altsyncram_3ja2:altsyncram1.data_a[14]
-data_a[15] => altsyncram_3ja2:altsyncram1.data_a[15]
-q_a[0] <= altsyncram_3ja2:altsyncram1.q_a[0]
-q_a[1] <= altsyncram_3ja2:altsyncram1.q_a[1]
-q_a[2] <= altsyncram_3ja2:altsyncram1.q_a[2]
-q_a[3] <= altsyncram_3ja2:altsyncram1.q_a[3]
-q_a[4] <= altsyncram_3ja2:altsyncram1.q_a[4]
-q_a[5] <= altsyncram_3ja2:altsyncram1.q_a[5]
-q_a[6] <= altsyncram_3ja2:altsyncram1.q_a[6]
-q_a[7] <= altsyncram_3ja2:altsyncram1.q_a[7]
-q_a[8] <= altsyncram_3ja2:altsyncram1.q_a[8]
-q_a[9] <= altsyncram_3ja2:altsyncram1.q_a[9]
-q_a[10] <= altsyncram_3ja2:altsyncram1.q_a[10]
-q_a[11] <= altsyncram_3ja2:altsyncram1.q_a[11]
-q_a[12] <= altsyncram_3ja2:altsyncram1.q_a[12]
-q_a[13] <= altsyncram_3ja2:altsyncram1.q_a[13]
-q_a[14] <= altsyncram_3ja2:altsyncram1.q_a[14]
-q_a[15] <= altsyncram_3ja2:altsyncram1.q_a[15]
-wren_a => altsyncram_3ja2:altsyncram1.wren_a
+|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated
+address_a[0] => altsyncram_9tb2:altsyncram1.address_a[0]
+address_a[1] => altsyncram_9tb2:altsyncram1.address_a[1]
+address_a[2] => altsyncram_9tb2:altsyncram1.address_a[2]
+address_a[3] => altsyncram_9tb2:altsyncram1.address_a[3]
+address_a[4] => altsyncram_9tb2:altsyncram1.address_a[4]
+address_a[5] => altsyncram_9tb2:altsyncram1.address_a[5]
+address_a[6] => altsyncram_9tb2:altsyncram1.address_a[6]
+address_a[7] => altsyncram_9tb2:altsyncram1.address_a[7]
+address_a[8] => altsyncram_9tb2:altsyncram1.address_a[8]
+address_a[9] => altsyncram_9tb2:altsyncram1.address_a[9]
+address_a[10] => altsyncram_9tb2:altsyncram1.address_a[10]
+address_a[11] => altsyncram_9tb2:altsyncram1.address_a[11]
+clock0 => altsyncram_9tb2:altsyncram1.clock0
+data_a[0] => altsyncram_9tb2:altsyncram1.data_a[0]
+data_a[1] => altsyncram_9tb2:altsyncram1.data_a[1]
+data_a[2] => altsyncram_9tb2:altsyncram1.data_a[2]
+data_a[3] => altsyncram_9tb2:altsyncram1.data_a[3]
+data_a[4] => altsyncram_9tb2:altsyncram1.data_a[4]
+data_a[5] => altsyncram_9tb2:altsyncram1.data_a[5]
+data_a[6] => altsyncram_9tb2:altsyncram1.data_a[6]
+data_a[7] => altsyncram_9tb2:altsyncram1.data_a[7]
+data_a[8] => altsyncram_9tb2:altsyncram1.data_a[8]
+data_a[9] => altsyncram_9tb2:altsyncram1.data_a[9]
+data_a[10] => altsyncram_9tb2:altsyncram1.data_a[10]
+data_a[11] => altsyncram_9tb2:altsyncram1.data_a[11]
+data_a[12] => altsyncram_9tb2:altsyncram1.data_a[12]
+data_a[13] => altsyncram_9tb2:altsyncram1.data_a[13]
+data_a[14] => altsyncram_9tb2:altsyncram1.data_a[14]
+data_a[15] => altsyncram_9tb2:altsyncram1.data_a[15]
+q_a[0] <= altsyncram_9tb2:altsyncram1.q_a[0]
+q_a[1] <= altsyncram_9tb2:altsyncram1.q_a[1]
+q_a[2] <= altsyncram_9tb2:altsyncram1.q_a[2]
+q_a[3] <= altsyncram_9tb2:altsyncram1.q_a[3]
+q_a[4] <= altsyncram_9tb2:altsyncram1.q_a[4]
+q_a[5] <= altsyncram_9tb2:altsyncram1.q_a[5]
+q_a[6] <= altsyncram_9tb2:altsyncram1.q_a[6]
+q_a[7] <= altsyncram_9tb2:altsyncram1.q_a[7]
+q_a[8] <= altsyncram_9tb2:altsyncram1.q_a[8]
+q_a[9] <= altsyncram_9tb2:altsyncram1.q_a[9]
+q_a[10] <= altsyncram_9tb2:altsyncram1.q_a[10]
+q_a[11] <= altsyncram_9tb2:altsyncram1.q_a[11]
+q_a[12] <= altsyncram_9tb2:altsyncram1.q_a[12]
+q_a[13] <= altsyncram_9tb2:altsyncram1.q_a[13]
+q_a[14] <= altsyncram_9tb2:altsyncram1.q_a[14]
+q_a[15] <= altsyncram_9tb2:altsyncram1.q_a[15]
+wren_a => altsyncram_9tb2:altsyncram1.wren_a
 
 
-|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|altsyncram_3ja2:altsyncram1
+|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|altsyncram_9tb2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -3133,7 +3147,7 @@ wren_b => ram_block3a14.PORTBWE
 wren_b => ram_block3a15.PORTBWE
 
 
-|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -3221,7 +3235,7 @@ ir_out[7] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out[7]
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -3304,7 +3318,7 @@ adapted_ir_out[6] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[7] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[7]
 
 
-|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -3387,7 +3401,7 @@ adapted_ir_out[6] => ir_out[6].DATAIN
 adapted_ir_out[7] => ir_out[7].DATAIN
 
 
-|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr
+|simple_pipeline|ram:ram1|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN66
 ROM_DATA[1] => Mux2.IN66
 ROM_DATA[2] => Mux1.IN66
@@ -3524,43 +3538,43 @@ q[15] <= altsyncram:altsyncram_component.q_a
 
 
 |simple_pipeline|ram:ram2|altsyncram:altsyncram_component
-wren_a => altsyncram_59k1:auto_generated.wren_a
+wren_a => altsyncram_bjl1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_59k1:auto_generated.data_a[0]
-data_a[1] => altsyncram_59k1:auto_generated.data_a[1]
-data_a[2] => altsyncram_59k1:auto_generated.data_a[2]
-data_a[3] => altsyncram_59k1:auto_generated.data_a[3]
-data_a[4] => altsyncram_59k1:auto_generated.data_a[4]
-data_a[5] => altsyncram_59k1:auto_generated.data_a[5]
-data_a[6] => altsyncram_59k1:auto_generated.data_a[6]
-data_a[7] => altsyncram_59k1:auto_generated.data_a[7]
-data_a[8] => altsyncram_59k1:auto_generated.data_a[8]
-data_a[9] => altsyncram_59k1:auto_generated.data_a[9]
-data_a[10] => altsyncram_59k1:auto_generated.data_a[10]
-data_a[11] => altsyncram_59k1:auto_generated.data_a[11]
-data_a[12] => altsyncram_59k1:auto_generated.data_a[12]
-data_a[13] => altsyncram_59k1:auto_generated.data_a[13]
-data_a[14] => altsyncram_59k1:auto_generated.data_a[14]
-data_a[15] => altsyncram_59k1:auto_generated.data_a[15]
+data_a[0] => altsyncram_bjl1:auto_generated.data_a[0]
+data_a[1] => altsyncram_bjl1:auto_generated.data_a[1]
+data_a[2] => altsyncram_bjl1:auto_generated.data_a[2]
+data_a[3] => altsyncram_bjl1:auto_generated.data_a[3]
+data_a[4] => altsyncram_bjl1:auto_generated.data_a[4]
+data_a[5] => altsyncram_bjl1:auto_generated.data_a[5]
+data_a[6] => altsyncram_bjl1:auto_generated.data_a[6]
+data_a[7] => altsyncram_bjl1:auto_generated.data_a[7]
+data_a[8] => altsyncram_bjl1:auto_generated.data_a[8]
+data_a[9] => altsyncram_bjl1:auto_generated.data_a[9]
+data_a[10] => altsyncram_bjl1:auto_generated.data_a[10]
+data_a[11] => altsyncram_bjl1:auto_generated.data_a[11]
+data_a[12] => altsyncram_bjl1:auto_generated.data_a[12]
+data_a[13] => altsyncram_bjl1:auto_generated.data_a[13]
+data_a[14] => altsyncram_bjl1:auto_generated.data_a[14]
+data_a[15] => altsyncram_bjl1:auto_generated.data_a[15]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_59k1:auto_generated.address_a[0]
-address_a[1] => altsyncram_59k1:auto_generated.address_a[1]
-address_a[2] => altsyncram_59k1:auto_generated.address_a[2]
-address_a[3] => altsyncram_59k1:auto_generated.address_a[3]
-address_a[4] => altsyncram_59k1:auto_generated.address_a[4]
-address_a[5] => altsyncram_59k1:auto_generated.address_a[5]
-address_a[6] => altsyncram_59k1:auto_generated.address_a[6]
-address_a[7] => altsyncram_59k1:auto_generated.address_a[7]
-address_a[8] => altsyncram_59k1:auto_generated.address_a[8]
-address_a[9] => altsyncram_59k1:auto_generated.address_a[9]
-address_a[10] => altsyncram_59k1:auto_generated.address_a[10]
-address_a[11] => altsyncram_59k1:auto_generated.address_a[11]
+address_a[0] => altsyncram_bjl1:auto_generated.address_a[0]
+address_a[1] => altsyncram_bjl1:auto_generated.address_a[1]
+address_a[2] => altsyncram_bjl1:auto_generated.address_a[2]
+address_a[3] => altsyncram_bjl1:auto_generated.address_a[3]
+address_a[4] => altsyncram_bjl1:auto_generated.address_a[4]
+address_a[5] => altsyncram_bjl1:auto_generated.address_a[5]
+address_a[6] => altsyncram_bjl1:auto_generated.address_a[6]
+address_a[7] => altsyncram_bjl1:auto_generated.address_a[7]
+address_a[8] => altsyncram_bjl1:auto_generated.address_a[8]
+address_a[9] => altsyncram_bjl1:auto_generated.address_a[9]
+address_a[10] => altsyncram_bjl1:auto_generated.address_a[10]
+address_a[11] => altsyncram_bjl1:auto_generated.address_a[11]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_59k1:auto_generated.clock0
+clock0 => altsyncram_bjl1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -3570,78 +3584,78 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_59k1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_59k1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_59k1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_59k1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_59k1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_59k1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_59k1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_59k1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_59k1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_59k1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_59k1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_59k1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_59k1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_59k1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_59k1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_59k1:auto_generated.q_a[15]
+q_a[0] <= altsyncram_bjl1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_bjl1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_bjl1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_bjl1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_bjl1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_bjl1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_bjl1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_bjl1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_bjl1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_bjl1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_bjl1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_bjl1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_bjl1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_bjl1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_bjl1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_bjl1:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated
-address_a[0] => altsyncram_3ja2:altsyncram1.address_a[0]
-address_a[1] => altsyncram_3ja2:altsyncram1.address_a[1]
-address_a[2] => altsyncram_3ja2:altsyncram1.address_a[2]
-address_a[3] => altsyncram_3ja2:altsyncram1.address_a[3]
-address_a[4] => altsyncram_3ja2:altsyncram1.address_a[4]
-address_a[5] => altsyncram_3ja2:altsyncram1.address_a[5]
-address_a[6] => altsyncram_3ja2:altsyncram1.address_a[6]
-address_a[7] => altsyncram_3ja2:altsyncram1.address_a[7]
-address_a[8] => altsyncram_3ja2:altsyncram1.address_a[8]
-address_a[9] => altsyncram_3ja2:altsyncram1.address_a[9]
-address_a[10] => altsyncram_3ja2:altsyncram1.address_a[10]
-address_a[11] => altsyncram_3ja2:altsyncram1.address_a[11]
-clock0 => altsyncram_3ja2:altsyncram1.clock0
-data_a[0] => altsyncram_3ja2:altsyncram1.data_a[0]
-data_a[1] => altsyncram_3ja2:altsyncram1.data_a[1]
-data_a[2] => altsyncram_3ja2:altsyncram1.data_a[2]
-data_a[3] => altsyncram_3ja2:altsyncram1.data_a[3]
-data_a[4] => altsyncram_3ja2:altsyncram1.data_a[4]
-data_a[5] => altsyncram_3ja2:altsyncram1.data_a[5]
-data_a[6] => altsyncram_3ja2:altsyncram1.data_a[6]
-data_a[7] => altsyncram_3ja2:altsyncram1.data_a[7]
-data_a[8] => altsyncram_3ja2:altsyncram1.data_a[8]
-data_a[9] => altsyncram_3ja2:altsyncram1.data_a[9]
-data_a[10] => altsyncram_3ja2:altsyncram1.data_a[10]
-data_a[11] => altsyncram_3ja2:altsyncram1.data_a[11]
-data_a[12] => altsyncram_3ja2:altsyncram1.data_a[12]
-data_a[13] => altsyncram_3ja2:altsyncram1.data_a[13]
-data_a[14] => altsyncram_3ja2:altsyncram1.data_a[14]
-data_a[15] => altsyncram_3ja2:altsyncram1.data_a[15]
-q_a[0] <= altsyncram_3ja2:altsyncram1.q_a[0]
-q_a[1] <= altsyncram_3ja2:altsyncram1.q_a[1]
-q_a[2] <= altsyncram_3ja2:altsyncram1.q_a[2]
-q_a[3] <= altsyncram_3ja2:altsyncram1.q_a[3]
-q_a[4] <= altsyncram_3ja2:altsyncram1.q_a[4]
-q_a[5] <= altsyncram_3ja2:altsyncram1.q_a[5]
-q_a[6] <= altsyncram_3ja2:altsyncram1.q_a[6]
-q_a[7] <= altsyncram_3ja2:altsyncram1.q_a[7]
-q_a[8] <= altsyncram_3ja2:altsyncram1.q_a[8]
-q_a[9] <= altsyncram_3ja2:altsyncram1.q_a[9]
-q_a[10] <= altsyncram_3ja2:altsyncram1.q_a[10]
-q_a[11] <= altsyncram_3ja2:altsyncram1.q_a[11]
-q_a[12] <= altsyncram_3ja2:altsyncram1.q_a[12]
-q_a[13] <= altsyncram_3ja2:altsyncram1.q_a[13]
-q_a[14] <= altsyncram_3ja2:altsyncram1.q_a[14]
-q_a[15] <= altsyncram_3ja2:altsyncram1.q_a[15]
-wren_a => altsyncram_3ja2:altsyncram1.wren_a
+|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated
+address_a[0] => altsyncram_9tb2:altsyncram1.address_a[0]
+address_a[1] => altsyncram_9tb2:altsyncram1.address_a[1]
+address_a[2] => altsyncram_9tb2:altsyncram1.address_a[2]
+address_a[3] => altsyncram_9tb2:altsyncram1.address_a[3]
+address_a[4] => altsyncram_9tb2:altsyncram1.address_a[4]
+address_a[5] => altsyncram_9tb2:altsyncram1.address_a[5]
+address_a[6] => altsyncram_9tb2:altsyncram1.address_a[6]
+address_a[7] => altsyncram_9tb2:altsyncram1.address_a[7]
+address_a[8] => altsyncram_9tb2:altsyncram1.address_a[8]
+address_a[9] => altsyncram_9tb2:altsyncram1.address_a[9]
+address_a[10] => altsyncram_9tb2:altsyncram1.address_a[10]
+address_a[11] => altsyncram_9tb2:altsyncram1.address_a[11]
+clock0 => altsyncram_9tb2:altsyncram1.clock0
+data_a[0] => altsyncram_9tb2:altsyncram1.data_a[0]
+data_a[1] => altsyncram_9tb2:altsyncram1.data_a[1]
+data_a[2] => altsyncram_9tb2:altsyncram1.data_a[2]
+data_a[3] => altsyncram_9tb2:altsyncram1.data_a[3]
+data_a[4] => altsyncram_9tb2:altsyncram1.data_a[4]
+data_a[5] => altsyncram_9tb2:altsyncram1.data_a[5]
+data_a[6] => altsyncram_9tb2:altsyncram1.data_a[6]
+data_a[7] => altsyncram_9tb2:altsyncram1.data_a[7]
+data_a[8] => altsyncram_9tb2:altsyncram1.data_a[8]
+data_a[9] => altsyncram_9tb2:altsyncram1.data_a[9]
+data_a[10] => altsyncram_9tb2:altsyncram1.data_a[10]
+data_a[11] => altsyncram_9tb2:altsyncram1.data_a[11]
+data_a[12] => altsyncram_9tb2:altsyncram1.data_a[12]
+data_a[13] => altsyncram_9tb2:altsyncram1.data_a[13]
+data_a[14] => altsyncram_9tb2:altsyncram1.data_a[14]
+data_a[15] => altsyncram_9tb2:altsyncram1.data_a[15]
+q_a[0] <= altsyncram_9tb2:altsyncram1.q_a[0]
+q_a[1] <= altsyncram_9tb2:altsyncram1.q_a[1]
+q_a[2] <= altsyncram_9tb2:altsyncram1.q_a[2]
+q_a[3] <= altsyncram_9tb2:altsyncram1.q_a[3]
+q_a[4] <= altsyncram_9tb2:altsyncram1.q_a[4]
+q_a[5] <= altsyncram_9tb2:altsyncram1.q_a[5]
+q_a[6] <= altsyncram_9tb2:altsyncram1.q_a[6]
+q_a[7] <= altsyncram_9tb2:altsyncram1.q_a[7]
+q_a[8] <= altsyncram_9tb2:altsyncram1.q_a[8]
+q_a[9] <= altsyncram_9tb2:altsyncram1.q_a[9]
+q_a[10] <= altsyncram_9tb2:altsyncram1.q_a[10]
+q_a[11] <= altsyncram_9tb2:altsyncram1.q_a[11]
+q_a[12] <= altsyncram_9tb2:altsyncram1.q_a[12]
+q_a[13] <= altsyncram_9tb2:altsyncram1.q_a[13]
+q_a[14] <= altsyncram_9tb2:altsyncram1.q_a[14]
+q_a[15] <= altsyncram_9tb2:altsyncram1.q_a[15]
+wren_a => altsyncram_9tb2:altsyncram1.wren_a
 
 
-|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|altsyncram_3ja2:altsyncram1
+|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|altsyncram_9tb2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -4156,7 +4170,7 @@ wren_b => ram_block3a14.PORTBWE
 wren_b => ram_block3a15.PORTBWE
 
 
-|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -4244,7 +4258,7 @@ ir_out[7] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out[7]
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -4327,7 +4341,7 @@ adapted_ir_out[6] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[7] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[7]
 
 
-|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -4410,7 +4424,7 @@ adapted_ir_out[6] => ir_out[6].DATAIN
 adapted_ir_out[7] => ir_out[7].DATAIN
 
 
-|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_59k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr
+|simple_pipeline|ram:ram2|altsyncram:altsyncram_component|altsyncram_bjl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN66
 ROM_DATA[1] => Mux2.IN66
 ROM_DATA[2] => Mux1.IN66
