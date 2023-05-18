@@ -92,6 +92,26 @@
 					"strict" : false
 				},
 				{
+					"name" : "clk2out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk2out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk2out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk2out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk2out[4]",
+					"strict" : false
+				},
+				{
 					"name" : "disp_1[0]",
 					"strict" : false
 				},
@@ -360,15 +380,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "Exec",
+					"name" : "clk20",
 					"strict" : false
 				},
 				{
-					"name" : "in[14]",
+					"name" : "exec",
+					"strict" : false
+				},
+				{
+					"name" : "in[13]",
 					"strict" : false
 				},
 				{
@@ -376,7 +400,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[13]",
+					"name" : "in[14]",
 					"strict" : false
 				},
 				{
@@ -400,11 +424,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "in[5]",
+					"name" : "in[7]",
 					"strict" : false
 				},
 				{
-					"name" : "in[7]",
+					"name" : "in[5]",
 					"strict" : false
 				},
 				{
