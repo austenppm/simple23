@@ -14,11 +14,12 @@
 `include "display.v"
 
 module simple(
-		input [15:0] in,//input
-		input clk,
-		input clk20,
+		input [15:0] in,  //input
+//		input clk,
+//		input clk20,
+		input clock,
 		input rst_n,
-		input exec,
+		input Exec,
 		output [7:0] out2,
 		output [3:0] sel2,
 		output [7:0] out3,
@@ -26,7 +27,7 @@ module simple(
 		output ce1out,
 		output ce2out,
 		output ceout,
-		output [4:0] clk2out,
+//		output [4:0] clk2out,
 		output [7:0] disp_1,disp_2,disp_3,disp_4,disp_5,disp_6,disp_7,disp_8,
 		output [8:0] sl_out2
 		);
@@ -41,7 +42,8 @@ module simple(
 		wire [3:0] ALUcondout,shiftercondout;
 		wire [15:0] Inst,Inst_wire1,Inst_wire2;
 		wire [15:0] pc,pcPlusOne,PCIn;
-		wire [4:0] clk2;
+//		wire [4:0] clk2;
+		wire [4:0] clock2;
 		wire [2:0] Branch;
 		wire [15:0] reg_0,reg_1,reg_2,reg_3,reg_4,reg_5,reg_6,reg_7,reg_8,reg_9,reg_10,reg_11,reg_12,reg_13,reg_14,reg_15;
 		wire [15:0] address;
@@ -50,26 +52,39 @@ module simple(
 		wire brch_sig_wire;
 		wire [7:0] ctlcheck;
 		wire [15:0] SZCV10;
-		register IR(.clk(clk2[3]),.rst_n(rst_n),.WriteData(Inst_wire1),.DataOut(IROut));
-		register BR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data2),.DataOut(BROut));
-		register AR(.clk(clk2[2]),.rst_n(rst_n),.WriteData(Data1),.DataOut(AROut));
-		register SZCV(.clk(clk2[1]),.rst_n(rst_n),.WriteData(SZCVIn),.DataOut(SZCVOut));
-		register DR(.clk(clk2[1]),.rst_n(rst_n),.WriteData(DRIn),.DataOut(DROut));
-		register MDR(.clk(clk2[0]),.rst_n(rst_n),.WriteData(MDRIn),.DataOut(MDROut));
-		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(RegDst_wire),.WriteData(WriteData),.clk(clk2[0]),.RegWrite(RegWrite&&clk2[0]),.Data1(Data1),.Data2(Data2),
+		wire Rst_n,exec;
+		reg reset0,reset1,exec0,exec1;
+
+		always @(posedge clock)begin
+                reset0 <= rst_n;
+                reset1 <= reset0;
+                exec0 <= Exec;
+                exec1 <= exec0;
+        end
+		
+		assign Rst_n = -reset1;
+		assign exec = -exec1;
+		
+		register IR(.clk(clock2[3]),.rst_n(rst_n),.WriteData(Inst_wire1),.DataOut(IROut));
+		register BR(.clk(clock2[2]),.rst_n(rst_n),.WriteData(Data2),.DataOut(BROut));
+		register AR(.clk(clock2[2]),.rst_n(rst_n),.WriteData(Data1),.DataOut(AROut));
+		register SZCV(.clk(clock2[1]),.rst_n(rst_n),.WriteData(SZCVIn),.DataOut(SZCVOut));
+		register DR(.clk(clock2[1]),.rst_n(rst_n),.WriteData(DRIn),.DataOut(DROut));
+		register MDR(.clk(clock2[0]),.rst_n(rst_n),.WriteData(MDRIn),.DataOut(MDROut));
+		RegisterFile RF(.Read1(Rs),.Read2(Rd),.WriteReg(RegDst_wire),.WriteData(WriteData),.clk(clock2[0]),.RegWrite(RegWrite&clock2[0]),.Data1(Data1),.Data2(Data2),
 							 .reg_1(reg_1),.reg_2(reg_2),.reg_3(reg_3),.reg_4(reg_4),.reg_5(reg_5),.reg_6(reg_6),.reg_7(reg_7),.reg_0(reg_0));
 		ALU ALU(.ALUctl(opcode_wire1),.A(A_wire),.B(B_wire),.Out(ALUOut),.Outcond(ALUcondout));
-		ctl ctl(.clk(clk2[3]),.rst_n(rst_n),.inst(Inst_wire2),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Halt(ce1),
+		ctl ctl(.clk(clock2[3]),.rst_n(rst_n),.inst(Inst_wire2),.MemRead(MemRead),.MemWrite(MemWrite),.RegWrite(RegWrite),.ALUSrc1(ALUSrc1),.ALUSrc2(ALUSrc2),.MemtoReg(MemtoReg),.ALUorShifter(ALUorshifter),.Halt(ce1),
 				  .Output(Output),.Input(Input),.opcode(opcode_wire),.RegDst(RegDst_wire),.Branch(Branch),.BranchCond(BC),.AS_BC(AS_BC));
 		shifter sf(.A(shifterIn),.opcode(opcode_wire2),.d(dshift),.Out(shifterOut),.Outcond(shiftercondout));
-		PC PC(.clock(clk2[4]),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce_1),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
-		phasecounter a0(.clk(clk),.rst_n(rst_n),.ce(ce_2),.p(clk2));
+		PC PC(.clock(clock2[4]),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce_1),.dr(PCIn),.pc(pc),.pcPlusOne(pcPlusOne));
+		phasecounter a0(.clk(clock),.rst_n(rst_n),.ce(ce_2),.p(clock2));
 		branch br(.cond(SZCVOut),.brch(Branch),.brch_sig(brch_sig_wire));
-		ram ram(.address(address),.clock(clk20),.data(AROut),.wren(MemWrite&&clk2[0]),.q(Inst));
-		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
-		counta2 c2(.rst_n(rst_n), .clk(clk20),.data(pc),.out2(out2),.sel2(sel2));
-		counta3 c3(.rst_n(rst_n), .clk(clk20),.data(out),.out2(out3),.sel2(sel3));
-		display ds(.sl_clk(clk20),.rst(rst_n),
+		ram ram(.address(address),.clock(clock),.data(AROut),.wren(MemWrite&clock2[0]),.q(Inst));
+		RemoveChattering rc(.clk(clock),.botton(Exec),.rst_n(rst_n),.signal(ce2));
+		counta2 c2(.rst_n(rst_n), .clk(clock),.data(pc),.out2(out2),.sel2(sel2));
+		counta3 c3(.rst_n(rst_n), .clk(clock),.data(out),.out2(out3),.sel2(sel3));
+		display ds(.sl_clk(clock),.rst(rst_n),
 						.reg_0(reg_0),.reg_1(reg_1),.reg_2(reg_2),.reg_3(reg_3),.reg_4(reg_4),.reg_5(reg_5),.reg_6(reg_6),.reg_7(reg_7),
 						.reg_8(reg_8),.reg_9(reg_9),.reg_10(reg_10),.reg_11(reg_11),.reg_12(reg_12),.reg_13(reg_13),.reg_14(reg_14),.reg_15(reg_15),
 						.ctl(ctlcheck),
@@ -100,9 +115,9 @@ module simple(
 					  DROut;
 		assign exd = {{8{d[7]}},d};
 		//DRを消すか否か----------------------------------------------------------------------------
-//		assign address = ((MemRead==1'b1||MemWrite==1'b1)&&(clk2[1]==1'b1||clk2[0]==1'b1)) ? DROut:
+//		assign address = ((MemRead==1'b1||MemWrite==1'b1)&&(cl1k2[1]==1'b1||cl1k2[0]==1'b1)) ? DROut:
 //								pc;
-		assign address = ((MemRead==1'b1||MemWrite==1'b1)&&(clk2[1]==1'b1||clk2[0]==1'b1)) ? DRIn:
+		assign address = ((MemRead==1'b1||MemWrite==1'b1)&&(clock2[1]==1'b1||clock2[0]==1'b1)) ? DRIn:
 								pc;
 		//-----------------------------------------------------------------------------------------
 		assign opcode_wire1 = opcode_wire;
@@ -123,7 +138,7 @@ module simple(
 		assign ceout = ce_1;
 		assign ce1out = ce1;
 		assign ce2out = ce2;
-		assign clk2out = clk2;
+		assign clk2out = clock2;
 		assign reg_8 = address;
 		assign reg_9 = DROut;
 		assign reg_10 = SZCV10;

@@ -1,3 +1,5 @@
-Info (10281): Verilog HDL Declaration information at shifter.v(4): object "d" differs only in case from object "D" in the same scope File: /export/home/021/a0218457/2023-simple-2023-team23/simple/shifter.v Line: 4
-Info (10281): Verilog HDL Declaration information at simple.v(43): object "pc" differs only in case from object "PC" in the same scope File: /export/home/021/a0218457/2023-simple-2023-team23/simple/simple.v Line: 43
-Info (10281): Verilog HDL Declaration information at simple.v(54): object "BR" differs only in case from object "br" in the same scope File: /export/home/021/a0218457/2023-simple-2023-team23/simple/simple.v Line: 54
+Info (10281): Verilog HDL Declaration information at shifter.v(4): object "d" differs only in case from object "D" in the same scope File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/shifter.v Line: 4
+Info (10281): Verilog HDL Declaration information at simple.v(21): object "rst_n" differs only in case from object "Rst_n" in the same scope File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 21
+Info (10281): Verilog HDL Declaration information at simple.v(22): object "Exec" differs only in case from object "exec" in the same scope File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 22
+Info (10281): Verilog HDL Declaration information at simple.v(44): object "pc" differs only in case from object "PC" in the same scope File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 44
+Info (10281): Verilog HDL Declaration information at simple.v(69): object "BR" differs only in case from object "br" in the same scope File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 69
