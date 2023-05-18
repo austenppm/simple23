@@ -4,7 +4,7 @@ module phase3ctl(
 	input [3:0] opcodein,
 	input clk,rst_n,
 	output reg ALUSrc1out,ALUSrc2out,ALUorshifterout,AS_BCout,MemReadout,
-	output reg Raout,Rbout,
+	output reg [2:0] Raout,Rbout,
 	output reg [3:0] opcodeout);
 	always @ (posedge clk) begin
 		if(!rst_n) begin

@@ -79,7 +79,7 @@ module ram (
 				.clocken2 (1'b1),
 				.clocken3 (1'b1),
 				.data_b (1'b1),
-				.eccstatus (),
+.eccstatus (),
 				.q_b (),
 				.rden_a (1'b1),
 				.rden_b (1'b1),
@@ -87,7 +87,7 @@ module ram (
 	defparam
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-		altsyncram_component.init_file = "ADD_SUB_AND_OR_XOR.mif",
+		altsyncram_component.init_file = "BubbleSort.mif",
 		altsyncram_component.intended_device_family = "Cyclone IV E",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=NONE",
 		altsyncram_component.lpm_type = "altsyncram",
