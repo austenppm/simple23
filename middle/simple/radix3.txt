@@ -1,0 +1,107 @@
+# Initialize registers
+LI 0, 1024     # Base address of input values
+LI 1, 2048     # Base address of output values
+LI 2, 0        # Current digit position
+LI 3, 1        # Bitmask for current digit position
+LI 4, 0        # Temporary register for input value
+LI 5, 0        # Temporary register for output value
+LI 6, 0        # Count of zeros
+LI 7, 0        # Count of ones
+
+# Sort loop
+SortLoop:
+    # Reset counts
+    LI 6, 0
+    LI 7, 0
+
+    # Count zeros and ones at current digit position
+    LI 8, 0    # Counter for input values
+CountLoop:
+    LD 4, 0(0)   # Load input value
+    AND 4, 3     # Isolate current digit
+    BNE One
+    ADD 6, 1     # Increment zero count
+    B EndCount
+One:
+    ADD 7, 1     # Increment one count
+EndCount:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 1024  # Check if all input values have been processed
+    BNE CountLoop
+
+    # Output zeros and ones at current digit position
+    LI 0, 1024   # Reset address of input values
+    LI 8, 0      # Counter for output values
+OutputLoop:
+    LD 4, 0(0)   # Load input value
+    AND 4, 3     # Isolate current digit
+    BNE OutputOne
+    LD 5, 0(0)   # Load input value
+    ST 5, 0(1)   # Store value in output
+    ADD 1, 1     # Increment output address
+    B EndOutput
+OutputOne:
+    LD 5, 0(0)   # Load input value
+    ST 5, 0(1)   # Store value in output
+    ADD 1, 1     # Increment output address
+EndOutput:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 1024  # Check if all input values have been processed
+    BNE OutputLoop
+
+    # Move to next digit position
+    ADD 2, 1
+    SLL 3, 1
+
+    # Repeat sort loop for all digit positions
+    CMP 2, 16
+    BLT SortLoop
+
+HLT
+
+LI 0,1024
+LI 1,2048
+LI 2,0
+LI 3,1
+LI 4,0
+LI 5,0
+LI 6,0
+LI 7,0
+
+LI 6,0
+LI 7,0
+
+LI 8,0
+LD 4,0,0
+AND 4,3
+BNE 1
+ADD 6,1
+B 1
+ADD 7,1
+ADD 0,1
+CMP 0,1024
+BNE -7
+
+LI 0,1024
+LI 8,0
+LD 4,0,0
+AND 4,3
+BNE 2
+LD 5,0,0
+ST 5,0,1
+ADD 1,1
+B 1
+LD 5,0,0
+ST 5,0,1
+ADD 1,1
+ADD 0,1
+CMP 0,1024
+BNE -10
+
+ADD 2,1
+SLL 3,1
+CMP 2,16
+BLT -21
+
+HLT
+

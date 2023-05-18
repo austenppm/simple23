@@ -1,0 +1,209 @@
+LI 0,1
+SLL 0,10 #initializing registers
+LI 1,1
+SLL 0,11
+LI 2,0 #dynamic
+LI 3,1 #current digit position
+LI 4,0 
+LI 5,0
+LI 6,0 #zeros
+LI 7,0 #ones
+LI 6,0 #start of sort loop and reset counts
+
+LD 4,0,0
+AND 4,3
+BNE 1
+ADD 6,1
+B 1
+ADD 7,1
+ADD 0,1
+LI 2,1
+SLL 2,10
+CMP 0,2
+BNE -11
+
+LI 0,1
+SLL 0,10
+LI 8,0
+LD 4,0,0
+AND 4,3
+BNE 2
+LD 5,0,0
+ST 5,0,1
+ADD 1,1
+B 1
+LD 5,0,0
+ST 5,0,1
+ADD 1,1
+ADD 0,1
+CMP 0,1024
+BNE -11
+
+ADD 2,1
+SLL 3,1
+CMP 2,16
+BLT -23
+
+HLT
+
+
+# Initialize registers
+LI 0, 1024     # Base address of input values
+LI 1, 2048     # Base address of output values
+LI 2, 0        # Current digit position
+LI 3, 1        # Bitmask for current digit position
+LI 4, 0        # Temporary register for input value
+LI 5, 0        # Temporary register for output value
+LI 6, 0        # Count of zeros
+LI 7, 1        # Start with 1
+
+# Generate 1024 in register 7 by shifting left 10 times
+SLL 7, 10      # 7 now holds 1024
+
+# Sort loop
+SortLoop:
+    # Reset counts
+    LI 6, 0
+
+    # Count zeros and ones at current digit position
+CountLoop:
+    LD 4, 0, 0   # Load input value
+    AND 4, 3     # Isolate current digit
+    BNE One
+    ADD 6, 1     # Increment zero count
+    B EndCount
+One:
+    ADD 6, 1     # Increment one count
+EndCount:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 7     # Check if all input values have been processed
+    BNE -7
+
+    # Output zeros and ones at current digit position
+    LI 0, 1024   # Reset address of input values
+OutputLoop:
+    LD 4, 0, 0   # Load input value
+    AND 4, 3     # Isolate current digit
+    BNE OutputOne
+    LD 5, 0, 0   # Load input value
+    ST 5, 0, 1   # Store value in output
+    ADD 1, 1     # Increment output address
+    B EndOutput
+OutputOne:
+    LD 5, 0, 0   # Load input value
+    ST 5, 0, 1   # Store value in output
+    ADD 1, 1     # Increment output address
+EndOutput:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 7     # Check if all input values have been processed
+    BNE -10
+
+    # Move to next digit position
+    ADD 2, 1
+    SLL 3, 1
+
+    # Repeat sort loop for all digit positions
+    CMP 2, 16
+    BLT -22
+
+HLT
+
+
+# Initialize registers
+LI 0, 1024     # Base address of input values
+LI 1, 2048     # Base address of output values
+LI 3, 1        # Bitmask for current digit position
+LI 4, 0        # Temporary register for input value
+LI 5, 0        # Temporary register for output value
+LI 6, 0        # Count of zeros
+LI 7, 1        # Start with 1
+
+# Generate 1024 in register 7 by shifting left 10 times
+SLL 7, 10      # 7 now holds 1024
+
+# Sort loop for bits 0-14
+LI 2, 0        # Current digit position
+SortLoop:
+    # Reset counts
+    LI 6, 0
+
+    # Count zeros and ones at current digit position
+CountLoop:
+    LD 4, 0, 0   # Load input value
+    AND 4, 3     # Isolate current digit
+    BNE One
+    ADD 6, 1     # Increment zero count
+    B EndCount
+One:
+    ADD 6, 1     # Increment one count
+EndCount:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 7     # Check if all input values have been processed
+    BNE -7
+
+    # Output zeros and ones at current digit position
+    LI 0, 1024   # Reset address of input values
+OutputLoop:
+    LD 4, 0, 0   # Load input value
+    AND 4, 3     # Isolate current digit
+    BNE OutputOne
+    LD 5, 0, 0   # Load input value
+    ST 5, 0, 1   # Store value in output
+    ADD 1, 1     # Increment output address
+    B EndOutput
+OutputOne:
+    LD 5, 0, 0   # Load input value
+    ST 5, 0, 1   # Store value in output
+    ADD 1, 1     # Increment output address
+EndOutput:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 7     # Check if all input values have been processed
+    BNE -10
+
+    # Move to next digit position
+    LI 2, 1
+    SLL 2, 1
+    CMP 2, 3
+    BNE -22
+
+# Now sort the sign bit (bit 15), but reverse the order
+LI 3, 1        # Reset bitmask for current digit position
+SLL 3, 15      # Bitmask for sign bit
+LI 0, 1024     # Reset base address of input values
+LI 1, 2048     # Reset base address of output values
+LI 6, 0        # Reset count of zeros
+
+CountLoop2:
+    LD 4, 0, 0   # Load input value
+    AND 4, 3     # Isolate sign bit
+    BNE One2
+    ADD 6, 1     # Increment zero count
+    B EndCount2
+One2:
+    ADD 6, 1     # Increment one count
+EndCount2:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 7     # Check if all input values have been processed
+    BNE -5
+
+    # Output zeros and ones at current digit position
+    LI 0, 1024   # Reset address of input values
+OutputLoop2:
+    LD 4, 0, 0   # Load input value
+    AND 4, 3     # Isolate sign bit
+    BNE OutputZero
+    LD 5, 0, 0   # Load input value
+    ST 5, 0, 1   # Store value in output
+    ADD 1, 1     # Increment output address
+    B EndOutput2
+OutputZero:
+    LD 5, 0, 0   # Load input value
+    ST 5, 0, 1   # Store value in output
+    ADD 1, 1     # Increment output address
+EndOutput2:
+    ADD 0, 1     # Move to next input value
+    CMP 0, 7     # Check if all input values have been processed
+    BNE -10
+
+HLT             # End of program
+
