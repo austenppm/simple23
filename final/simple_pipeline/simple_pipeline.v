@@ -20,7 +20,7 @@
 
 module simple_pipeline(
 		input [15:0] in,//input
-		input clk,
+		input clkin,
 		input clk20,
 		input rst_n,
 		input exec,
@@ -34,6 +34,9 @@ module simple_pipeline(
 		output [7:0] disp_1,disp_2,disp_3,disp_4,disp_5,disp_6,disp_7,disp_8,
 		output [8:0] sl_out2
 		);
+		reg [31:0] count;
+		wire [0:0] clk;
+		wire [3:0] clkout;
 		wire [15:0] IROut,BROut,AROut,AR2In,AR2Out,SZCVIn,SZCVOut,DRIn,DROut,MDRIn,MDROut,MDR2Out,out;
 		wire [2:0] Rs,Rd;
 		wire [3:0] dshift,dshiftout;
@@ -97,6 +100,7 @@ module simple_pipeline(
 		branch br(.cond(SZCVOut),.brch(Branchout),.brch_sig(brch_sig_wire));
 		ram ram1(.address(pc),.clock(~clk),.data(0),.wren(1'b0),.q(Inst));
 		ram ram2(.address(DROut),.clock(~clk),.data(AR2Out),.wren(MemWriteout),.q(MemData));
+		pll pll(.areset(0),.inclk0(clkin),.c0(clk));
 		RemoveChattering rc(.clk(clk20),.botton(exec),.rst_n(rst_n),.signal(ce2));
 		counta2 c2(.rst_n(rst_n), .clk(clk20),.data(pc),.out2(out2),.sel2(sel2));
 		counta3 c3(.rst_n(rst_n), .clk(clk20),.data(Inst),.out2(out3),.sel2(sel3));
@@ -146,6 +150,7 @@ module simple_pipeline(
 		assign PCIn = WriteData;
 		assign ce_1 = !ce1 && ce2 && hazard;
 		assign ce_2 = !ce1 && ce2;
+//		assign clk = clkout[0];
 		
 		//デバッグ用アサイン
 		assign ctlcheck = {hazard,MemtoRegout,brch_sig_wire,RegWriteout,MemWriteout,MemReadout,ALUSrc2out,ALUSrc1out};
@@ -163,6 +168,17 @@ module simple_pipeline(
 		assign reg_11 = MDROut;
 		assign reg_12 = shifterOut;
 		assign reg_13 = ALUOut;
-		assign reg_14 = shifterIn;
-		assign reg_15 = A_wire;
+		assign reg_14 = count[31:16];
+		assign reg_15 = count[15:0];
+		always@(posedge clk or negedge rst_n) begin
+			if(!rst_n) begin
+				count <= 32'b00000000000000000000000000000000;
+			end else begin
+				if (ce_1 == 1'b1) begin
+					count <= count + 1;
+				end else begin
+					count <= count;
+				end
+			end
+		end
 endmodule
