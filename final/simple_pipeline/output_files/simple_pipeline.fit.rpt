@@ -1,6 +1,6 @@
 Fitter report for simple_pipeline
-Fri May 12 15:30:14 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+Fri May 19 15:47:24 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -67,26 +67,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri May 12 15:30:14 2023           ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
-; Revision Name                      ; simple_pipeline                                 ;
-; Top-level Entity Name              ; simple_pipeline                                 ;
-; Family                             ; Cyclone IV E                                    ;
-; Device                             ; EP4CE30F23I7                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 2,991 / 28,848 ( 10 % )                         ;
-;     Total combinational functions  ; 2,952 / 28,848 ( 10 % )                         ;
-;     Dedicated logic registers      ; 629 / 28,848 ( 2 % )                            ;
-; Total registers                    ; 629                                             ;
-; Total pins                         ; 120 / 329 ( 36 % )                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 131,072 / 608,256 ( 22 % )                      ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                 ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Fitter Summary                                                                   ;
++------------------------------------+---------------------------------------------+
+; Fitter Status                      ; Successful - Fri May 19 15:47:24 2023       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; simple_pipeline                             ;
+; Top-level Entity Name              ; simple_pipeline                             ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE30F23I7                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 2,991 / 28,848 ( 10 % )                     ;
+;     Total combinational functions  ; 2,952 / 28,848 ( 10 % )                     ;
+;     Dedicated logic registers      ; 629 / 28,848 ( 2 % )                        ;
+; Total registers                    ; 629                                         ;
+; Total pins                         ; 120 / 329 ( 36 % )                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 131,072 / 608,256 ( 22 % )                  ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -157,19 +157,19 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.15        ;
+; Average used               ; 1.13        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processor 3            ;   1.4%      ;
-;     Processor 4            ;   1.4%      ;
-;     Processor 5            ;   1.4%      ;
-;     Processor 6            ;   1.3%      ;
-;     Processor 7            ;   1.3%      ;
-;     Processor 8            ;   1.3%      ;
-;     Processors 9-12        ;   1.3%      ;
+;     Processor 2            ;   1.3%      ;
+;     Processor 3            ;   1.3%      ;
+;     Processor 4            ;   1.3%      ;
+;     Processor 5            ;   1.2%      ;
+;     Processor 6            ;   1.2%      ;
+;     Processor 7            ;   1.2%      ;
+;     Processor 8            ;   1.2%      ;
+;     Processors 9-12        ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -226,7 +226,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/output_files/simple_pipeline.pin.
+The pin-out file can be found in /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/output_files/simple_pipeline.pin.
 
 
 +--------------------------------------------------------------------------+
@@ -3448,6 +3448,7 @@ Info (119006): Selected device EP4CE30F23I7 for design "simple_pipeline"
 Info (21077): Low junction temperature is -40 degrees C
 Info (21077): High junction temperature is 100 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EP4CE15F23A7 is compatible
     Info (176445): Device EP4CE15F23C7 is compatible
@@ -3505,23 +3506,23 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
-Info (176353): Automatically promoted node clk20~input (placed in PIN A12 (CLK8, DIFFCLK_5n)) File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/simple_pipeline.v Line: 23
+Info (176353): Automatically promoted node clk20~input (placed in PIN A12 (CLK8, DIFFCLK_5n)) File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/simple_pipeline.v Line: 23
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G14
-Info (176353): Automatically promoted node clk~input (placed in PIN B12 (CLK9, DIFFCLK_5p)) File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/simple_pipeline.v Line: 22
+Info (176353): Automatically promoted node clk~input (placed in PIN B12 (CLK9, DIFFCLK_5p)) File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/simple_pipeline.v Line: 22
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G12
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node display:ds|divider:b1|c  File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/divider.v Line: 19
+Info (176353): Automatically promoted node display:ds|divider:b1|c  File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/divider.v Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node shifter:sf|WideOr8~0  File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/shifter.v Line: 12
+Info (176353): Automatically promoted node shifter:sf|WideOr8~0  File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/shifter.v Line: 12
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node ALU:ALU|Mux18~0  File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/ALU.v Line: 10
+Info (176353): Automatically promoted node ALU:ALU|Mux18~0  File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/ALU.v Line: 10
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node shifter:sf|Mux18~0  File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/shifter.v Line: 12
+Info (176353): Automatically promoted node shifter:sf|Mux18~0  File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/shifter.v Line: 12
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node counta2:c2|divider:b1|c  File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/divider.v Line: 19
+Info (176353): Automatically promoted node counta2:c2|divider:b1|c  File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/divider.v Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node counta3:c3|divider:b1|c  File: /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/divider.v Line: 19
+Info (176353): Automatically promoted node counta3:c3|divider:b1|c  File: /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/divider.v Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -3566,17 +3567,17 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/output_files/simple_pipeline.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 1669 megabytes
-    Info: Processing ended: Fri May 12 15:30:14 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:11
+Info (144001): Generated suppressed messages file /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/output_files/simple_pipeline.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 1658 megabytes
+    Info: Processing ended: Fri May 19 15:47:25 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /export/home/021/a0218457/2023-simple-2023-team23/simple_pipeline/output_files/simple_pipeline.fit.smsg.
+The suppressed messages can be found in /export/home/019/a0192807/2023-simple-2023-team23/final/simple_pipeline/output_files/simple_pipeline.fit.smsg.
 
 
