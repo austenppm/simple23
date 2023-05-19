@@ -1,5 +1,5 @@
 Fitter report for simple
-Thu May 18 17:01:44 2023
+Fri May 19 13:33:55 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 18 17:01:44 2023       ;
+; Fitter Status                      ; Successful - Fri May 19 13:33:55 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; simple                                      ;
 ; Top-level Entity Name              ; simple                                      ;
@@ -162,13 +162,13 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
+;     Processor 2            ;   1.4%      ;
 ;     Processor 3            ;   1.3%      ;
 ;     Processor 4            ;   1.3%      ;
 ;     Processor 5            ;   1.3%      ;
-;     Processor 6            ;   1.2%      ;
-;     Processor 7            ;   1.2%      ;
-;     Processor 8            ;   1.2%      ;
+;     Processor 6            ;   1.3%      ;
+;     Processor 7            ;   1.3%      ;
+;     Processor 8            ;   1.3%      ;
 ;     Processors 9-12        ;   1.2%      ;
 +----------------------------+-------------+
 
@@ -213,7 +213,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/output_files/simple.pin.
+The pin-out file can be found in /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/output_files/simple.pin.
 
 
 +-------------------------------------------------------------------------+
@@ -2853,72 +2853,72 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
-Info (176353): Automatically promoted node clk20~input (placed in PIN A12 (CLK8, DIFFCLK_5n)) File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 19
+Info (176353): Automatically promoted node clk20~input (placed in PIN A12 (CLK8, DIFFCLK_5n)) File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G14
-Info (176353): Automatically promoted node clk~input (placed in PIN B12 (CLK9, DIFFCLK_5p)) File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 18
+Info (176353): Automatically promoted node clk~input (placed in PIN B12 (CLK9, DIFFCLK_5p)) File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 18
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G12
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node display:ds|divider:b1|c  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/divider.v Line: 19
+Info (176353): Automatically promoted node display:ds|divider:b1|c  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/divider.v Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node phasecounter:a0|p[3]  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node phasecounter:a0|p[2] File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
-        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
-        Info (176357): Destination node clk2out[3]~output File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 29
-Info (176353): Automatically promoted node phasecounter:a0|p[2]  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+Info (176353): Automatically promoted node phasecounter:a0|p[3]  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node phasecounter:a0|p[1] File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
-        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
-        Info (176357): Destination node clk2out[2]~output File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 29
-Info (176353): Automatically promoted node shifter:sf|Equal1~0  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/shifter.v Line: 41
+        Info (176357): Destination node phasecounter:a0|p[2] File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
+        Info (176357): Destination node clk2out[3]~output File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 29
+Info (176353): Automatically promoted node phasecounter:a0|p[2]  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node shifter:sf|cond[1]~4 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/shifter.v Line: 11
-        Info (176357): Destination node shifter:sf|cond[1]~5 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/shifter.v Line: 11
+        Info (176357): Destination node phasecounter:a0|p[1] File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
+        Info (176357): Destination node clk2out[2]~output File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 29
+Info (176353): Automatically promoted node shifter:sf|Equal1~0  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/shifter.v Line: 41
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node shifter:sf|cond[1]~4 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/shifter.v Line: 11
+        Info (176357): Destination node shifter:sf|cond[1]~5 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/shifter.v Line: 11
         Info (176357): Destination node shifter:sf|always0~0
-Info (176353): Automatically promoted node phasecounter:a0|p[1]  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+Info (176353): Automatically promoted node phasecounter:a0|p[1]  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node phasecounter:a0|p[0] File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
-        Info (176357): Destination node phasecounter:a0|Equal0~1 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
-        Info (176357): Destination node address~0 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 47
-        Info (176357): Destination node clk2out[1]~output File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 29
-Info (176353): Automatically promoted node ALU:ALU|Mux18~0  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/ALU.v Line: 10
+        Info (176357): Destination node phasecounter:a0|p[0] File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+        Info (176357): Destination node phasecounter:a0|Equal0~1 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
+        Info (176357): Destination node address~0 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 47
+        Info (176357): Destination node clk2out[1]~output File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 29
+Info (176353): Automatically promoted node ALU:ALU|Mux18~0  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/ALU.v Line: 10
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node phasecounter:a0|p[0]  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+Info (176353): Automatically promoted node phasecounter:a0|p[0]  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
-        Info (176357): Destination node address~0 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 47
+        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
+        Info (176357): Destination node address~0 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 47
         Info (176357): Destination node comb~0
         Info (176357): Destination node comb~1
-        Info (176357): Destination node clk2out[0]~output File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 29
-Info (176353): Automatically promoted node phasecounter:a0|p[4]  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+        Info (176357): Destination node clk2out[0]~output File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 29
+Info (176353): Automatically promoted node phasecounter:a0|p[4]  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
-        Info (176357): Destination node phasecounter:a0|p[3]~0 File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
-        Info (176357): Destination node clk2out[4]~output File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/simple.v Line: 29
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~0  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+        Info (176357): Destination node phasecounter:a0|Equal0~0 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 10
+        Info (176357): Destination node phasecounter:a0|p[3]~0 File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/phasecounter.v Line: 9
+        Info (176357): Destination node clk2out[4]~output File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/simple.v Line: 29
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~0  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~1  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~1  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~2  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~2  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~3  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~3  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~4  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~4  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~5  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~5  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~6  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~6  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~7  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
+Info (176353): Automatically promoted node RegisterFile:RF|Decoder0~7  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/RegisterFile.v Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node shifter:sf|Mux18~0  File: /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/shifter.v Line: 12
+Info (176353): Automatically promoted node shifter:sf|Mux18~0  File: /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/shifter.v Line: 12
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2956,10 +2956,10 @@ Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/output_files/simple.fit.smsg
+Info (144001): Generated suppressed messages file /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/output_files/simple.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 22 warnings
     Info: Peak virtual memory: 1657 megabytes
-    Info: Processing ended: Thu May 18 17:01:45 2023
+    Info: Processing ended: Fri May 19 13:33:56 2023
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:11
 
@@ -2967,6 +2967,6 @@ Info: Quartus Prime Fitter was successful. 0 errors, 22 warnings
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /export/home/019/a0192807/Desktop/2023-simple-2023-team23/middle/simple/output_files/simple.fit.smsg.
+The suppressed messages can be found in /export/home/019/a0192807/2023-simple-2023-team23/middle/simple/output_files/simple.fit.smsg.
 
 
