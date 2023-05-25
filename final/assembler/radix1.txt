@@ -1,0 +1,108 @@
+LI 1,1 #register 1 is 1
+LI 3,1 # bitmask for current digit position
+LI 0,1 
+SLL 0,11
+SUB 0,1 #2047
+
+LI 2,1
+SLL 2,10 #base address of input values 1024
+LI 5,0 #temporary register for count of zeroes
+
+
+LD 4,0,2 
+AND 4,3
+BNE 1
+ADD 5,1 
+ADD 2,1 #count of where we are in 
+CMP 2,0 # repeat until we reach 2047
+BLT -7
+LI 6,1 
+SLL 6,11 #temporary register containing 2048
+ADD 5,6  #register containing 2048 + x
+LI 2,1
+SLL 2,10 #temporary register containing 1024
+LD 4,0,2
+LD 7,0,2
+AND 4,3
+BE 2		#if the last bit is 0, it will go to line BNE 2. meaning if it is 1 ST 7,0,5 and ADD 5,1 will run
+ST 7,0,5
+ADD 5,1 #watch register 5
+BNE 2	#if the last bit is 1, it will go to line BE 2. meaning if it is 0 ST 7,0,6 and ADD 6,1 will run
+ST 7,0,6
+ADD 6,1 #watch register 6
+ADD 2,1 #watch register 2
+CMP 2,0
+BLT -12
+
+LI 2,1 #1024 check register 2 and 7
+SLL 2,10
+LI 7,1
+SLL 7,11 #2048
+LD 4,0,7
+ADD 7,1
+ST 4,0,2
+ADD 2,1
+CMP 2,0
+BLT -6
+
+LI 5,1 
+SLL 5,14
+
+CMP 3,5
+
+BLT -43
+
+LI 3,1
+SLL 3,15
+
+LI 2,1
+SLL 2,10 #1024
+LI 5,0
+
+LD 4,0,2
+AND 4,3
+BE 1
+ADD 5,1
+ADD 2,1
+CMP 2,0
+BLT -7
+
+LI 6,1
+SLL 6,11 #2048
+ADD 5,6 #2048 + x
+
+LI 2,1
+SLL 2,10 #1024
+
+LD 4,0,2
+LD 7,0,2
+AND 4,3
+BNE 2
+ST 7,0,6
+ADD 6,1
+BE 2
+ST 7,0,5
+ADD 5,1
+ADD 2,1
+CMP 2,0
+BLT -12
+
+LI 2,1 #1024 check register 2 and 7
+SLL 2,10
+LI 7,1
+SLL 7,11 #2048
+LD 4,0,7
+ADD 7,1
+ST 4,0,2
+ADD 2,1
+CMP 2,0
+BLT -6
+
+LI 2,1
+SLL 2,10
+LD 4,0,2
+OUT 4
+ADD 2,1
+CMP 2,0
+BLE -5
+HLT
