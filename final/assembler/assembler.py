@@ -107,8 +107,8 @@ def assemble(data):
             "10" + "011" + to_binary(rb, 3) + to_binary(d, 8, signed=True),        
         "B": lambda d:
             "10" + "100" + "000" + to_binary(d, 8, signed=True),
-        "SLI": lambda d:
-            "10" + "101" + to_binary(rb, 3) + to_binary(d, 4, signed=True) + to_binary(d, 4, signed=True),     
+        "SLI": lambda rb, d1, d2:
+            "10" + "101" + to_binary(rb, 3) + to_binary(d1, 4, signed=True) + to_binary(d2, 4, signed=False),     
         "BE": lambda d:
             "10" + "111" + "000" + to_binary(d, 8, signed=True),
         "BLT": lambda d:
