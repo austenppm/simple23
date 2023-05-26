@@ -47,7 +47,7 @@ module ALU(
 					end
 			endcase
 			
-			if(C==16'b0)
+			if(C[15:0]==16'b0)
 				cond[2] <= 1'b1;
 			else
 				cond[2] <= 1'b0;
