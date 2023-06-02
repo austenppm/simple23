@@ -89,7 +89,7 @@ module simple_pipeline(
 		PC PC(.clock(clk),.reset(rst_n),.branchFlag(brch_sig_wire),.ce(ce_1),.dr(DROut),.pc(pc),.pcPlusOne(pcPlusOne));
 		phase3ctl p3IFID(.ALUSrc1in(ALUSrc1&hazard),.ALUSrc2in(ALUSrc2&hazard),.ALUorshifterin(ALUorshifter&hazard),.AS_BCin(AS_BC&hazard&(~brch_sig_wire)),.MemReadin(MemRead&hazard),.SLIin(SLI),.Rain(Inst_wire1[13:11]&{3{hazard}}),.Rbin(Inst_wire1[10:8]&{3{hazard}}),.opcodein(opcode_wire&{4{hazard}}),
 							.clk(clk),.rst_n(rst_n),.ALUSrc1out(x0),.ALUSrc2out(x1),.ALUorshifterout(x2),.AS_BCout(x3),.MemReadout(x14),.SLIout(x16),.Raout(z5),.Rbout(z6),.opcodeout(y0));
-		phase4ctl p4IFID(.MemWritein(MemWrite&hazard&(~brch_sig_wire)), .Inputin(Input&hazard),.Branchin(Branch),.clk(clk),.rst_n(rst_n),.MemWriteout(x4), .Inputout(x5),.Branchout(z0));
+		phase4ctl p4IFID(.MemWritein(MemWrite&hazard&(~brch_sig_wire)), .Inputin(Input&hazard),.Branchin(Branch|{3{brch_sig_wire}}),.clk(clk),.rst_n(rst_n),.MemWriteout(x4), .Inputout(x5),.Branchout(z0));
 		phase5ctl p5IFID(.MemtoRegin(MemtoReg&hazard),.RegWritein(RegWrite&hazard&(~brch_sig_wire)),.RegDstin(RegDst_wire&{3{hazard}}),.clk(clk),.rst_n(rst_n),.MemtoRegout(x8),.RegWriteout(x9),.RegDstout(z2));
 		phase3ctl p3IDEX(.ALUSrc1in(x0),.ALUSrc2in(x1),.ALUorshifterin(x2),.AS_BCin(x3&(~brch_sig_wire)),.MemReadin(x14),.SLIin(x16),.Rain(z5),.Rbin(z6),.opcodein(y0),
 							.clk(clk),.rst_n(rst_n),.ALUSrc1out(ALUSrc1out),.ALUSrc2out(ALUSrc2out),.ALUorshifterout(ALUorshifterout),.AS_BCout(AS_BCout),.MemReadout(x15),.SLIout(SLIout),.Raout(z7),.Rbout(z8),.opcodeout(opcodeout));
@@ -178,7 +178,7 @@ module simple_pipeline(
 			if(!rst_n) begin
 				count <= 32'b00000000000000000000000000000000;
 			end else begin
-				if (ce_1 == 1'b1) begin
+				if (ce_2 == 1'b1) begin
 					count <= count + 1;
 				end else begin
 					count <= count;
