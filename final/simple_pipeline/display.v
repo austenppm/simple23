@@ -1,5 +1,5 @@
 module display(
-	input	sl_clk,rst,
+	input	clk,rst_n,
 	input [15:0] reg_0,reg_1,reg_2,reg_3,reg_4,reg_5,reg_6,reg_7,reg_8,reg_9,reg_10,reg_11,reg_12,reg_13,reg_14,reg_15,
 	input [7:0] ctl,
 	output reg [7:0] disp_1,disp_2,disp_3,disp_4,disp_5,disp_6,disp_7,disp_8,
@@ -7,7 +7,6 @@ module display(
 	wire [15:0] wire_reg0,wire_reg1,wire_reg2,wire_reg3,wire_reg4,wire_reg5,wire_reg6,wire_reg7,wire_reg8,wire_reg9,wire_reg10,wire_reg11,wire_reg12,wire_reg13,wire_reg14,wire_reg15;
 	wire [7:0] disp_reg0_1,disp_reg0_2,disp_reg0_3,disp_reg0_4,disp_reg1_1,disp_reg1_2,disp_reg1_3,disp_reg1_4,disp_reg2_1,disp_reg2_2,disp_reg2_3,disp_reg2_4,disp_reg3_1,disp_reg3_2,disp_reg3_3,disp_reg3_4,disp_reg4_1,disp_reg4_2,disp_reg4_3,disp_reg4_4,disp_reg5_1,disp_reg5_2,disp_reg5_3,disp_reg5_4,disp_reg6_1,disp_reg6_2,disp_reg6_3,disp_reg6_4,disp_reg7_1,disp_reg7_2,disp_reg7_3,disp_reg7_4,disp_reg8_1,disp_reg8_2,disp_reg8_3,disp_reg8_4,disp_reg9_1,disp_reg9_2,disp_reg9_3,disp_reg9_4,disp_reg10_1,disp_reg10_2,disp_reg10_3,disp_reg10_4,disp_reg11_1,disp_reg11_2,disp_reg11_3,disp_reg11_4,disp_reg12_1,disp_reg12_2,disp_reg12_3,disp_reg12_4,disp_reg13_1,disp_reg13_2,disp_reg13_3,disp_reg13_4,disp_reg14_1,disp_reg14_2,disp_reg14_3,disp_reg14_4,disp_reg15_1,disp_reg15_2,disp_reg15_3,disp_reg15_4;
 	wire sl_clk_wire,sl_rst_wire;
-	wire clk_300Hz;
 	reg [5:0] t;
 	reg [8:0] sel;
 	assign wire_reg0 = reg_0;
@@ -26,9 +25,8 @@ module display(
 	assign wire_reg13 = reg_13;
 	assign wire_reg14 = reg_14;
 	assign wire_reg15 = reg_15;
-	assign sl_clk_wire = sl_clk;
-	assign sl_rst_wire = rst;
-	divider b1(.clk(sl_clk_wire),.hz(30'd300),.rst_n(sl_rst_wire),.outclk(clk_300Hz));
+	assign sl_clk_wire = clk;
+	assign sl_rst_wire = rst_n;
 	number reg0(.data_sig(wire_reg0), .disp_out1(disp_reg0_1), .disp_out2(disp_reg0_2), .disp_out3(disp_reg0_3), .disp_out4(disp_reg0_4));
 	number reg1(.data_sig(wire_reg1), .disp_out1(disp_reg1_1), .disp_out2(disp_reg1_2), .disp_out3(disp_reg1_3), .disp_out4(disp_reg1_4));
 	number reg2(.data_sig(wire_reg2), .disp_out1(disp_reg2_1), .disp_out2(disp_reg2_2), .disp_out3(disp_reg2_3), .disp_out4(disp_reg2_4));
@@ -46,11 +44,20 @@ module display(
 	number reg14(.data_sig(wire_reg14), .disp_out1(disp_reg14_1), .disp_out2(disp_reg14_2), .disp_out3(disp_reg14_3), .disp_out4(disp_reg14_4));
 	number reg15(.data_sig(wire_reg15), .disp_out1(disp_reg15_1), .disp_out2(disp_reg15_2), .disp_out3(disp_reg15_3), .disp_out4(disp_reg15_4));
 	assign sl_out = sel;
-	always @ (posedge clk_300Hz or negedge sl_rst_wire) begin
-			if (!sl_rst_wire) begin
-				t <= 4'd0000;
-			end else begin
-				t <= (t + 1) % 36;
+	reg [25:0] count;
+	always @(posedge clk or negedge rst_n) begin
+		if (!rst_n)
+			count <= 26'h0;
+		else if (count == (26'd20_000_000 / 300))
+			count <= 26'h0;
+		else
+			count <= count + 26'h1;
+	end
+	always @(posedge clk or negedge rst_n) begin
+		if (!rst_n)
+			t <= 4'd0000;
+		else if (count == (26'd10_000_000 / 300)) begin
+			t <= (t + 1) % 36;
 				sel[7] <= (t == 2) ? 1:
 							 (t == 4) ? 0:
 							 sel[7];
@@ -159,8 +166,19 @@ module display(
 						(t == 25)? disp_reg13_1:
 						(t == 29)? disp_reg15_1:
 						disp_8;
-			end
+		end else begin
+			t <= t;
+			sel <= sel;
+			disp_1 <= disp_1;
+			disp_2 <= disp_2;
+			disp_3 <= disp_3;
+			disp_4 <= disp_4;
+			disp_5 <= disp_5;
+			disp_6 <= disp_6;
+			disp_7 <= disp_7;
+			disp_8 <= disp_8;
 		end
+	end
 endmodule
 
 module SEVENSEG_LED (
@@ -205,5 +223,6 @@ module number( //16ビットの値を入力として四ケタずつの値（１�
 	assign disp_out4 =  disp_wire4;
 	
 endmodule
+
 
 

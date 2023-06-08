@@ -6,24 +6,39 @@ module counta2(
 			);
 			reg [3:0] t;
 			reg [3:0] sel;
-			wire clk_300Hz;
-			wire clk_10Hz;
-			reg [4:0] c;
+			reg [30:0] c;
 			segLED a0(.a(c), .selin(sel),.out(out2),.sel(sel2));
-			divider b1(.clk(clk),.hz(30'd300),.rst_n(rst_n),.outclk(clk_300Hz));
-		always @ (posedge clk_300Hz or negedge rst_n) begin
-			if (!rst_n) begin
-				t <= 4'd0000;
-			end else begin
-				t <= (t + 1) % 4;
-				sel <= (t == 4'b0000) ? 4'b1110:
-					   (t == 4'b0001) ? 4'b1101:
-					   (t == 4'b0010) ? 4'b1011:
-					   4'b0111;
-				c <= (t == 4'b0000) ? data % 10:
-					 (t == 4'b0001) ? (data/10) % 10:
-					 (t == 4'b0010) ? (data/100) % 10:
-					 (data/1000) % 10;
+			reg [25:0] count;
+			always @(posedge clk or negedge rst_n) begin
+				if (!rst_n)
+					count <= 26'h0;
+				else if (count == (26'd20_000_000 / 300))
+					count <= 26'h0;
+				else
+					count <= count + 26'h1;
 			end
-		end
+			always @(posedge clk or negedge rst_n) begin
+				if (!rst_n)
+					t <= 4'd0000;
+				else if (count == (26'd10_000_000 / 300)) begin
+					t <= (t + 1) % 4;
+				end else begin
+					t <= t;
+				end
+			end
+			always @(posedge clk or negedge rst_n) begin
+				if (!rst_n) begin
+					sel <= 4'd0000;
+					c <= 0;
+				end else begin
+					sel <= (t == 4'b0000) ? 4'b1110:
+							(t == 4'b0001) ? 4'b1101:
+							(t == 4'b0010) ? 4'b1011:
+							4'b0111;
+					c <= (t == 4'b0000) ? data % 10:
+						 (t == 4'b0001) ? (data/10) % 10:
+						 (t == 4'b0010) ? (data/100) % 10:
+						 (data/1000) % 10;
+				end
+			end
 endmodule

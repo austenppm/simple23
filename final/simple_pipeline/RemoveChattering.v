@@ -1,26 +1,32 @@
 module RemoveChattering (
 	input clk, botton, rst_n,
 	output reg signal);
-	wire clk_10Hz;
-	reg botton_reg;
-	reg [7:0] remove_chat;
-	wire rst_n1,rst_n2,rst_n3;
-	divider b2(.clk(clk),.hz(30'd10),.rst_n(rst_n),.outclk(clk_10Hz));
-	assign rst_n1 = rst_n;
-	assign rst_n2 = rst_n;
-	assign rst_n3 = rst_n;
-	always @ (posedge clk_10Hz or negedge rst_n2) begin
-		if(!rst_n2) begin
-			botton_reg <= 1'b0;
-		end else begin
-			botton_reg <= !botton;
-		end
+	reg botton_reg1;
+	reg botton_reg2;
+	reg [50:0] count;
+	always @(posedge clk or negedge rst_n) begin
+			if (!rst_n)
+				count <= 26'd0;
+			else if (count == 26'd2_000_000)
+				count <= 26'd0;
+			else
+				count <= count + 26'd1;
 	end
-	always @(posedge botton_reg or negedge rst_n3) begin
-		if(!rst_n3) begin
+	always @(posedge clk or negedge rst_n) begin
+		if (!rst_n) begin
+			botton_reg1 <= 1'b0;
+			botton_reg2 <= 1'b0;
 			signal <= 1'b0;
+		end else if (count == 26'd1_000_000) begin
+			botton_reg1 <= botton_reg2;
+			botton_reg2 <= !botton;
+			if (botton_reg1 == 1'b0 && botton_reg2 == 1'b1) begin
+				signal <= !signal;
+			end
 		end else begin
-			signal <= signal +1;
+			botton_reg1 <= botton_reg1;
+			botton_reg2 <= botton_reg2;
+			signal <= signal;
 		end
 	end
 endmodule
